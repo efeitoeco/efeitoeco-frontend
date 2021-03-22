@@ -1,3 +1,27 @@
-.height {
-    height: 280px
+.h2 {
+    color: #614023;
+    font-weight: 600;
+}
+
+.card {
+    transition-duration: 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
+}
+.card-title{
+    font-weight: 500;
+}
+.preco {
+    color: #075f22;
+    text-align: center;
+    font-weight: 500;
+}
+.parcela {
+    color: #075f2193;
+    text-align: center;
+    font-size: 0.9em;
 }

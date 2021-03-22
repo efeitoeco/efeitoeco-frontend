@@ -2,13 +2,21 @@
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h1 class="text-center mb-3 mt-3">Cadastrar</h1>
+                    
                     <!-- Incluir validação Angular + Bootstrap -->
-                        <div class="form-group"> 
-                            <label for="nome">Nome</label> 
-                            <input type="text" required class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo">
+                        <div class="form-nomes d-flex">
+                            <div class="form-group mr-3"> 
+                                <label for="nome">Nome</label> 
+                                <input type="text" required class="form-control" name="nome" id="nome" placeholder="Insira seu nome">
+                            </div>
+                            <div class="form-group"> 
+                                <label for="nome">Sobrenome</label> 
+                                <input type="text" required class="form-control" name="sobrenome" id="sobrenome" placeholder="Insira seu sobrenome">
+                            </div>
                         </div>
+                        
                         <div class="form-group"> 
                             <label for="email">E-mail</label> 
                             <input type="text" required class="form-control" name="email" id="email" placeholder="Insira seu e-mail">

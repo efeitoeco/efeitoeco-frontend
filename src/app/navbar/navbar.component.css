@@ -6,3 +6,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu
 { 
     display: block; 
 }
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
