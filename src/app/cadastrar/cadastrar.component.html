@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-center mb-3 mt-3">Cadastrar</h1>
+                    <!-- Incluir validação Angular + Bootstrap -->
+                        <div class="form-group"> 
+                            <label for="nome">Nome</label> 
+                            <input type="text" required class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo">
+                        </div>
+                        <div class="form-group"> 
+                            <label for="email">E-mail</label> 
+                            <input type="text" required class="form-control" name="email" id="email" placeholder="Insira seu e-mail">
+                        </div>
+                        <div class="form-group"> 
+                            <label for="usuario">Usuário</label> 
+                            <input type="text" required class="form-control" name="usuario" id="usuario" placeholder="Insira seu nome de usuário">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" name="senha" id="senha" placeholder="Insira sua senha">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Confirmar Senha</label>
+                            <input type="password" class="form-control" name="senha" id="confirmarSenha" placeholder="Confirme sua senha">
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-danger mr-3" href="#">
+                                Cancelar
+                            </button>
+                            <button class="btn btn-success" type="submit">
+                                Confirmar
+                            </button>
+                        </div>
+
+                        <hr class="mt-4 mb-3">
+
+                        <p class="text-center">
+                            Já tem uma conta? <a [routerLink]="['/entrar']">Entre</a>
+                        </p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="img-bg"></div>
+    </div>
+</div>

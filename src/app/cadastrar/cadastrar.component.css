@@ -1,0 +1,7 @@
+#img-bg {
+    background-image: url(https://i.imgur.com/Dg7S5xe.jpg);
+   /* height: 100vh;*/
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
