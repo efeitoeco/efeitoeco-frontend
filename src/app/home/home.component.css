@@ -25,3 +25,9 @@
     text-align: center;
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 768px) {
+    #carrosel-2 {
+        display: none;
+    }
+}

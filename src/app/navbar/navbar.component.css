@@ -10,3 +10,23 @@ ul.nav li.dropdown:hover ul.dropdown-menu
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
+
+/* Botão em construção */
+
+.barra-persquisa {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#input-pesquisa {
+    padding: 5px;
+    /* border: 1px solid #BEBEBE;
+    border-radius: 3px 0 0 3px; */
+    border: none;
+}
+
+#botao-pesquisa {
+    padding: 5px;
+    /* border-radius: 0 3px 3px 0;
+    border: 1px solid #BEBEBE; */
+    border: none;
+}
