@@ -1,0 +1,42 @@
+.logo {
+    width: 40px;
+    height: 40px;
+
+}
+
+li {
+    list-style:none;
+    padding: 10px;
+    
+}
+
+a {
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.cor-copy{
+    color: rgba(0,0,0,.5);
+}
+
+.cor-menu-rodape:hover {
+  color: #614023;
+}
+
+.fa-facebook-f:hover{
+    color: #4267b2;
+
+}
+
+.fa-twitter:hover{
+    color: #1da1f2;
+}
+
+.tamanho{
+    font-size: 1.4em;
+}
+
+.fa-instagram:hover{
+    color: #e65168;
+}
