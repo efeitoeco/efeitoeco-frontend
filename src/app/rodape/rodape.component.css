@@ -40,3 +40,7 @@ a {
 .fa-instagram:hover{
     color: #e65168;
 }
+
+#scroll-btn {
+    cursor: pointer;
+}

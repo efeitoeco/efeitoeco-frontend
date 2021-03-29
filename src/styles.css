@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    scroll-behavior: smooth;
+}
 
 .form-eco {
     /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
