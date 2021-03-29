@@ -4,7 +4,7 @@
 <div class="container">
    
     <!--Corousel-->
-    <div class="row mt-3">
+    <div class="row mt-3 ">
         <div class="col-md-8">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -75,13 +75,25 @@
         </div>
     </div>
 
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid mt-4 bg-light">
+      <div class="container d-flex align-items-center">
+        
+        <div class="col-md-4" ><img class="img-jumbotron"  src="../../assets/img/imagem junbotron.png" alt=""></div>
+        <div class="col-md-8">
+        <h1 class="display-4 h2">Fluid jumbotron</h1>
+        <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam incidunt sapiente ab odio quis veritatis neque, quidem, delectus expedita sed velit distinctio cum repellendus aperiam repudiandae inventore amet dignissimos esse! </p>
+      </div>
+      </div>
+    </div>
+
     <!--Produtos em Destaque-->
     <section class="">
         <h2 class="text-center mt-5 h2">Produtos em Destaque</h2>
        
         <!--Card Destaque-->
 
-        <div class="row row-cols-1 row-cols-md-4 mt-5" align="center">
+        <div class="row row-cols-1 row-cols-md-4 mt-3" align="center">
             <div class="col mb-4">
               <div class="card">
                 <img src="../../assets/img/card4.jpg" class="card-img-top" alt="...">
@@ -137,7 +149,7 @@
               <div class="card">
                 <img src="../../assets/img/card3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Óleo Essencial de Campim Limão</h5>
+                  <h5 class="card-title">Óleo Essencial de Capim Limão</h5>
                   <p class="card-text">Óleo essencial para aromaterapia (10mL).</p>
                   <hr>
                   <h5 class="preco">R$ 24,90</h5>
@@ -154,7 +166,88 @@
             </div>
           </div>
     </section>
+    
+   <!-- <h1>Ver o que vamos colocar aqui para separar</h1>-->
 
+    <!--Lançamentos-->
+    <section class="">
+      <h2 class="text-center mt-5 h2">Lançamentos</h2>
+     
+      <!--Card Destaque-->
+
+      <div class="row row-cols-1 row-cols-md-4 mt-3" align="center">
+          <div class="col mb-4">
+            <div class="card">
+              <img src="../../assets/img/card4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Kit de Óleos Essenciais</h5>
+                <p class="card-text">Óleo essencial para aromaterapia (10mL).</p>
+                <hr>
+                <h5 class="preco">R$ 69,90</h5>
+                <div>
+                  <span class="parcela">ou 3x de R$ 23,30 sem juros</span>
+                </div>
+                <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="../../assets/img/card1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Bloco de Notas</h5>
+                <p class="card-text">Bloco de notas, com 30 folhas. Feito de papel reciclado.</p>
+                <hr>
+                <h5 class="preco">R$ 19,90</h5>
+                <div>
+                  <span class="parcela">ou 3x de R$ 6,63 sem juros</span>
+                </div>
+                <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="../../assets/img/card2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Ecopad</h5>
+                <p class="card-text">Porta ecopad de madeira com 10 discos de algodão reutilizáveis.</p>
+                <hr>
+                <h5 class="preco">R$ 29,90</h5>
+                <div>
+                  <span class="parcela">ou 3x de R$ 9,96 sem juros</span>
+                </div>
+                <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card">
+              <img src="../../assets/img/card3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Óleo Essencial de Capim Limão</h5>
+                <p class="card-text">Óleo essencial para aromaterapia (10mL).</p>
+                <hr>
+                <h5 class="preco">R$ 24,90</h5>
+                <div>
+                  <span class="parcela">ou 3x de R$ 8,30 sem juros</span>
+                </div>
+                
+                <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+                  Comprar
+                </button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
     
 
 

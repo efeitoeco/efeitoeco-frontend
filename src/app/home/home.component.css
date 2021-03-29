@@ -3,6 +3,11 @@
     font-weight: 600;
 }
 
+.img-jumbotron {
+    width: 100%;
+
+}
+
 .card {
     transition-duration: 0.3s;
     cursor: pointer;
@@ -26,8 +31,11 @@
     font-size: 0.9em;
 }
 
+
+
 @media screen and (max-width: 768px) {
     #carrosel-2 {
         display: none;
     }
 }
+
