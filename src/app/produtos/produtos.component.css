@@ -1,0 +1,48 @@
+.filtro{
+    background-color: red;
+    width: 20%;
+    height: 600px;
+}
+
+.filtrados{
+    width: 80%;
+}
+.ordenar{
+    width: 100%;
+}
+
+.card {
+    transition-duration: 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
+}
+
+.card-title{
+    font-weight: 500;
+}
+
+.preco {
+    color: #075f22;
+    text-align: center;
+    font-weight: 500;
+}
+
+.parcela {
+    color: #075f2193;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.borda{
+    border: #075f22 1px solid;
+
+}
+
+.div-filtro{
+    border-radius: 4px;
+}
