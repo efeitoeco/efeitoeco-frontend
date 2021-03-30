@@ -5,7 +5,24 @@
 
 .img-jumbotron {
     width: 100%;
+}
 
+/* Utilizei o posicion absoluta para colocar a div dentro do card com o bottom: 0, que deixa a div com zero de distância da parte de baixo da div-mãe (div do card), e deixei com width de 100% para ficar com o comprimento da div-mãe */
+.legenda-carrosel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* coloquei um background preto com 33% de opacidade para favorecer a leitura (contrastre com as letras brancas), e coloquei padding para o texto não ficar colado nas extremidades, especialmente na extremidade de baixo. Também deixei a cor do texto branco e usei o display flex pra centralizar o conteúdo verticalmente e horizontalmente */
+.carrosel2-bg {
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 30px 35px 40px 35px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -13,25 +30,27 @@
     cursor: pointer;
     height: 100%;
 }
+
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
 }
+
 .card-title{
     font-weight: 500;
 }
+
 .preco {
     color: #075f22;
     text-align: center;
     font-weight: 500;
 }
+
 .parcela {
     color: #075f2193;
     text-align: center;
     font-size: 0.9em;
 }
-
-
 
 @media screen and (max-width: 768px) {
     #carrosel-2 {
