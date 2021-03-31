@@ -1,0 +1,20 @@
+.img-produto{
+    width: 100%;
+}
+.preco-principal {
+    color: #075f22;
+    font-weight: 600;
+}
+.botão-quant{
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+}
+.preco-item{
+    border: 1px solid rgba(0,0,0,.5);
+    border-radius: 3px;
+}
+.botão-carrinho{
+    width: 300px;
+    border-radius: 10px;
+}

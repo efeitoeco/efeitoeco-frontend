@@ -9,6 +9,8 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
     HomeComponent,
     RodapeComponent,
     ProdutosComponent,
+    TelaProdutoComponent,
+    ChatbotComponent,
   ],
   imports: [
     BrowserModule,

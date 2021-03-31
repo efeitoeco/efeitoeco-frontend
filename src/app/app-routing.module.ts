@@ -4,6 +4,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: ProdutosComponent 
+  },
+  {
+    path: 'produtos/id',
+    component: TelaProdutoComponent
   }
 ];
 
