@@ -23,10 +23,9 @@
 
  </div>
 
-
  <div class="container mb-5">
     <div class="d-flex justify-content-end ordenar">
-        <div class="dropdown">
+        <!--<div class="dropdown">
             <button class="btn btn-light dropdown-toggle borda" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ordenar Por
             </button>
@@ -35,14 +34,63 @@
               <button class="dropdown-item" type="button">Menor preço</button>
               <button class="dropdown-item" type="button">Lançamentos</button>
             </div>
-          </div>
+          </div> -->
+          <div class="d-flex flex-column">
+            <label for="">Ordenar Por</label>
+            <select name="" id="" class="bg-light border border-success p-2 ordenar-select">
+              <option value="" class="">Lançamentos</option>
+              <option value="">Menor Preço</option>
+              <option value="">Maior Preço</option>
+              <option value="">A-Z</option>
+              <option value="">Z-A</option>
+              
+            </select>
+         </div>
     </div>
     <div class="d-flex">
-        <div class="filtro">
-            <div class="borda div-filtro">
-                <h5>
-                    
+        <div class="filtro pt-5">
+            <div class="borda div-filtro px-2 pb-2 pt-3">
+                <h5 class="mb-3 text-center titulo">
+                 Categoria   
                 </h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Acessórios e Utensílios
+                  </label>
+                </div>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="checkbox" value="2" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Aromaterapia
+                  </label>
+                </div>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="checkbox" value="3" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Decoração e Móveis
+                  </label>
+                </div>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="checkbox" value="4" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                   Higiene Pessoal
+                  </label>
+                </div>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" type="checkbox" value="5" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                   Papelaria
+                  </label>
+                </div>
+            </div>
+            <div class="borda div-filtro p-2 mt-3">
+              <h5 class="mb-3 text-center titulo">
+                Preço  
+               </h5>
+               <input type="range" min="0" max="500">
+               
+              
             </div>
         
         </div>
