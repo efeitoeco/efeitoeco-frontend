@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaProdutoComponent implements OnInit {
 
+  quantidade: number = 1;
+
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-
+  aumentarQuantidade(){
+    this.quantidade++;
+  }
+  diminuirQuantidade(){
+    if(this.quantidade>1){
+      this.quantidade--
+    }
+  }
 }
