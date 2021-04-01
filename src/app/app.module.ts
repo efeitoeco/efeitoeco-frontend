@@ -11,6 +11,8 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

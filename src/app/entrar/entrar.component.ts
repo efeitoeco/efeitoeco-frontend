@@ -31,6 +31,19 @@ export class EntrarComponent implements OnInit {
       environment.id = this.usuarioLogin.id;
       environment.nome = this.usuarioLogin.nome;
       environment.foto = this.usuarioLogin.foto;
+
+      console.log(environment.token);
+      console.log(environment.id);
+      console.log(environment.nome);
+      console.log(environment.foto);
+
+
+      this.router.navigate(['/home']);
+
+    }, err=>{
+      if(err.status === 500){
+        alert('Amigo tu errou em algo em')
+      }
     })
   }
 
