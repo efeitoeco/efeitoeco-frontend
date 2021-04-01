@@ -9,17 +9,18 @@ export class TelaProdutoComponent implements OnInit {
 
   quantidade: number = 1;
 
-
   constructor() { }
 
   ngOnInit() {
   }
-  aumentarQuantidade(){
+
+  aumentarQuantidade() {
     this.quantidade++;
   }
-  diminuirQuantidade(){
-    if(this.quantidade>1){
-      this.quantidade--
+
+  diminuirQuantidade() {
+    if(this.quantidade > 1) {
+      this.quantidade--;
     }
   }
 }

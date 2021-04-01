@@ -1,0 +1,39 @@
+span { 
+    color: rgb(36, 17, 119); 
+} 
+
+::-webkit-input-placeholder { 
+    color: #711 
+}
+
+.bot div { 
+    margin: 10px; 
+}
+
+#fala-usuario { 
+    width: 500px;
+    border: 0; 
+    padding: 5px; 
+    border: 1px solid #421; 
+}
+
+.chat {
+	height: 300px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;
+} 
+
+.mensagens {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	height: 90%;
+	width: 100%;
+	background-color: white;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+}
