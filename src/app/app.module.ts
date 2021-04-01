@@ -13,6 +13,10 @@ import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TelaContaComponent } from './tela-conta/tela-conta.component';
+import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
+import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
+import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProdutosComponent,
     TelaProdutoComponent,
     ChatbotComponent,
+    TelaContaComponent,
+    TelaAtualizarComponent,
+    CadastrarProdutosComponent,
+    MeusProdutosComponent,
   ],
   imports: [
     BrowserModule,
