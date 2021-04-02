@@ -22,16 +22,6 @@
 
 <div class="container mb-5">
   <div class="d-flex justify-content-end ordenar">
-    <!--<div class="dropdown">
-            <button class="btn btn-light dropdown-toggle borda" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ordenar Por
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button">Maior preço</button>
-              <button class="dropdown-item" type="button">Menor preço</button>
-              <button class="dropdown-item" type="button">Lançamentos</button>
-            </div>
-          </div> -->
     <div class="d-flex flex-column">
       <label for="">Ordenar Por</label>
       <select name="" id="" class="bg-light border border-success p-2 ordenar-select">
@@ -94,6 +84,7 @@
     <div class="filtrados px-5 pb-5 pt-3">
       <div class="row row-cols-1 row-cols-md-3 mt-3" align="center">
 
+
         <div class="col mb-4" *ngFor='let produto of listaProduto'>
           <div class="card">
             <img src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
@@ -110,104 +101,6 @@
             </div>
           </div>
         </div>
-
-        <!--
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Kit de Óleos Essenciais</h5>
-              <hr>
-              <h5 class="preco">R$ 69,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 23,30 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Bloco de Notas</h5>
-              <hr>
-              <h5 class="preco">R$ 19,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 6,63 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ecopad</h5>
-              <hr>
-              <h5 class="preco">R$ 29,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 9,96 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ecopad</h5>
-              <hr>
-              <h5 class="preco">R$ 29,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 9,96 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ecopad</h5>
-              <hr>
-              <h5 class="preco">R$ 29,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 9,96 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="../../assets/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ecopad</h5>
-              <hr>
-              <h5 class="preco">R$ 29,90</h5>
-              <div>
-                <span class="parcela">ou 3x de R$ 9,96 sem juros</span>
-              </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
-                Comprar
-              </button>
-            </div>
-          </div>
-        </div> -->
 
 
       </div>

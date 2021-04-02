@@ -13,27 +13,46 @@ export class ChatbotComponent implements OnInit {
       ["oi", "eae", "ola", "iai", "olá"],
       ["tudo bem", "como voce ta", "tudo bem com voce"],
       ["meu pedido ta atrasado", "atraso", "pedido atrasado", "pedido em atraso", "atrasado"],
-      ["te amo", "eu te amo"]
+      ["te amo", "eu te amo"],
+      ["obrigado", "valeu", "thanks", "thx", "obrigada", "vlw"]
   ];
 
   respostas = [
       ["Oi!", "Olá!"],
       ["Estou bem, e você?", "Ótima, e você?", "Hmmm, estou ótima. Como você está?"],
       ["Aguarde um momento, estamos te redirecionando para uma atendente..."],
-      ["Eu também amo todos os clientes da Efeito Eco <3"]
+      ["Eu também amo todos os clientes da Efeito Eco <3"],
+      ["De nada :)"]
   ];
 
   alternativas = [
       "Não entendi o que você disse :(",
       "Você pode repetir, por favor?",
-      "Tente dizer novamente, por favor"
+      "Tente dizer novamente, por favor",
+      `Você pode tentar falar com um de nossos colaboradores <a href="#">clicando aqui</a>`
   ];
 
   synth = window.speechSynthesis;
 
+  botaoAtivado: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  botaoTransparente() {
+    if(!this.botaoAtivado) {
+      let botao: any = document.getElementById("botao-chatbot");
+      botao.style.opacity = "0.5";
+      botao.style.transform = "translateY(+3px)";
+    }
+  }
+
+  botaoOpaco() {
+    let botao: any = document.getElementById("botao-chatbot");
+    botao.style.opacity = "1";
+    botao.style.transform = "translateY(-3px)";
   }
 
   mostrarChat() {
@@ -42,8 +61,10 @@ export class ChatbotComponent implements OnInit {
 
     if(displayChatbot == "none") {
       chatChatbot.style.display = "block";
+      this.botaoAtivado = true;
     } else {
       chatChatbot.style.display = "none";
+      this.botaoAtivado = false;
     }
   }
 
@@ -87,23 +108,46 @@ export class ChatbotComponent implements OnInit {
     let divUsuario = document.createElement("div");
     divUsuario.id = "chat-usuario";
     divUsuario.className = "chat-usuario";
-    divUsuario.innerHTML = `<span>${entrada}</span>`;
+    divUsuario.innerHTML = `
+      <div style="display: flex; width: 100%; flex-direction: row-reverse; margin-top: 10px;">
+        <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block; max-width: 80%">
+          <span>
+            ${entrada}
+          </span>
+        </div>
+      </div>`;
     divMensagens?.appendChild(divUsuario);
 
     let divBot = document.createElement("div");
-    let textoBot = document.createElement("span");
     divBot.id = "div-texto-bot";
     divBot.className = "resposta-bot";
-    textoBot.innerText = "Digitando...";
-    divBot.appendChild(textoBot);
+    let textoBot: string = "Digitando..."
+    divBot.innerHTML = `
+      <div style="display: flex; width: 80%; margin-top: 10px;">
+        <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">
+          <span>
+            ${textoBot}
+          </span>
+        </div>
+      </div>`;
     divMensagens?.appendChild(divBot);
 
     divMensagens.scrollTop = divMensagens?.scrollHeight - divMensagens?.clientHeight;
 
     setTimeout(() => {
-      textoBot.innerText = `${produto}`;
+      textoBot = `${produto}`
+      divBot.innerHTML = `
+        <div style="display: flex; width: 80%; margin-top: 10px;">
+          <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">
+            <span>
+              ${textoBot}
+            </span>
+          </div>
+        </div>`;
+    divMensagens?.appendChild(divBot);
+
       this.voz(produto)
-    }, 1500)
+    }, 1200)
   }
 
   saida(entrada: string) {
@@ -121,8 +165,6 @@ export class ChatbotComponent implements OnInit {
 
     if(this.compare(this.falasUsuario, this.respostas, texto)) {
       produto = this.compare(this.falasUsuario, this.respostas, texto);
-    } else if(texto.match(/obrigado/gi)) {
-      produto = "De nada =)"
     } else {
       produto = this.alternativas[Math.floor(Math.random() * this.alternativas.length)];
     }

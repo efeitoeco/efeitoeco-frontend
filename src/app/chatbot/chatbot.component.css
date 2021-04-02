@@ -1,25 +1,36 @@
-span { 
-    color: rgb(36, 17, 119); 
-} 
+.bot-foto {
+	border-radius: 100%;
+	background-color: #fff;
+	width: 36px;
+	height: 36px;
+}
 
-::-webkit-input-placeholder { 
-    color: #711 
+.chat-topo {
+	height: 50px;
+	padding-left: 15px;
 }
 
 .bot {
 	display: flex;
 }
 
-.bot div { 
-    margin: 10px; 
-}
-
-#fala-usuario { 
-    /*width: 500px;*/
-	width: 265px;
+#fala-usuario {
+	border-radius: 4px;
+	width: 80%;
     border: 0; 
     padding: 5px; 
-    border: 1px solid #421; 
+    border: 1px solid rgba(0, 0, 0, .5); 
+}
+
+.enviar-chatbot {
+	color: rgba(0, 0, 0, .5);
+	border-radius: 4px;
+	width: 20%;
+	transition: 0.5s;
+}
+
+.enviar-chatbot:hover {
+	color: #000;
 }
 
 .chat {
@@ -34,24 +45,31 @@ span {
 .mensagens {
 	display: flex;
 	flex-direction: column;
-	overflow: scroll;
-	height: 90%;
+	overflow-y: scroll;
+	height: 100%;
 	width: 100%;
-	background-color: white;
+	background-color: #f8f9fa;
 	padding: 15px;
-	margin: 15px;
-	border-radius: 10px;
+	overflow-x: hidden;
+	border-bottom: 1px solid rgba(0, 0, 0, .5);
 }
 
 #botao-chatbot {
+	transition: 0.5s;
+	opacity: 0.5;
 	cursor: pointer;
 	position: fixed;
 	right: 15px;
 	bottom: 20px;
 	width: 60px;
 	height: 60px;
-	background-color: #075f2193;
+	background-color: #075f21;
 	border-radius: 100%;
+	box-shadow: 0 6px 10px rgb(0, 0, 0, 66%);
+}
+
+#botao-chatbot:hover {
+	opacity: 1;
 }
 
 #conteudo-botao {
@@ -65,11 +83,13 @@ span {
 }
 
 #chat-chatbot {
+	z-index: 999;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
 	display: none;
 	position: fixed;
 	right: 25px;
 	bottom: 100px;
 	width: 300px;
-	height: 400px;
-	background-color: #075f2193;
+	background-color: #075f21;
 }
