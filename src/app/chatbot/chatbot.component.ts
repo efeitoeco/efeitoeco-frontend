@@ -36,6 +36,17 @@ export class ChatbotComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mostrarChat() {
+    let chatChatbot:any = document.getElementById("chat-chatbot");
+    let displayChatbot = getComputedStyle(chatChatbot).display;
+
+    if(displayChatbot == "none") {
+      chatChatbot.style.display = "block";
+    } else {
+      chatChatbot.style.display = "none";
+    }
+  }
+
   enviarMsg() {
     let inputUsuario: any = document.getElementById("fala-usuario");
     let entrada = inputUsuario.value;

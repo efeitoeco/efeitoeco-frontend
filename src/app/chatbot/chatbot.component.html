@@ -1,6 +1,21 @@
-<div class="bot">
+<!-- <div class="bot">
     <div class="chat" id="chat">
         <div id="mensagens" class="mensagens"></div>
         <input type="text" id="fala-usuario" placeholder="Fale com a Eeliana" (keyup.enter)='enviarMsg()'>
+    </div>
+</div> -->
+
+<div id="botao-chatbot" (click)='mostrarChat()'>
+    <div id="conteudo-botao">
+        <i class="fas fa-comment"></i>
+    </div>
+</div>
+
+<div id="chat-chatbot">
+    <div class="bot">
+        <div class="chat" id="chat">
+            <div id="mensagens" class="mensagens"></div>
+            <input type="text" id="fala-usuario" placeholder="Fale com a Eeliana" (keyup.enter)='enviarMsg()'>
+        </div>
     </div>
 </div>
