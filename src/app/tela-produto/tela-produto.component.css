@@ -37,3 +37,18 @@
 .carrinho{
     font-size: 1.3em
 }
+
+/**
+ * Este .img-carousel serve para a imagem não ser clicável
+*/
+.img-carousel {
+    pointer-events: none;
+}
+
+/**
+ * Este .naoArrasta serve para a imagem não ser arrastada
+*/
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}

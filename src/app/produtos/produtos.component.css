@@ -143,3 +143,21 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: rgba(7, 95, 34, .5);
   }
+
+
+/**
+ * Este .img-carousel serve para a imagem não ser clicável
+*/
+.img-carousel {
+    pointer-events: none;
+}
+
+
+/**
+ * Este .naoArrasta serve para a imagem não ser arrastada
+*/
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
