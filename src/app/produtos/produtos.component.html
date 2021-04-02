@@ -96,6 +96,25 @@
     </div>
     <div class="filtrados px-5 pb-5 pt-3">
       <div class="row row-cols-1 row-cols-md-3 mt-3" align="center">
+
+        <div class="col mb-4" *ngFor='let produto of listaProduto'>
+          <div class="card">
+            <img src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
+            <div class="card-body">
+              <h5 class="card-title">{{produto.nome}}</h5>
+              <hr>
+              <h5 class="preco">R$ {{produto.preco}}</h5>
+              <div>
+                <span class="parcela">ou 3x de R$ {{produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+              </div>
+              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--
         <div class="col mb-4">
           <div class="card">
             <img src="../../assets/img/card4.jpg" class="card-img-top" alt="...">
@@ -191,7 +210,7 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
       </div>
