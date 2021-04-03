@@ -14,7 +14,11 @@ export class ChatbotComponent implements OnInit {
       ["tudo bem", "como voce ta", "tudo bem com voce"],
       ["meu pedido ta atrasado", "atraso", "pedido atrasado", "pedido em atraso", "atrasado"],
       ["te amo", "eu te amo"],
-      ["obrigado", "valeu", "thanks", "thx", "obrigada", "vlw"]
+      ["obrigado", "valeu", "thanks", "thx", "obrigada", "vlw"],
+      ["boa noite"],
+      ["boa tarde"],
+      ["bom dia"],
+      ["quais sao seus produtos", "o que voces vendem", "o que voce vende"]
   ];
 
   respostas = [
@@ -22,7 +26,11 @@ export class ChatbotComponent implements OnInit {
       ["Estou bem, e você?", "Ótima, e você?", "Hmmm, estou ótima. Como você está?"],
       ["Aguarde um momento, estamos te redirecionando para uma atendente..."],
       ["Eu também amo todos os clientes da Efeito Eco <3"],
-      ["De nada :)"]
+      ["De nada :)"],
+      ["Boa noite"],
+      ["Boa tarde"],
+      ["Bom dia"],
+      ["Para descobrir nossos maravilhosos produtos, <a routerLink='/produtos'>clique aqui</a>"]
   ];
 
   alternativas = [
@@ -158,8 +166,11 @@ export class ChatbotComponent implements OnInit {
     .replace(/ um /g, "")
     .replace(/olá/g, "ola")
     .replace(/você/g, "voce")
+    .replace(/vocês/g, "voces")
+    .replace(/são/g, "sao")
     .replace(/ uma /g, "")
     .replace(/vc/g, "voce")
+    .replace(/vcs/g, "voces")
     .replace(/está/g, "ta")
     .replace(/esta/g, "ta");
 
