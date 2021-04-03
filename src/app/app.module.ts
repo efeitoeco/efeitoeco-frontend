@@ -17,6 +17,7 @@ import { TelaContaComponent } from './tela-conta/tela-conta.component';
 import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
     TelaAtualizarComponent,
     CadastrarProdutosComponent,
     MeusProdutosComponent,
+    DarkModeComponent,
   ],
   imports: [
     BrowserModule,
