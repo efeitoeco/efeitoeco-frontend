@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --texto-marrom:  #614023;
+    --verde-preco: #075f22;
+    --verde-parcela: #075f2193;
+    
+
+}
+
 html{
     scroll-behavior: smooth;
 }

@@ -1,5 +1,5 @@
 .h2 {
-    color: #614023;
+    color: var(--texto-marrom);
     font-weight: 600;
 }
 
@@ -41,13 +41,13 @@
 }
 
 .preco {
-    color: #075f22;
+    color:var(--verde-preco);
     text-align: center;
     font-weight: 500;
 }
 
 .parcela {
-    color: #075f2193;
+    color:var(--verde-parcela);
     text-align: center;
     font-size: 0.9em;
 }
