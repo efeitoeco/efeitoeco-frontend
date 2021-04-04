@@ -9,6 +9,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
 import { TelaContaComponent } from './tela-conta/tela-conta.component';
 import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
+import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
 
 const routes: Routes = [
   {
@@ -59,8 +60,13 @@ const routes: Routes = [
         pathMatch: 'full'
       }
     ]
+  },
+  {
+    path: 'trabalhe-conosco',
+    component: TrabalheConoscoComponent
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
