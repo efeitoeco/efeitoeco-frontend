@@ -19,6 +19,7 @@ import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produ
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.co
     MeusProdutosComponent,
     DarkModeComponent,
     TrabalheConoscoComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,
