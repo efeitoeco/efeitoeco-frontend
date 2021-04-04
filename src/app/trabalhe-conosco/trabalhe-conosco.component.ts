@@ -12,12 +12,14 @@ export class TrabalheConoscoComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+  
   };
 
   enviar(){
     this.router.navigate(['/home']);
     alert ('Obrigad@ pelo interesse em colaborar com o Efeito Eco! Seu currículo será analisado com carinho pela nossa equipe de gente!')
+    window.scroll(0,0)
     }
 
 }

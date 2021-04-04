@@ -7,8 +7,13 @@
     justify-content: center;
 }
 
-.h2 {
+.h3 {
     color: var(--texto-marrom);
+    font-weight: 600;
+}
+
+.h4 {
+    color: var(--verde-preco);
     font-weight: 600;
 }
 
