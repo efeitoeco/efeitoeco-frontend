@@ -13,7 +13,7 @@
                                     
                     <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                     <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                    <input [(ngModel)]='usuario.nome' type="text" required class="input-eco" name="nome" id="nome" placeholder="">
+                    <input [(ngModel)]='usuario.nome' type="text" required class="input-eco" name="nome" id="nome" placeholder="" (keyup.enter)='registrar()'>
 
                     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -28,7 +28,7 @@
 
                     <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                     <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                    <input [(ngModel)]='usuario.sobrenome' type="text" required class="input-eco" name="sobrenome" id="sobrenome" placeholder="">
+                    <input [(ngModel)]='usuario.sobrenome' type="text" required class="input-eco" name="sobrenome" id="sobrenome" placeholder="" (keyup.enter)='registrar()'>
 
                     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -45,7 +45,7 @@
                 
                 <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                 <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                <input [(ngModel)]='usuario.email' type="text" required class="input-eco" name="email" id="email" placeholder="">
+                <input [(ngModel)]='usuario.email' type="text" required class="input-eco" name="email" id="email" placeholder="" (keyup.enter)='registrar()'>
 
                 <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                 <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -59,7 +59,7 @@
                 
                 <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                 <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                <input [(ngModel)]='usuario.foto' type="text" required class="input-eco" name="foto" id="foto" placeholder="">
+                <input [(ngModel)]='usuario.foto' type="text" required class="input-eco" name="foto" id="foto" placeholder="" (keyup.enter)='registrar()'>
 
                 <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                 <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -74,7 +74,7 @@
 
                 <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                 <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                <input (input)='confirmarSenha($event)' type="password" required class="input-eco" name="senha" id="senha" placeholder="">
+                <input (input)='confirmarSenha($event)' type="password" required class="input-eco" name="senha" id="senha" placeholder="" (keyup.enter)='registrar()'>
                 
                 <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                 <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -89,7 +89,7 @@
 
                 <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
                 <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-                <input [(ngModel)]='usuario.senha' type="password" required class="input-eco" name="senha" id="confirmarSenha" placeholder="">
+                <input [(ngModel)]='usuario.senha' type="password" required class="input-eco" name="senha" id="confirmarSenha" placeholder="" (keyup.enter)='registrar()'>
 
                 <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
                 <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->

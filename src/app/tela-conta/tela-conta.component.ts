@@ -1,6 +1,5 @@
-import { ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
@@ -14,7 +13,7 @@ import { AuthService } from '../service/auth.service';
 
 export class TelaContaComponent implements OnInit {
 
-  usuario: Usuario = new Usuario;
+  usuario: Usuario = new Usuario();
   minhaFoto = environment.foto;
   meuNome = environment.nome;
   meuId = environment.id;
