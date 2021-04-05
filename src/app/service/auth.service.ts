@@ -20,26 +20,26 @@ export class AuthService {
     return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/logar', usuarioLogin);
   }   
 
-  cadastrar(usuario: Usuario): Observable<Usuario>{
+  cadastrar(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario);
   }
 
-  getByIdUsuario(id: number): Observable<Usuario>{
+  getByIdUsuario(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`);
   }
 
-  putUsuario(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('http://localhost:8080/usuarios', usuario, this.token)
+  putUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('http://localhost:8080/usuarios', usuario, this.token);
   }
 
-  deleteUsuario(id: number){
-    return this.http.delete(`http://localhost:8080/usuarios/${id}`, this.token)
+  deleteUsuario(id: number) {
+    return this.http.delete(`http://localhost:8080/usuarios/${id}`, this.token);
   }
 
-  logado(){
+  logado() {
     let ok: boolean = false;
-    if (environment.token!=''){
-      ok = true
+    if(environment.token != '') {
+      ok = true;
     }
     return ok;
   }

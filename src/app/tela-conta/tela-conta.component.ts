@@ -12,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 })
 
 
-export class TelaContaComponent implements OnInit{
+export class TelaContaComponent implements OnInit {
 
   usuario: Usuario = new Usuario;
   minhaFoto = environment.foto;
@@ -22,18 +22,23 @@ export class TelaContaComponent implements OnInit{
 
   constructor(
     private auth: AuthService,
-    private change: ChangeDetectorRef
+    private route: Router
   ) { }
 
-  ngOnInit(){
-
+  ngOnInit() {
+    this.estaLogado();
     this.findByIdUsuario();  
   }
 
+  estaLogado() {
+    if(environment.token == '') {
+      this.route.navigate(['/home']);
+    }
+  }
 
-  findByIdUsuario(){
-    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario)=>{
-     this.usuario = resp
-   })
+  findByIdUsuario() {
+    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
+      this.usuario = resp;
+    })
   }
 }

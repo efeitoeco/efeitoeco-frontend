@@ -21,31 +21,30 @@ export class TelaAtualizarComponent implements OnInit {
 
   ngOnInit() {
     this.findByIdUsuario();
-    console.log(this.usuario.nome)
   }
 
   findByIdUsuario() {
     this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
       this.usuario = resp;
-      console.log("deu bom");
     })
-   }
+  }
 
-   atualizarDados() {
-     let urlAtual = this.router.url;
+  atualizarDados() {
+    /* Pegamos a Url atual e atrbuimos ela a variavel local chamada urlAtual */
+    let urlAtual = this.router.url;
 
-     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-     this.router.onSameUrlNavigation = 'reload';
-     this.router.navigate(['/conta']);
-   }
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/conta']);
+  }
 
-   atualizarUsuario() {
+  atualizarUsuario() {
     this.usuario.id = this.meuId;
 
     this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
-      this.usuario = resp;
-      alert("Se tu queria alterar, parabéns, você conseguiu");
-      this.atualizarDados();
+        this.usuario = resp;
+        alert("Dados atualizados com sucesso!");
+        this.atualizarDados();
     })
   }
 }
