@@ -16,11 +16,12 @@
                     Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Acessórios & Utensílios</a>
+                    <a *ngFor='let categoria of listaCategoria' class="dropdown-item" href="#">{{categoria.nome}}</a>
+                    <!--<a class="dropdown-item" href="#">Acessórios & Utensílios</a>
                     <a class="dropdown-item" href="#">Aromaterapia</a>
                     <a class="dropdown-item" href="#">Decoração & Móveis</a>
                     <a class="dropdown-item" href="#">Higiene Pessoal</a>
-                    <a class="dropdown-item" href="#">Papelaria</a>
+                    <a class="dropdown-item" href="#">Papelaria</a>-->
                 </div>
             </li>
             <li class="nav-item">

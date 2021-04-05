@@ -18,6 +18,7 @@ import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.componen
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.co
     CadastrarProdutosComponent,
     MeusProdutosComponent,
     TrabalheConoscoComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,

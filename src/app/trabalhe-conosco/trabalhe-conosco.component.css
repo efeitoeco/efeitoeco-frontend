@@ -45,6 +45,8 @@
 .form-textarea-tc {
     /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 
     /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
     width: 100%;
@@ -57,7 +59,16 @@
 }
 
 .textarea-tc {
-    height: 80px;
+    height: 75px;
+}
+
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.naoCopia{
+    pointer-events: none;
 }
 
 @media screen and (max-width: 1120px) {

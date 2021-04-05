@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../models/Categoria';
 import { Produto } from '../models/Produto';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoServiceService } from '../service/produto-service.service';
 
 @Component({
@@ -11,14 +13,18 @@ export class ProdutosComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProduto: Produto[];
+  listaCategoria: Categoria[];
 
 
   constructor(
-    private produtoService: ProdutoServiceService
+    private produtoService: ProdutoServiceService,
+    private categoriaService: CategoriaService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.verTodosProdutos();
+    this.verTodasCategorias();
+    
   }
 
   verTodosProdutos() {
@@ -27,6 +33,9 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
-  
-
+  verTodasCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+      this.listaCategoria = resp;
+    })
+  }
 }

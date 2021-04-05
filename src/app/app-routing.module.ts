@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -37,6 +37,11 @@ const routes: Routes = [
     path: 'produtos/id',
     component: TelaProdutoComponent
   },
+  {
+    path:'trabalheconosco',
+    component: TrabalheConoscoComponent
+  },
+
 
   {
     path: 'conta',

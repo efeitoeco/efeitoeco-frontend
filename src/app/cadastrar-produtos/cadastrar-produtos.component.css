@@ -1,6 +1,8 @@
 .form-textarea-eco {
     /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 
     /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
     width: 100%;
@@ -13,7 +15,7 @@
 }
 
 .textarea-eco {
-    height: 80px;
+    height: 75px;
 }
 
 .select-eco {
