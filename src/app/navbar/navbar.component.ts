@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../models/Categoria';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -9,10 +10,13 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class NavbarComponent implements OnInit {
 
+
+
   listaCategoria: Categoria[];
 
   constructor(
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    public auth: AuthService
   ) { }
 
   ngOnInit(){

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../models/Usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-tela-conta',
@@ -7,11 +12,28 @@ import { Component, OnInit } from '@angular/core';
 })
 
 
-export class TelaContaComponent implements OnInit {
+export class TelaContaComponent implements OnInit{
 
-  constructor() { }
+  usuario: Usuario = new Usuario;
+  minhaFoto = environment.foto;
+  meuNome = environment.nome;
+  meuId = environment.id;
 
-  ngOnInit(): void {
+
+  constructor(
+    private auth: AuthService,
+    private change: ChangeDetectorRef
+  ) { }
+
+  ngOnInit(){
+
+    this.findByIdUsuario();  
   }
 
+
+  findByIdUsuario(){
+    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario)=>{
+     this.usuario = resp
+   })
+  }
 }

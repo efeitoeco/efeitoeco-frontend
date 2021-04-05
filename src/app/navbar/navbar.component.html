@@ -36,10 +36,18 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li *ngIf='auth.logado()' class="nav-item">
+                <a class="nav-link" [routerLink]="['/conta']">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit" >
+                    Minha Conta
+                    </button>
+                </a>
+            </li>
+            
+            <li *ngIf='!auth.logado()' class="nav-item">
                 <a class="nav-link" [routerLink]="['/entrar']">
                     <button class="btn btn-light my-2 my-sm-0" type="submit" >
-                    Minha conta
+                    Fazer Login 
                     </button>
                 </a>
             </li>

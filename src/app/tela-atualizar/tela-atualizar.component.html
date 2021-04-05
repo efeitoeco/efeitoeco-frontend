@@ -7,7 +7,7 @@
         
         <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
         <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-        <input type="text" required class="input-eco" name="nome" id="nome" placeholder="">
+        <input [(ngModel)]="usuario.nome" [value]="usuario.nome" type="text" required class="input-eco" name="nome" id="nome" placeholder="">
 
         <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
         <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -22,7 +22,7 @@
 
         <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
         <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-        <input type="text" required class="input-eco" name="sobrenome" id="sobrenome" placeholder="">
+        <input [(ngModel)]="usuario.sobrenome" [value]="usuario.sobrenome" type="text" required class="input-eco" name="sobrenome" id="sobrenome" placeholder="">
 
         <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
         <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -37,7 +37,7 @@
                             
     <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
     <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
-    <input type="text" required class="input-eco" name="email" id="email" placeholder="">
+    <input [(ngModel)]="usuario.foto" [value]="usuario.foto" type="text" required class="input-eco" name="email" id="email" placeholder="">
 
     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
@@ -99,7 +99,7 @@
     <button class="btn btn-danger mr-3" [routerLink]="['/home']">
         Cancelar
     </button>
-    <button class="btn btn-success" type="submit">
+    <button (click)="atualizarUsuario()" class="btn btn-success" type="submit">
         Confirmar
     </button>
 </div>

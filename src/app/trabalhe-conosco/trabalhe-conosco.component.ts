@@ -13,8 +13,8 @@ export class TrabalheConoscoComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-   
-  };
+    window.scroll(0,0);
+  }
 
   enviar(){
     this.router.navigate(['/home']);
