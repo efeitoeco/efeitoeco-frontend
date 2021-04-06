@@ -20,6 +20,7 @@ import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { ContatoComponent } from './contato/contato.component';
     TrabalheConoscoComponent,
     SobreComponent,
     ContatoComponent,
+    AlterarSenhaComponent,
   ],
   imports: [
     BrowserModule,

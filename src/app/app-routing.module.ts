@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'atualizar-dados',
         component: TelaAtualizarComponent
+      },
+      {
+        path: 'alterar-senha',
+        component: AlterarSenhaComponent
       },
       {
         path: 'cadastrar-produto',

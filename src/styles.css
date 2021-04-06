@@ -11,11 +11,6 @@ html{
     scroll-behavior: smooth;
 }
 
-.dark{
-    background-color: #2d3436;
-    color: #dfe6e9;
-}
-
 .form-eco {
     /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
     position: relative;

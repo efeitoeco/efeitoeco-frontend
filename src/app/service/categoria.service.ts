@@ -15,4 +15,8 @@ export class CategoriaService {
   getAllCategoria(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>('http://localhost:8080/categorias');
   }
+
+  getByIdCategoria(id: number): Observable<Categoria>{
+    return this.http.get<Categoria>(`http://localhost:8080/categorias/${id}`);
+  }
 }
