@@ -23,11 +23,20 @@
     transition-duration: 0.3s;
     cursor: pointer;
     height: 100%;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
+}
+
+.card:hover .imagem2 {
+  transition: 0.6s;
+}
+
+.card:hover .imagem2 {
+  transform: translateX(100%);
 }
 
 .card-title{

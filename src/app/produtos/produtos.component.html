@@ -64,7 +64,8 @@
 
         <div class="col mb-4" *ngFor='let produto of listaProduto'>
           <div class="card">
-            <img src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
+            <img id="imagem-card-eco" src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
+            <img *ngIf="produto.imagem2 != ''" src="{{produto.imagem2}}" style="position: absolute;" class="card-img-top imagem2" alt="{{produto.nome}}">
             <div class="card-body">
               <h5 class="card-title">{{produto.nome}}</h5>
               <hr>

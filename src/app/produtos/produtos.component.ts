@@ -13,6 +13,7 @@ export class ProdutosComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProduto: Produto[];
+
   listaCategoria: Categoria[];
 
 
