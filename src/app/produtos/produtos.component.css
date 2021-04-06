@@ -27,11 +27,11 @@
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    /*transform: translateY(-3px);*/
     box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
 }
 
-.card:hover .imagem2 {
+.card .imagem2 {
   transition: 0.6s;
 }
 

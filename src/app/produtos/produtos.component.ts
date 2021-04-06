@@ -46,10 +46,6 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
-  filtroCategoria(obj: Produto) {
-    return this.categoriasSelecionadas.includes(obj.categoria.id);
-  }
-
   filtrarPorCategoria(event: any, id: number) {
 
     if(event.target.checked) {
