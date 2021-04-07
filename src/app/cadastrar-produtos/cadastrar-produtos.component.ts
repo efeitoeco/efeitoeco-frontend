@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../models/Categoria';
-import { Produto } from '../models/Produto';
+import { Produto } from '../models/CadastrarProduto';
 import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoServiceService } from '../service/produto-service.service';
+import { CadastrarProdutoService } from '../service/cadastrar-produto.service';
 
 @Component({
   selector: 'app-cadastrar-produtos',
@@ -24,7 +25,8 @@ export class CadastrarProdutosComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private produtoService: ProdutoServiceService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private cadastroService: CadastrarProdutoService
   ){ }
 
   ngOnInit(): void {
@@ -45,20 +47,19 @@ export class CadastrarProdutosComponent implements OnInit {
     })
   }
 
-  cadastrarProduto(){
-    this.usuario.id = this.meuId
-    this.produto.criadoPor = this.usuario
-    this.categoria.id = this.categoriaId
-    this.produto.categoria = this.categoria
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp
-      alert("Vossa Alteza, tu conseguiu cadastrar esse produto. Boa sorte nas vendas!!!")
-      this.produto = new Produto()
+  cadastrarProduto() {
+    this.produto.idDoUsuario = this.meuId;
+    this.categoria.id = this.categoriaId;
+    this.produto.categoria = this.categoria;
+    this.cadastroService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp;
+      alert("Vossa Alteza, tu conseguiu cadastrar esse produto. Boa sorte nas vendas!!!");
+      this.produto = new Produto();
     })
   }
 
-  verTodasCategorias(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+  verTodasCategorias() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.categoriaLista = resp;
     })
   }
