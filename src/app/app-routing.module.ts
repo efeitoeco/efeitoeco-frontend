@@ -35,7 +35,7 @@ const routes: Routes = [
     component: ProdutosComponent 
   },
   {
-    path: 'produtos/id',
+    path: 'produtos/:id',
     component: TelaProdutoComponent
   },
   {

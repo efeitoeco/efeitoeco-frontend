@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Produto } from '../models/Produto';
+import { ProdutoServiceService } from '../service/produto-service.service';
 
 @Component({
   selector: 'app-tela-produto',
@@ -7,11 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaProdutoComponent implements OnInit {
 
+  produto: Produto = new Produto();
+
   quantidade: number = 1;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private produtoService: ProdutoServiceService
+  ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
+
+    let idProduto = this.route.snapshot.params['id'];
+    this.findByIdProduto(idProduto);
+  }
+
+  findByIdProduto(id: number) {
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+      this.produto = resp;
+    })
   }
 
   aumentarQuantidade() {

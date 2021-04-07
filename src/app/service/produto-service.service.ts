@@ -21,6 +21,10 @@ export class ProdutoServiceService {
     return this.http.get<Produto[]>('http://localhost:8080/produtos');
   }
 
+  getByIdProduto(id: number): Observable<Produto> {
+    return this.http.get<Produto>(`http://localhost:8080/produtos/${id}`);
+  }
+
   postProduto(produto: Produto): Observable<Produto> {
     return this.http.post<Produto>('http://localhost:8080/produtos', produto, this.token);
   }

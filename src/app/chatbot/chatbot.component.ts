@@ -163,6 +163,9 @@ export class ChatbotComponent implements OnInit {
 
     let texto = entrada.toLowerCase().trim();
     texto = texto
+    .replace("?", "")
+    .replace("!", "")
+    .replace(".", "")
     .replace(/ um /g, "")
     .replace(/olá/g, "ola")
     .replace(/você/g, "voce")
