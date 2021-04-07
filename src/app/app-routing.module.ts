@@ -7,6 +7,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { SobreComponent } from './sobre/sobre.component';
 import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
 import { TelaContaComponent } from './tela-conta/tela-conta.component';
 import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
@@ -42,7 +43,10 @@ const routes: Routes = [
     path:'trabalheconosco',
     component: TrabalheConoscoComponent
   },
-
+  {
+    path:'sobre',
+    component: SobreComponent
+  },
 
   {
     path: 'conta',
