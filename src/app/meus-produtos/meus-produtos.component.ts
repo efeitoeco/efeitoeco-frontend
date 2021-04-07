@@ -20,25 +20,14 @@ export class MeusProdutosComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.meuId)
-    this.findByIdUsuario()
-    console.log(this.usuario.produtosVenda)
-    console.log(this.usuario.nome)
-
-    //this.listaDeProdutos = [...this.usuario.produtosVenda]
-    this.preencherProdutos()
-    console.log(this.listaDeProdutos)
+    this.encontrarProdutos();
   }
 
-  preencherProdutos() {
-    for(let i=0;i<this.usuario.produtosVenda.length;i++){
-     this.listaDeProdutos.push(this.usuario.produtosVenda[i])
-    }
-  }
-
-  findByIdUsuario() {
+  encontrarProdutos() {
     this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
       this.usuario = resp;
+      console.log(this.usuario.nome);
+      this.listaDeProdutos = [...this.usuario.produtosVenda]; 
     })
   }
 
