@@ -8,7 +8,7 @@
 
     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
-    <label for="nome-produto" class="p-1 ml-2 bg-white label-eco">Nome do produto</label>
+    <label for="nome-produto" class="p-1 ml-2 bg-white label-eco">Nome do produto *</label>
 
     <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
     <div class="borda-do-input"></div>
@@ -20,7 +20,7 @@
 
     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
-    <label for="descricao-produto" class="p-1 ml-2 bg-white label-eco">Descrição</label>
+    <label for="descricao-produto" class="p-1 ml-2 bg-white label-eco">Descrição *</label>
 
     <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
     <div class="borda-do-input"></div>
@@ -34,7 +34,7 @@
 
     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
-    <label for="preco-produto" class="p-1 ml-2 bg-white label-eco">Preço</label>
+    <label for="preco-produto" class="p-1 ml-2 bg-white label-eco">Preço *</label>
 
     <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
     <div class="borda-do-input"></div>
@@ -48,7 +48,21 @@
 
     <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
     <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
-    <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Link da foto</label>
+    <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Link da primeira foto *</label>
+
+    <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
+    <div class="borda-do-input"></div>
+</div>
+
+<div class="form-eco mt-4">
+
+    <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
+    <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
+    <input [(ngModel)]="produto.imagem2" type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">
+
+    <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
+    <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
+    <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Link da segunda foto</label>
 
     <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
     <div class="borda-do-input"></div>
@@ -56,7 +70,7 @@
 
 <div class="form-eco mt-4">
     <select [(ngModel)]="categoriaId" class="select-eco">
-        <option value="">Categoria do produto</option>
+        <option value="">Categoria do produto *</option>
         <option *ngFor="let categoria of categoriaLista" value="{{categoria.id}}">{{categoria.nome}}</option>
     </select>
 </div>
