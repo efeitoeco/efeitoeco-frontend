@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-md-2" align="center">
-    <div class="col mb-4">
-      <div class="card" *ngFor="let produto of listaDeProdutos">
+    <div class="col mb-4" *ngFor="let produto of listaDeProdutos">
+      <div class="card">
         <div class="px-5 pt-3">
             <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
         </div>

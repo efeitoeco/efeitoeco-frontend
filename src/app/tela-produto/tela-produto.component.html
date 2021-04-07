@@ -20,8 +20,8 @@
 <!--Carousel automático para as mensagens-->
 
 
-<main class="container d-flex mb-5">
-    <div class="col-md-5 ">
+<main class="container d-flex mb-5 container-mae">
+    <div class="container-imagens">
         <!--<img src="../../assets/img/card1.jpg" alt="" class="img-produto">-->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -46,23 +46,33 @@
             </a>
           </div>
     </div>
-    <div class="col-md-7 pl-5">
+    <div class="container-dados">
         <h2 class="m-0 font-weight-bold nome-produto">
             {{produto.nome}}
         </h2>
-        <span class="">Vendido por: <a href="" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
+        <span class="vendido-por">Vendido por: <a href="" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
         <h3 class="mt-3 preco-principal mb-0">
             R$ {{produto.preco}}
         </h3>
         <span class="parcela-principal"> ou 3x de R$ {{produto.preco / 3 | number: '1.2-2'}} sem juros</span>
-        <div class="d-flex align-items-center mt-3">
+
+        <div class="mt-3 container-qtde-carrinho">
+
+          <div class="quantidade-a-adicionar">
             <button class="botao-quant btn btn-light d-flex justify-content-center align-items-center" (click)="diminuirQuantidade()">-</button>
             <div class="px-3 py-2 preco-item ml-3">{{quantidade}}</div>
             <button class="botao-quant ml-3 btn btn-light d-flex justify-content-center align-items-center" (click)="aumentarQuantidade()">+</button>
-            <button class="botao-carrinho ml-5 btn btn-light"><i class="fas fa-shopping-cart mr-4 carrinho">
-            </i>Adicionar ao carrinho</button>
+          </div>
+            
+          <div class="adicionar-carrinho-botao">
+            <button class="botao-carrinho btn btn-light">
+              <i class="fas fa-shopping-cart mr-4 carrinho"></i>
+              Adicionar ao carrinho
+            </button>
+          </div>
+            
         </div>
-        <div class="mt-4 text-justify">
+        <div class="mt-4 text-justify produto-descricao">
             <p>
               {{produto.descricao}}
             </p>
