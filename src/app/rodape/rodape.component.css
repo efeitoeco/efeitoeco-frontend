@@ -29,6 +29,10 @@ a {
     transition: color 0.5s;
 }
 
+i {
+    transition: color 0.5s;
+}
+
 .cor-copy {
     color: rgba(0,0,0,.5);
 }
