@@ -12,7 +12,7 @@ export class TelaProdutoComponent implements OnInit {
 
   produto: Produto = new Produto();
 
-  quantidade: number = 1;
+  quantidade: number;
 
   constructor(
     private router: Router,
@@ -22,6 +22,8 @@ export class TelaProdutoComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+
+    this.quantidade = 1;
 
     let idProduto = this.route.snapshot.params['id'];
     this.findByIdProduto(idProduto);
