@@ -4,11 +4,13 @@
 
 .menu-rodape {
     display: flex;
+    padding: 0;
 }
 
 .menu-redes-sociais {
     display: flex;
     margin-left: auto;
+    padding: 0;
 }
 
 .logo {
