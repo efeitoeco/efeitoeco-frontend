@@ -7,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatbotComponent implements OnInit {
 
-  
-
-  falasUsuario = [
-      ["oi", "eae", "ola", "iai", "olá"],
+    falasUsuario = [
+      ["oi", "eae", "ola", "iai", "olá", "oie", "oii", "hey"],
       ["tudo bem", "como voce ta", "tudo bem com voce"],
       ["meu pedido ta atrasado", "atraso", "pedido atrasado", "pedido em atraso", "atrasado"],
       ["te amo", "eu te amo"],
@@ -18,7 +16,11 @@ export class ChatbotComponent implements OnInit {
       ["boa noite"],
       ["boa tarde"],
       ["bom dia"],
-      ["quais sao seus produtos", "o que voces vendem", "o que voce vende"]
+      ["quais sao seus produtos", "o que voces vendem", "o que voce vende"],
+      ["como vender", "como vender meus produtos", "como posso vender meus produtos", "como cadastrar meus produtos", "como posso cadastrar meus produtos", "como ser vendedor", "como ser vendedora", "quero ser vendedor", "quero ser vendedora", "quero ser parceiro", "quero ser parceira", "como ser parceiro", "como ser parceira"],
+      ["to bem", "bem tmb", "to bem tmb", "to otimo", "to otima"],
+      ["como faço para comprar", "como comprar", "como posso comprar", "quero comprar"],
+      ["como saber mais sobre voces", "como saber novidades", "como saber das novidades", "como acompanhar novidades", "como acompanhar", "quero acompanhar novidades"]
   ];
 
   respostas = [
@@ -30,7 +32,11 @@ export class ChatbotComponent implements OnInit {
       ["Boa noite"],
       ["Boa tarde"],
       ["Bom dia"],
-      ["Para descobrir nossos maravilhosos produtos, <a routerLink='/produtos'>clique aqui</a>"]
+      [`Para descobrir nossos maravilhosos produtos, <a href='http://localhost:4200/produtos' target="_blank">clique aqui</a>`],
+      [`Para ser um dos nossos parceiros, você deve <a href='http://localhost:4200/cadastrar' target="_blank">criar uma conta</a>, ir até a página de "minha conta" e clicar no botão de "cadastrar produto".`],
+      ["Que bom!", "Fico feliz em saber disso!", "Que ótimo!", "Maravilha!"],
+      [`Para comprar um de nossos incríveis produtos, faça o seu  <a href='http://localhost:4200/cadastrar' target="_blank">cadastro aqui</a>, entre em "produtos" e escolha os de sua preferência.`],
+      [`Você pode saber mais sobre nós na seção <a href='#'>sobre nós</a> e nos acompanhar nas redes sociais (<a href='https://www.facebook.com/Efeito-Eco-102859405242662' target="_blank">Facebook</a>, <a href='https://twitter.com/EcoEfeito' target="_blank">Twitter</a> e <a href='https://www.instagram.com/efeito_eco/' target="_blank">Instagram</a>).`]
   ];
 
   alternativas = [
@@ -163,19 +169,31 @@ export class ChatbotComponent implements OnInit {
 
     let texto = entrada.toLowerCase().trim();
     texto = texto
+    .replace(/pra/g, "para")
     .replace("?", "")
     .replace("!", "")
     .replace(".", "")
     .replace(/ um /g, "")
-    .replace(/olá/g, "ola")
-    .replace(/você/g, "voce")
-    .replace(/vocês/g, "voces")
-    .replace(/são/g, "sao")
+    .replace(/ o /g, "")
+    .replace(/ os /g, "")
+    .replace(/ a /g, "")
+    .replace(/ as /g, "")
+    .replace(/ olá /g, "ola")
+    .replace(/ você /g, "voce")
+    .replace(/ vocês /g, "voces")
+    .replace(/ são /g, "sao")
+    .replace(/ tô /g, "to")
+    .replace(/ estou /g, "to")
+    .replace(/ tbm /g, "tmb")
+    .replace(/ também /g, "tmb")
+    .replace(/ tambem /g, "tmb")
+    .replace(/ tb /g, "tmb")
     .replace(/ uma /g, "")
-    .replace(/vc/g, "voce")
-    .replace(/vcs/g, "voces")
-    .replace(/está/g, "ta")
-    .replace(/esta/g, "ta");
+    .replace(/ vc /g, "voce")
+    .replace(/ vcs /g, "voces")
+    .replace(/ está /g, "ta")
+    .replace(/ esta /g, "ta")
+    .replace(/ td /g, "tudo");
 
     if(this.compare(this.falasUsuario, this.respostas, texto)) {
       produto = this.compare(this.falasUsuario, this.respostas, texto);
