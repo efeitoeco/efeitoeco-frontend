@@ -14,6 +14,8 @@ export class ProdutosComponent implements OnInit {
   produto: Produto = new Produto();
   listaProduto: Produto[];
   listaProdutoFiltrada: Produto[];
+  listaProdutoFiltradaPreco: Produto[];
+  precoFiltrado: number;
 
   listaCategoria: Categoria[];
 
@@ -25,6 +27,7 @@ export class ProdutosComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    this.precoFiltrado = 500;
     this.verTodosProdutos();
     this.verTodasCategorias();
 
@@ -37,6 +40,7 @@ export class ProdutosComponent implements OnInit {
     this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
       this.listaProduto = resp;
       this.listaProdutoFiltrada = resp;
+      this.listaProdutoFiltradaPreco = resp;
     })
   }
 
@@ -45,6 +49,12 @@ export class ProdutosComponent implements OnInit {
       this.listaCategoria = resp;
     })
   }
+
+  /*filtrarPorPreco() {
+    this.listaProdutoFiltradaPreco = this.listaProdutoFiltrada.filter((produto: Produto) => {
+      return produto.preco <= this.precoFiltrado;
+    })
+  }*/
 
   filtrarPorCategoria(event: any, id: number) {
 
@@ -56,6 +66,9 @@ export class ProdutosComponent implements OnInit {
       this.categoriasSelecionadas = this.categoriasSelecionadas.filter(m => m != id);
     }
 
+    this.filtrarProdutos();
+
+    /*
     console.log(this.categoriasSelecionadas);
     if(this.categoriasSelecionadas.length < 1) {
       this.listaProdutoFiltrada = [...this.listaProduto];
@@ -63,7 +76,23 @@ export class ProdutosComponent implements OnInit {
       this.listaProdutoFiltrada = this.listaProduto.filter((produto: Produto) => {
         return this.categoriasSelecionadas.includes(produto.categoria.id);
       })
+    }
+    console.log(this.listaProduto);*/
   }
-    console.log(this.listaProduto);
+
+  filtrarProdutos() {
+    /* Filtrando por categoria */
+    if(this.categoriasSelecionadas.length < 1) {
+      this.listaProdutoFiltrada = [...this.listaProduto];
+    } else {
+      this.listaProdutoFiltrada = this.listaProduto.filter((produto: Produto) => {
+        return this.categoriasSelecionadas.includes(produto.categoria.id);
+      })
+    }
+
+    /* Filtrando por preço */
+    this.listaProdutoFiltrada = this.listaProdutoFiltrada.filter((produto: Produto) => {
+      return produto.preco <= this.precoFiltrado;
+    })
   }
 }
