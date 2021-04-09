@@ -23,7 +23,7 @@
 <div class="container mb-5">
   <div class="d-flex justify-content-end ordenar">
     <div class="d-flex flex-column">
-      <label for="">Ordenar Por</label>
+      <label for="" class="text-center">Ordenar Por</label>
       <select name="" id="" class="bg-light border border-success p-2 ordenar-select">
         <option value="" class="">Lançamentos</option>
         <option value="">Menor Preço</option>
@@ -52,7 +52,7 @@
         <h5 class="mb-3 text-center titulo">
           Preço
         </h5>
-        <input [(ngModel)]='precoFiltrado' class="slider-eco" type="range" min="0" max="500" (change)='filtrarProdutos()'>
+        <input [(ngModel)]='precoFiltrado' class="slider-eco" type="range" min="0" max="{{maiorPreco}}" (change)='filtrarProdutos()' step="0.01" [value]='precoFiltrado'>
         <div class="input-preco-div mt-2">
           <!--<input [(ngModel)]='precoFiltrado' type="text" [value]='precoFiltrado' class="input-preco" (change)='filtrarProdutos()'>-->
           <p>{{ precoFiltrado }}</p>

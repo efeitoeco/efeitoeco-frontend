@@ -16,6 +16,7 @@ export class ProdutosComponent implements OnInit {
   listaProdutoFiltrada: Produto[];
   listaProdutoFiltradaPreco: Produto[];
   precoFiltrado: number;
+  maiorPreco: number;
 
   listaCategoria: Categoria[];
 
@@ -27,7 +28,6 @@ export class ProdutosComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    this.precoFiltrado = 500;
     this.verTodosProdutos();
     this.verTodasCategorias();
 
@@ -41,6 +41,8 @@ export class ProdutosComponent implements OnInit {
       this.listaProduto = resp;
       this.listaProdutoFiltrada = resp;
       this.listaProdutoFiltradaPreco = resp;
+      this.pegarPrecoMax();
+      this.precoFiltrado = this.maiorPreco;
     })
   }
 
@@ -49,12 +51,6 @@ export class ProdutosComponent implements OnInit {
       this.listaCategoria = resp;
     })
   }
-
-  /*filtrarPorPreco() {
-    this.listaProdutoFiltradaPreco = this.listaProdutoFiltrada.filter((produto: Produto) => {
-      return produto.preco <= this.precoFiltrado;
-    })
-  }*/
 
   filtrarPorCategoria(event: any, id: number) {
 
@@ -67,17 +63,6 @@ export class ProdutosComponent implements OnInit {
     }
 
     this.filtrarProdutos();
-
-    /*
-    console.log(this.categoriasSelecionadas);
-    if(this.categoriasSelecionadas.length < 1) {
-      this.listaProdutoFiltrada = [...this.listaProduto];
-    } else {
-      this.listaProdutoFiltrada = this.listaProduto.filter((produto: Produto) => {
-        return this.categoriasSelecionadas.includes(produto.categoria.id);
-      })
-    }
-    console.log(this.listaProduto);*/
   }
 
   filtrarProdutos() {
@@ -94,5 +79,14 @@ export class ProdutosComponent implements OnInit {
     this.listaProdutoFiltrada = this.listaProdutoFiltrada.filter((produto: Produto) => {
       return produto.preco <= this.precoFiltrado;
     })
+  }
+
+  pegarPrecoMax() {
+    let arrayPrecos: number[] = [];
+    for(let i = 0; i < this.listaProduto.length; i++) {
+      arrayPrecos.push(this.listaProduto[i].preco);
+    }
+    
+    this.maiorPreco = Math.max(...arrayPrecos);
   }
 }
