@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../models/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class TelaAtualizarComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class TelaAtualizarComponent implements OnInit {
 
     this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp;
-        alert("Dados atualizados com sucesso!");
+        this.alerta.showAlertSuccess("Dados atualizados com sucesso!");
         this.atualizarDados();
     })
   }

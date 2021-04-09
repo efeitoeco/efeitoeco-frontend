@@ -7,6 +7,7 @@ import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoServiceService } from '../service/produto-service.service';
 import { CadastrarProdutoService } from '../service/cadastrar-produto.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-cadastrar-produtos',
@@ -26,7 +27,8 @@ export class CadastrarProdutosComponent implements OnInit {
     private auth: AuthService,
     private produtoService: ProdutoServiceService,
     private categoriaService: CategoriaService,
-    private cadastroService: CadastrarProdutoService
+    private cadastroService: CadastrarProdutoService,
+    private alerta: AlertasService
   ){ }
 
   ngOnInit(): void {
@@ -53,7 +55,7 @@ export class CadastrarProdutosComponent implements OnInit {
     this.produto.categoria = this.categoria;
     this.cadastroService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
-      alert("Vossa Alteza, tu conseguiu cadastrar esse produto. Boa sorte nas vendas!!!");
+      this.alerta.showAlertSuccess("Produto cadastrado com sucesso!");
       this.produto = new Produto();
     })
   }

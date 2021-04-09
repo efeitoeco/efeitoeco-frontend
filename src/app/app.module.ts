@@ -21,6 +21,8 @@ import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.co
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -42,12 +44,14 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
     SobreComponent,
     ContatoComponent,
     AlterarSenhaComponent,
+    AlertasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
