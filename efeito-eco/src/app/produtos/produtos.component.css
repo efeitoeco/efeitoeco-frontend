@@ -11,7 +11,16 @@
 }
 
 .ordenar-select {
-    border-color: rgba(0, 0 , 0, .5);
+    border: #b3d6bd 1px solid;
+    border-radius: 4px;
+}
+
+.ordenar-select:focus {
+    outline: none;
+}
+
+.filtros-e-categorias {
+    margin-top: 15px;
 }
 
 .titulo {

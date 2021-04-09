@@ -34,8 +34,8 @@
       </select>
     </div>
   </div>
-  <div class="d-flex">
-    <div class="filtro pt-5">
+  <div class="d-flex filtros-e-categorias">
+    <div class="filtro">
       <div class="borda div-filtro px-2 pb-2 pt-3">
         <h5 class="mb-3 text-center titulo">
           Categoria
@@ -54,16 +54,15 @@
         </h5>
         <input [(ngModel)]='precoFiltrado' class="slider-eco" type="range" min="0" max="{{maiorPreco}}" (change)='filtrarProdutos()' step="0.01" [value]='precoFiltrado'>
         <div class="input-preco-div mt-2">
-          <!--<input [(ngModel)]='precoFiltrado' type="text" [value]='precoFiltrado' class="input-preco" (change)='filtrarProdutos()'>-->
-          <p>{{ precoFiltrado }}</p>
+          <p>R$ {{ precoFiltrado }}</p>
         </div>
         
 
       </div>
 
     </div>
-    <div class="filtrados px-5 pb-5 pt-3">
-      <div class="row row-cols-1 row-cols-md-3 mt-3" align="center">
+    <div class="filtrados px-5 pb-5">
+      <div class="row row-cols-1 row-cols-md-3" align="center">
 
 
         <div class="col mb-4" *ngFor='let produto of listaProdutoFiltrada | orderBy : key : reverse'>
