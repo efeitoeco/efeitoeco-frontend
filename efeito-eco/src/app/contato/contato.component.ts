@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-contato',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  
+  
+  constructor(
+    private router: Router,
+    private auth: AuthService,
+    private alerta: AlertasService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
+  }
+
+  enviarContato(){
+    this.alerta.showAlertSuccess("Sua mensagem foi enviada com sucesso!");
+    this.router.navigate(['/home']);
   }
 
 }

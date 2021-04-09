@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { ContatoComponent } from './contato/contato.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
@@ -46,6 +47,11 @@ const routes: Routes = [
   {
     path:'sobre',
     component: SobreComponent
+  },
+
+  {
+    path:'contato',
+    component: ContatoComponent
   },
 
   {
