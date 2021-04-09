@@ -32,6 +32,8 @@ export class CadastrarComponent implements OnInit {
   registrar(){
     if(this.usuario.senha != this.confirmeSenha) {
       this.alertas.showAlertDanger(`Os campos de "senha" e "confirmar senha" devem ser iguais!`);
+    } else if(!this.verificarLinkImagem(this.usuario.foto)) {
+      this.alertas.showAlertDanger("Link de imagem deve ser um link direto de uma imagem JPEG, JPG, GIF ou PNG");
     } else {
       this.auth.cadastrar(this.usuario).subscribe((resp: Usuario)=> {
         this.usuario = resp;
@@ -41,6 +43,10 @@ export class CadastrarComponent implements OnInit {
         this.alertas.showAlertDanger(err.error.mensagem);
       })
     }
+  }
+
+  verificarLinkImagem(url: string) {
+    return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
   }
 
 }
