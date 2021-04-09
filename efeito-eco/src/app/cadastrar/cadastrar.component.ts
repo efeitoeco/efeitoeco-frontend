@@ -22,7 +22,7 @@ export class CadastrarComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    window.scroll(0,0)
+    window.scroll(0,0);
   }
 
   confirmarSenha(event: any){
@@ -30,13 +30,15 @@ export class CadastrarComponent implements OnInit {
   }
 
   registrar(){
-    if(this.usuario.senha != this.confirmeSenha){
-      alert('O senha e o confirmar senha deveria ser igual meu bb')
-    }else{
+    if(this.usuario.senha != this.confirmeSenha) {
+      this.alertas.showAlertDanger(`Os campos de "senha" e "confirmar senha" devem ser iguais!`);
+    } else {
       this.auth.cadastrar(this.usuario).subscribe((resp: Usuario)=> {
         this.usuario = resp;
         this.router.navigate(['/entrar']);
         this.alertas.showAlertSuccess('Seja bem-vindo(a), você é um amante da natureza!');
+      }, err => {       
+        this.alertas.showAlertDanger(err.error.mensagem);
       })
     }
   }
