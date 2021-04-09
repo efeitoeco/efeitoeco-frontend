@@ -22,12 +22,18 @@ export class ProdutosComponent implements OnInit {
 
   categoriasSelecionadas: number[];
 
+  tipoOrdenacao: string;
+
+  key = 'id';
+  reverse = true;
+
   constructor(
     private produtoService: ProdutoServiceService,
     private categoriaService: CategoriaService
   ) { }
 
   ngOnInit(){
+    this.tipoOrdenacao = 'lancamento';
     this.verTodosProdutos();
     this.verTodasCategorias();
 
@@ -88,5 +94,50 @@ export class ProdutosComponent implements OnInit {
     }
     
     this.maiorPreco = Math.max(...arrayPrecos);
+  }
+
+  ordenar() {
+    switch(this.tipoOrdenacao) {
+      case 'menorPreco':
+        this.ordenarMenorPreco();
+        break;
+      case 'precoMaior':
+        this.ordenarMaiorPreco();
+        break;
+      case 'az':
+        this.ordenarAZ();
+        break;
+      case 'za':
+        this.ordenarZA();
+        break;
+      case 'lancamento':
+        this.ordenarLancamento();
+        break;
+    }
+  }
+
+  ordenarMaiorPreco() {
+    this.key = 'preco';
+    this.reverse = true;
+  }
+
+  ordenarMenorPreco() {
+    this.key = 'preco';
+    this.reverse = false;
+  }
+
+  ordenarAZ() {
+    this.key = 'nome';
+    this.reverse = false;
+  }
+
+  ordenarZA() {
+    this.key = 'nome';
+    this.reverse = true;
+  }
+
+  ordenarLancamento() {
+    this.key = 'id';
+    this.reverse = true;
   }
 }

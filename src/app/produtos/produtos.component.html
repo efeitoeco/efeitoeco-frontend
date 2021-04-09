@@ -24,12 +24,12 @@
   <div class="d-flex justify-content-end ordenar">
     <div class="d-flex flex-column">
       <label for="" class="text-center">Ordenar Por</label>
-      <select name="" id="" class="bg-light border border-success p-2 ordenar-select">
-        <option value="" class="">Lançamentos</option>
-        <option value="">Menor Preço</option>
-        <option value="">Maior Preço</option>
-        <option value="">A-Z</option>
-        <option value="">Z-A</option>
+      <select [(ngModel)]='tipoOrdenacao' name="" id="" class="bg-light border border-success p-2 ordenar-select" (change)='ordenar()'>
+        <option value="lancamento" class="">Lançamentos</option>
+        <option value="menorPreco">Menor Preço</option>
+        <option value="precoMaior">Maior Preço</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
 
       </select>
     </div>
@@ -66,7 +66,7 @@
       <div class="row row-cols-1 row-cols-md-3 mt-3" align="center">
 
 
-        <div class="col mb-4" *ngFor='let produto of listaProdutoFiltrada'>
+        <div class="col mb-4" *ngFor='let produto of listaProdutoFiltrada | orderBy : key : reverse'>
           <div class="card" [routerLink]="['/produtos', produto.id]">
             <img id="imagem-card-eco" src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
             <img *ngIf="produto.imagem2!=null" src="{{produto.imagem2}}" style="position: absolute;" class="card-img-top imagem2" alt="{{produto.nome}}">

@@ -23,6 +23,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
