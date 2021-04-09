@@ -21,6 +21,7 @@ import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.co
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
     SobreComponent,
     ContatoComponent,
     AlterarSenhaComponent,
+    AcessibilidadeComponent,
   ],
   imports: [
     BrowserModule,

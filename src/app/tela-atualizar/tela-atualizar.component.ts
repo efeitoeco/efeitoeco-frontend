@@ -28,6 +28,7 @@ export class TelaAtualizarComponent implements OnInit {
       this.usuario = resp;
     })
   }
+  
 
   atualizarDados() {
     /* Pegamos a Url atual e atrbuimos ela a variavel local chamada urlAtual */

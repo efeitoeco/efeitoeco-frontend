@@ -25,9 +25,16 @@ export class MeusProdutosComponent implements OnInit {
     console.log(this.usuario.produtosVenda)
     console.log(this.usuario.nome)
 
-    //this.listaDeProdutos = [...this.usuario.produtosVenda]
+    // this.listaDeProdutos = [...this.usuario.produtosVenda]
     this.preencherProdutos()
     console.log(this.listaDeProdutos)
+  }
+
+  findByIdUsuario() {
+    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
+      this.usuario = resp;
+      this.listaDeProdutos = [...this.usuario.produtosVenda]
+    })
   }
 
   preencherProdutos() {
@@ -36,10 +43,8 @@ export class MeusProdutosComponent implements OnInit {
     }
   }
 
-  findByIdUsuario() {
-    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
-      this.usuario = resp;
-    })
-  }
+
+  
+
 
 }
