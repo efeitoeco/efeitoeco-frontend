@@ -24,6 +24,7 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
+import { TelaVendedorComponent } from './tela-vendedor/tela-vendedor.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { OrderModule } from 'ngx-order-pipe';
     ContatoComponent,
     AlterarSenhaComponent,
     AlertasComponent,
+    TelaVendedorComponent,
   ],
   imports: [
     BrowserModule,
