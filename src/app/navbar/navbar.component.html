@@ -11,21 +11,19 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/produtos']">Produtos</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a *ngFor='let categoria of listaCategoria' class="dropdown-item" href="#">{{categoria.nome}}</a>
-                    <!--<a class="dropdown-item" href="#">Acessórios & Utensílios</a>
-                    <a class="dropdown-item" href="#">Aromaterapia</a>
-                    <a class="dropdown-item" href="#">Decoração & Móveis</a>
-                    <a class="dropdown-item" href="#">Higiene Pessoal</a>
-                    <a class="dropdown-item" href="#">Papelaria</a>-->
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/produtos']">Produtos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Sobre nós</a>
@@ -51,23 +49,12 @@
                     </button>
                 </a>
             </li>
-            <!--
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Encontre um produto" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
-            -->
-
           
             <div class="barra-pesquisa d-flex align-items-center">
                 <form id= "tabPesquisar">
                     <input type="search">
                 </form>
             </div>
-            
-            
 
         </ul>
         
