@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../models/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -14,14 +15,19 @@ export class TelaVendedorComponent implements OnInit {
   vendedorId: number;
   dados: boolean;
   produtos: boolean;
+  meuId = environment.id;
 
   constructor(
     private auth: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.vendedorId = this.route.snapshot.params['id'];
+    if(this.vendedorId == this.meuId) {
+      this.router.navigate(['/conta']);
+    }
     this.findByIdUsuario();
     this.dados = true;
     this.produtos = false;

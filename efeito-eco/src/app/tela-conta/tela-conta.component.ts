@@ -21,7 +21,7 @@ export class TelaContaComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private route: Router
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -31,7 +31,7 @@ export class TelaContaComponent implements OnInit {
 
   estaLogado() {
     if(environment.token == '') {
-      this.route.navigate(['/home']);
+      this.router.navigate(['/home']);
     }
   }
 

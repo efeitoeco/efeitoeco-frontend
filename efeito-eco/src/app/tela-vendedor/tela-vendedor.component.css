@@ -13,3 +13,7 @@
 .botao-menu:hover {
     color: #000;   
 }
+
+.vendedor-foto {
+    border-radius: 4px;
+}
