@@ -12,7 +12,10 @@ import { SobreComponent } from './sobre/sobre.component';
 import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
 import { TelaContaComponent } from './tela-conta/tela-conta.component';
 import { TelaProdutoComponent } from './tela-produto/tela-produto.component';
+import { TelaVendedorComponent } from './tela-vendedor/tela-vendedor.component';
 import { TrabalheConoscoComponent } from './trabalhe-conosco/trabalhe-conosco.component';
+import { VendedorDadosComponent } from './vendedor-dados/vendedor-dados.component';
+import { VendedorProdutosComponent } from './vendedor-produtos/vendedor-produtos.component';
 
 const routes: Routes = [
   {
@@ -77,6 +80,25 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'atualizar-dados',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: 'usuario/:id',
+    component: TelaVendedorComponent,
+    children: [
+      {
+        path: 'dados',
+        component: VendedorDadosComponent
+      },
+      {
+        path: 'produtos',
+        component: VendedorProdutosComponent
+      },
+      {
+        path: '',
+        redirectTo: 'dados',
         pathMatch: 'full'
       }
     ]

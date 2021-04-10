@@ -50,7 +50,7 @@
         <h2 class="m-0 font-weight-bold nome-produto">
             {{produto.nome}}
         </h2>
-        <span class="vendido-por">Vendido por: <a href="" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
+        <span class="vendido-por">Vendido por: <a [routerLink]="['/usuario', produto.criadoPor.id]" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
         <h3 class="mt-3 preco-principal mb-0">
             R$ {{produto.preco}}
         </h3>

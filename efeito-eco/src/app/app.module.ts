@@ -26,6 +26,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 import { TelaVendedorComponent } from './tela-vendedor/tela-vendedor.component';
 import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
+import { VendedorDadosComponent } from './vendedor-dados/vendedor-dados.component';
+import { VendedorProdutosComponent } from './vendedor-produtos/vendedor-produtos.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.compone
     AlertasComponent,
     TelaVendedorComponent,
     AcessibilidadeComponent,
+    VendedorDadosComponent,
+    VendedorProdutosComponent,
   ],
   imports: [
     BrowserModule,
