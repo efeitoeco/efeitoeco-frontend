@@ -188,7 +188,7 @@
               <div class="row sessionCards row-cols-md-2 row-cols-lg-3 row-cols-sm-1 w-75">
 
                 <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:0:3;">
-                  <div class="card">
+                  <div class="card" [routerLink]="['/produtos', produto.id]">
                     <div style="width: 100%; overflow: hidden;">
                       <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
                     </div>

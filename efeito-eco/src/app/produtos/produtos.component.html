@@ -76,7 +76,7 @@
               <div>
                 <span class="parcela">ou 3x de R$ {{produto.preco / 3 | number : '1.2-2'}} sem juros</span>
               </div>
-              <button class="btn btn-success mt-3" align="center" [routerLink]="['/entrar']">
+              <button class="btn btn-success mt-3" align="center" [routerLink]="['/produtos', produto.id]">
                 Comprar
               </button>
             </div>
