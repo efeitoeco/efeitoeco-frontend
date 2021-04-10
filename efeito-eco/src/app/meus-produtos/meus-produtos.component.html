@@ -10,11 +10,11 @@
           <h5 class="preco">R$ {{produto.preco}}</h5>
           <div class="p-3">
           <div class="div-botoes">
-              <button class="btn btn-secondary mt-2 w-100" align="center">Ver produto</button>
+              <button class="btn btn-secondary mt-2 w-100" align="center" [routerLink]="['/produtos', produto.id]">Ver produto</button>
           </div>
 
           <div class="div-botoes">
-          <button class="btn btn-info mt-3 mr-10 w-45" align="center">
+          <button class="btn btn-info mt-3 mr-10 w-45" align="center" [routerLink]="['/editar-produto', produto.id]">
             Editar
           </button>
           <button class="btn btn-danger mt-3 w-45" align="center">

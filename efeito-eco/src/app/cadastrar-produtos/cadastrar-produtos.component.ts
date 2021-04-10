@@ -21,7 +21,7 @@ export class CadastrarProdutosComponent implements OnInit {
   categoria: Categoria = new Categoria();
   meuId: number = environment.id;
   categoriaLista: Categoria[];
-  categoriaId: number
+  categoriaId: number;
 
   constructor(
     private auth: AuthService,
