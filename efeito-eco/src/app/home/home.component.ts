@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
 
   listaProdutos: Produto[];
 
+  destaquesId: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  listaDestaques: Produto[];
+
   key = 'id';
   reverse = true;
 
@@ -20,6 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.verProdutosLancamentos();
+    this.verProdutosDestaque();
   }
 
   verProdutosLancamentos() {
@@ -28,6 +32,17 @@ export class HomeComponent implements OnInit {
 
       /* Ordenando a lista */
       this.listaProdutos.sort((a, b) => (a.id < b.id) ? 1 : -1);
+    })
+  }
+
+  verProdutosDestaque() {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
+      this.listaDestaques = resp;
+
+      /* Filtrando a lista */
+      this.listaDestaques = this.listaDestaques.filter((produto: Produto) => {
+        return this.destaquesId.includes(produto.categoria.id);
+      })
     })
   }
 
