@@ -9,6 +9,6 @@
     </div>
     <div class="col-md-8 p-4 muda-conteudo">
         <app-vendedor-dados [vendedor]='vendedor' *ngIf='dados'></app-vendedor-dados>
-        <app-vendedor-produtos *ngIf='produtos'></app-vendedor-produtos>
+        <app-vendedor-produtos [vendedor]='vendedor' *ngIf='produtos'></app-vendedor-produtos>
     </div>
 </main>
