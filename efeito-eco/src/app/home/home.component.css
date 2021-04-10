@@ -1,3 +1,6 @@
+.home {
+    margin-top: 5em;
+}
 
 .h2 {
     color: var(--texto-marrom);
@@ -58,4 +61,3 @@
         display: none;
     }
 }
-

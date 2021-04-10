@@ -1,4 +1,4 @@
-header{ 
+header { 
     position: fixed; 
     top:0; 
     left: 0; 
@@ -7,15 +7,18 @@ header{
     z-index: 2; 
 } 
 
-header.hide{ 
+.navbar-eco {
+	height: 4em;
+}
+
+header.hide { 
     transform: translateY(-100%);
 }
 .logo {
     height: 60px;
 }
 
-ul.nav li.dropdown:hover ul.dropdown-menu
-{ 
+ul.nav li.dropdown:hover ul.dropdown-menu { 
     display: block; 
 }
 
@@ -23,34 +26,13 @@ ul.nav li.dropdown:hover ul.dropdown-menu
     display: block;
 }
 
-/* Botão antigo */
-/*
-.barra-persquisa {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-#input-pesquisa {
-    padding: 5px;
-    /* border: 1px solid #BEBEBE;
-    border-radius: 3px 0 0 3px; */
-    /* border: none; */
-/*}*/
-
-/*#botao-pesquisa {
-    padding: 5px;*/
-    /* border-radius: 0 3px 3px 0;
-    border: 1px solid #BEBEBE; */
-    /*border: none;*/
-/*}*/
-
-
-
 input[type=search] {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	font-family: inherit;
 	font-size: 100%;
 }
+
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
 	display: none; 
@@ -76,6 +58,7 @@ input[type=search] {
 	-moz-transition: all .5s;
 	transition: all .5s;
 }
+
 input[type=search]:focus {
 	width: 130px;
 	background-color: #fff;
@@ -86,10 +69,10 @@ input[type=search]:focus {
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
 
-
 input:-moz-placeholder {
 	color: #999;
 }
+
 input::-webkit-input-placeholder {
 	color: #999;
 }
@@ -101,9 +84,11 @@ input::-webkit-input-placeholder {
 	color: transparent;
 	cursor: pointer;
 }
+
 #tabPesquisar input[type=search]:hover {
 	background-color: #fff;
 }
+
 #tabPesquisar input[type=search]:focus {
 	width: 130px;
 	padding-left: 32px;
@@ -111,19 +96,18 @@ input::-webkit-input-placeholder {
 	background-color: #fff;
 	cursor: auto;
 }
+
 #tabPesquisar input:-moz-placeholder {
 	color: transparent;
 }
+
 #tabPesquisar input::-webkit-input-placeholder {
 	color: transparent;
 }
 /* Novo botão em construção */
 
-
-
 /* Botão do DarkMode em construção */
-.botaoDarkMode{
+.botaoDarkMode {
 	height: 30px;
 }
-/* Botão do DarkMode em construção */	
-
+/* Botão do DarkMode em construção */

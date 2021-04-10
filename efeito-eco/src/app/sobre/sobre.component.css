@@ -1,3 +1,7 @@
+.container-fluid-eco {
+    margin-top: 4em;
+}
+
 .tamanho-img-sobre{
     height: 200px;
     width: 200px;
@@ -8,14 +12,12 @@
     width: 180px;
 }
 
-
-
-.tamanho-imgLogo{
+.tamanho-imgLogo {
     height: 250px;
     width: 500px;
 }
 
-.tamanho-logoGeneration{
+.tamanho-logoGeneration {
     height: 40px;
     width: 80;
 }
@@ -25,7 +27,7 @@
     justify-content: center;
 }
 
-.container-sobre{
+.container-sobre {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -33,7 +35,7 @@
     justify-content: center;
 }
 
-.container-principios{
+.container-principios {
     display: flex;
     align-items: center;
 }
@@ -54,6 +56,6 @@
     text-align: center;
 }
 
-.card-text{
+.card-text {
     text-align: center;
 }

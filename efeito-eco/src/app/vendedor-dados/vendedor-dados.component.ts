@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Usuario } from '../models/Usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-vendedor-dados',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendedorDadosComponent implements OnInit {
 
-  constructor() { }
+  @Input() vendedor: Usuario;
+  @Input() vendedorId: number;
+
+  constructor(
+    private auth: AuthService
+  ) { }
 
   ngOnInit(): void {
+    console.log(this.vendedorId);
+    this.findByIdUsuario();
+  }
+
+  findByIdUsuario() {
+    this.auth.getByIdUsuario(this.vendedorId).subscribe((resp: Usuario) => {
+      this.vendedor = resp;
+      console.log(this.vendedorId);
+    })
   }
 
 }
