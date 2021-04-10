@@ -3,11 +3,12 @@
         <div class="d-flex justify-content-center flex-column">
             <img src="{{vendedor.foto}}" alt="pessoa sorrindo">
             <h4 class="text-center mt-3">{{vendedor.nome}}</h4>
-            <button class="mt-5 botao-menu py-3 btn btn-light" [routerLink]="['dados']">Dados</button>
-            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['produtos']">Produtos</button>        
+            <button class="mt-5 botao-menu py-3 btn btn-light" [routerLink]="['dados']" (click)="mostrarDados()">Dados</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['produtos']" (click)="mostrarProdutos()">Produtos</button>        
         </div>
     </div>
     <div class="col-md-8 p-4 muda-conteudo">
-        <router-outlet></router-outlet>
+        <app-vendedor-dados [vendedor]='vendedor' *ngIf='dados'></app-vendedor-dados>
+        <app-vendedor-produtos *ngIf='produtos'></app-vendedor-produtos>
     </div>
 </main>

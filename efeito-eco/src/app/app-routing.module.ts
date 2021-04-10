@@ -86,22 +86,7 @@ const routes: Routes = [
   },
   {
     path: 'usuario/:id',
-    component: TelaVendedorComponent,
-    children: [
-      {
-        path: 'dados',
-        component: VendedorDadosComponent
-      },
-      {
-        path: 'produtos',
-        component: VendedorProdutosComponent
-      },
-      {
-        path: '',
-        redirectTo: 'dados',
-        pathMatch: 'full'
-      }
-    ]
+    component: TelaVendedorComponent
   },
   {
     path: 'trabalhe-conosco',

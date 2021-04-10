@@ -12,6 +12,8 @@ export class TelaVendedorComponent implements OnInit {
 
   vendedor: Usuario = new Usuario();
   vendedorId: number;
+  dados: boolean;
+  produtos: boolean;
 
   constructor(
     private auth: AuthService,
@@ -21,12 +23,24 @@ export class TelaVendedorComponent implements OnInit {
   ngOnInit(): void {
     this.vendedorId = this.route.snapshot.params['id'];
     this.findByIdUsuario();
+    this.dados = true;
+    this.produtos = false;
   }
 
   findByIdUsuario() {
     this.auth.getByIdUsuario(this.vendedorId).subscribe((resp: Usuario) => {
       this.vendedor = resp;
     })
+  }
+
+  mostrarDados() {
+    this.dados = true;
+    this.produtos = false;
+  }
+
+  mostrarProdutos() {
+    this.dados = false;
+    this.produtos = true;
   }
 
 }
