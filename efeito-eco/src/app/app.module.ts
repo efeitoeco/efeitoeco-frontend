@@ -28,6 +28,8 @@ import { TelaVendedorComponent } from './tela-vendedor/tela-vendedor.component';
 import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 import { VendedorDadosComponent } from './vendedor-dados/vendedor-dados.component';
 import { VendedorProdutosComponent } from './vendedor-produtos/vendedor-produtos.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { VendedorProdutosComponent } from './vendedor-produtos/vendedor-produtos
     AcessibilidadeComponent,
     VendedorDadosComponent,
     VendedorProdutosComponent,
+    ProdutoEditComponent,
+    ProdutoDeleteComponent,
   ],
   imports: [
     BrowserModule,
