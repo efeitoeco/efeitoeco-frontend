@@ -189,18 +189,23 @@
 
                 <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:0:3;">
                   <div class="card">
-                    <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
-                    <div class="card-body">
-                      <h5 class="card-title">{{ produto.nome }}</h5>
-                      <p class="card-text">{{ produto.descricao }}</p>
-                      <hr>
+                    <div style="width: 100%; overflow: hidden;">
+                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
                       <h5 class="preco">R$ {{ produto.preco }}</h5>
-                      <div>
-                        <span class="parcela">ou 3x de R$ {{ produto.preco / 3 }} sem juros</span>
+                      <div class="d-flex flex-column justify-content-center">
+                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            Comprar
+                          </button>
+                        </div>
                       </div>
-                      <button class="btn btn-success mt-3" align="center" [routerLink]="['/produtos', produto.id]">
-                        Comprar
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -214,18 +219,23 @@
 
                 <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:3:6;">
                   <div class="card">
-                    <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
-                    <div class="card-body">
-                      <h5 class="card-title">{{ produto.nome }}</h5>
-                      <p class="card-text">{{ produto.descricao }}</p>
-                      <hr>
+                    <div style="width: 100%; overflow: hidden;">
+                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
                       <h5 class="preco">R$ {{ produto.preco }}</h5>
-                      <div>
-                        <span class="parcela">ou 3x de R$ {{ produto.preco / 3 }} sem juros</span>
+                      <div class="d-flex flex-column justify-content-center">
+                        <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            Comprar
+                          </button>
+                        </div>
                       </div>
-                      <button class="btn btn-success mt-3" align="center" [routerLink]="['/produtos', produto.id]">
-                        Comprar
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -239,16 +249,22 @@
 
                 <div class="col mb-4" *ngFor="let produto of listaProdutos | slice:6:9;">
                   <div class="card">
-                    <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
-                    <div class="card-body">
-                      <h5 style="font-weight: 500; text-align: center;">{{ produto.nome }}</h5>
-                      <hr>
+                    <div style="width: 100%; overflow: hidden;">
+                      <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 0; padding-bottom: 0;">
+                      <h5 style="font-weight: 500; text-align: center; margin-bottom: 0;">{{ produto.nome }}</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-end" style="margin-top: 0; padding-top: 0;">
+                      <hr class="w-100">
                       <h5 class="preco">R$ {{ produto.preco }}</h5>
                       <div class="d-flex flex-column justify-content-center">
                         <span class="parcela" style="text-align: center;">ou 3x de R$ {{ produto.preco / 3 | number : '1.2-2'}} sem juros</span>
-                        <button class="btn btn-success mt-3" align="center" [routerLink]="['/produtos', produto.id]">
-                          Comprar
-                        </button>
+                        <div class="d-flex justify-content-center">
+                          <button class="btn btn-success mt-3" [routerLink]="['/produtos', produto.id]">
+                            Comprar
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

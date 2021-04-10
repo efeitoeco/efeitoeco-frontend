@@ -86,6 +86,14 @@
     background-color: rgba(221, 221, 221, 0.219);
 }
 
+.card-img-top {
+    transition: transform .2s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 768px) {
     #carrosel-2 {
         display: none;
