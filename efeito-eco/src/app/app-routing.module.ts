@@ -4,6 +4,7 @@ import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ContatoComponent } from './contato/contato.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
@@ -96,6 +97,10 @@ const routes: Routes = [
   {
     path: 'editar-produto/:id',
     component: ProdutoEditComponent
+  },
+  {
+    path: 'delete-produto/:id',
+    component: ProdutoDeleteComponent
   }
 ];
 
