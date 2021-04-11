@@ -12,8 +12,20 @@
 <body style="font-family: 'Poppins', sans-serif;">
   <app-root></app-root>
   <script src="https://kit.fontawesome.com/6c1b9b6ddb.js" crossorigin="anonymous"></script>
-
   
+  <!-- Navbar semi-fixa-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    var zero = 0; 
+
+    $(document).ready(function(){ 
+    $(window).on('scroll', function(){ 
+        $('header').toggleClass('hide', $(window).scrollTop() 
+        > zero); 
+        zero = $(window).scrollTop(); 
+      }) 
+    })
+  </script> 
   <!--Acessibilidade libras-->
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
