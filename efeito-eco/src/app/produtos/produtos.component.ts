@@ -17,6 +17,7 @@ export class ProdutosComponent implements OnInit {
   listaProdutoFiltradaPreco: Produto[];
   precoFiltrado: number;
   maiorPreco: number;
+  menorPreco: number;
 
   listaCategoria: Categoria[];
 
@@ -48,6 +49,7 @@ export class ProdutosComponent implements OnInit {
       this.listaProdutoFiltrada = resp;
       this.listaProdutoFiltradaPreco = resp;
       this.pegarPrecoMax();
+      this.pegarPrecoMin();
       this.precoFiltrado = this.maiorPreco;
     })
   }
@@ -94,6 +96,15 @@ export class ProdutosComponent implements OnInit {
     }
     
     this.maiorPreco = Math.max(...arrayPrecos);
+  }
+
+  pegarPrecoMin() {
+    let arrayPrecos: number[] = [];
+    for(let i = 0; i < this.listaProduto.length; i++) {
+      arrayPrecos.push(this.listaProduto[i].preco);
+    }
+    
+    this.menorPreco = Math.min(...arrayPrecos);
   }
 
   ordenar() {
