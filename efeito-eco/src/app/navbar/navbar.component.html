@@ -34,11 +34,19 @@
                         </button>
                     </a>
                 </li>
+
+                <li *ngIf='auth.logado()' class="nav-item">
+                    <a class="nav-link" [routerLink]="['/carrinho']">
+                        <button class="btn btn-light my-2 my-sm-0" type="submit" >
+                            Carrinho
+                        </button>
+                    </a>
+                </li>
                 
                 <li *ngIf='!auth.logado()' class="nav-item">
                     <a class="nav-link" [routerLink]="['/entrar']">
                         <button class="btn btn-light my-2 my-sm-0" type="submit" >
-                        Fazer Login 
+                            Fazer Login 
                         </button>
                     </a>
                 </li>

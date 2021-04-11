@@ -1,0 +1,23 @@
+.card-eco-carrinho {
+    width: 50%;
+    display: flex;
+}
+
+.img-eco-carrinho {
+    width: 50%;
+}
+
+.img-eco-carrinho-arquivo {
+    height: 240px;
+}
+
+.dados-eco-carrinho {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto-preco-carrinho {
+    margin-top: 10px;
+}

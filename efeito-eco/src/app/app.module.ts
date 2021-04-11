@@ -30,6 +30,7 @@ import { VendedorDadosComponent } from './vendedor-dados/vendedor-dados.componen
 import { VendedorProdutosComponent } from './vendedor-produtos/vendedor-produtos.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     VendedorProdutosComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
+    CarrinhoComponent,
   ],
   imports: [
     BrowserModule,

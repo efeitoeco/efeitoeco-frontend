@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../models/Produto';
+import { AlertasService } from '../service/alertas.service';
+import { CarrinhoService } from '../service/carrinho.service';
 import { ProdutoServiceService } from '../service/produto-service.service';
 
 @Component({
@@ -17,7 +20,9 @@ export class TelaProdutoComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private produtoService: ProdutoServiceService
+    private produtoService: ProdutoServiceService,
+    private carrinhoService: CarrinhoService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -42,6 +47,16 @@ export class TelaProdutoComponent implements OnInit {
   diminuirQuantidade() {
     if(this.quantidade > 1) {
       this.quantidade--;
+    }
+  }
+
+  adicionarAoCarrinho(idProduto: number) {
+    if(environment.token == '') {
+      this.alertas.showAlertDanger("Você precisa estar logado para adicionar produtos ao seu carrinho.");
+      this.router.navigate(['/entrar']);
+    } else {
+      this.carrinhoService.adicionarProduto(idProduto, this.quantidade);
+      this.alertas.showAlertSuccess("Produto adicionado com sucesso!");
     }
   }
 }

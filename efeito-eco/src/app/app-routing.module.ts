@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
@@ -101,6 +102,10 @@ const routes: Routes = [
   {
     path: 'delete-produto/:id',
     component: ProdutoDeleteComponent
+  },
+  {
+    path: 'carrinho',
+    component: CarrinhoComponent
   }
 ];
 

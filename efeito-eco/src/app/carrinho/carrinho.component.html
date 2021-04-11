@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h1>Meu Carrinho</h1>
+
+    <div class="col mb-4" *ngFor='let produto of produtosCarrinho'>
+        <div class="card-eco-carrinho">
+
+            <div class="img-eco-carrinho">
+                <img class="img-eco-carrinho-arquivo" [src]="produto.imagem1" [alt]="produto.nome">
+            </div>
+
+            <div class="dados-eco-carrinho">
+
+                <h5>{{ produto.nome }}</h5>
+                <p>{{ produto.descricao }}</p>
+
+                <h6 class="produto-preco-carrinho">{{ produto.preco }}</h6>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
