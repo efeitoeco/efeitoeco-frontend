@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { ProdutoCarrinho } from '../models/Produto';
+import { Produto, ProdutoCarrinho } from '../models/Produto';
+import { Usuario } from '../models/Usuario';
 import { AlertasService } from '../service/alertas.service';
+import { AuthService } from '../service/auth.service';
 import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
@@ -13,12 +15,16 @@ import { CarrinhoService } from '../service/carrinho.service';
 export class CarrinhoComponent implements OnInit {
 
   produtosCarrinho: ProdutoCarrinho[];
+  produtosCarrinhoFull: Produto[];
+
   temProdutos: boolean;
+  usuario: Usuario = new Usuario();
 
   constructor(
     private carrinhoService: CarrinhoService,
     private router: Router,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private auth: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +37,7 @@ export class CarrinhoComponent implements OnInit {
       this.temProdutos = true;
     }
     this.produtosCarrinho = this.carrinhoService.produtosNoCarrinho;
+    this.produtosCarrinhoFull = this.carrinhoService.produtosNoCarrinhoFull;
     console.log(this.produtosCarrinho);
   }
 
@@ -47,10 +54,20 @@ export class CarrinhoComponent implements OnInit {
     this.atualizarDados();
   }
 
-  finalizarCompra() {
-    this.alertas.showAlertSuccess("Compra efetuada!");
-    this.carrinhoService.esvaziarCarrinho();
-    this.router.navigate(['/home']);
+  terminarCompra() {
+    this.auth.getByIdUsuario(environment.id).subscribe((resp: Usuario) => {
+      this.usuario = resp;
+      for(let i = 0; i < this.produtosCarrinho.length; i++) {
+        this.usuario.minhasCompras.push(this.produtosCarrinhoFull[i]);
+      }
+
+      this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp;
+        this.alertas.showAlertSuccess("Compra efetuada!");
+        this.carrinhoService.esvaziarCarrinho();
+        this.router.navigate(['/home']);
+      })
+    })
   }
 
 }
