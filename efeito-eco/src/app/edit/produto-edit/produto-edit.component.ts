@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CadastrarProduto, Produto } from 'src/app/models/Produto';
 import { Categoria } from 'src/app/models/Categoria';
 import { Usuario } from 'src/app/models/Usuario';
@@ -29,7 +29,7 @@ export class ProdutoEditComponent implements OnInit {
   constructor(
     private categoriaService: CategoriaService,
     private route: ActivatedRoute,
-    private auth: AuthService,
+    private router: Router,
     private produtoService: ProdutoServiceService,
     private alertas: AlertasService,
     private CadastrarProdutoService: CadastrarProdutoService
@@ -49,12 +49,17 @@ export class ProdutoEditComponent implements OnInit {
   }
 
   atualizarProduto() {
-    console.log(this.produto);
-    this.CadastrarProdutoService.putProduto(this.produto).subscribe((resp: CadastrarProduto) => {
-      this.produto = resp;
-      this.alertas.showAlertSuccess("Produto atualizado com sucesso!");
-      this.produto = new CadastrarProduto();
-    })
+    if(!this.verificarLinkImagem(this.produto.imagem1) || !this.verificarLinkImagem(this.produto.imagem2)) {
+      this.alertas.showAlertDanger("Link de imagem deve ser um link direto de uma imagem JPEG, JPG, GIF ou PNG");
+    } else {
+      console.log(this.produto);
+      this.CadastrarProdutoService.putProduto(this.produto).subscribe((resp: CadastrarProduto) => {
+        this.produto = resp;
+        this.alertas.showAlertSuccess("Produto atualizado com sucesso!");
+        this.produto = new CadastrarProduto();
+        this.router.navigate(['/conta/meus-produtos']);
+      })
+    }
   }
 
   findByIdProduto() {
@@ -74,11 +79,15 @@ export class ProdutoEditComponent implements OnInit {
   } 
 
   findByIdCategoria() {
-  this.categoriaService.getByIdCategoria(this.categoriaId).subscribe((resp: Categoria) => {
-    this.categoria = resp;
-    this.produto.categoria.id = this.categoria.id;
-    this.produto.categoria.nome = this.categoria.nome;
-  })    
+    this.categoriaService.getByIdCategoria(this.categoriaId).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+      this.produto.categoria.id = this.categoria.id;
+      this.produto.categoria.nome = this.categoria.nome;
+    })    
+  }
+
+  verificarLinkImagem(url: string) {
+    return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
   }
 
 }
