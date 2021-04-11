@@ -7,7 +7,7 @@ import { ProdutoServiceService } from './produto-service.service';
 })
 export class CarrinhoService {
 
-  produtosNoCarrinho: ProdutoCarrinho[] = [];;
+  produtosNoCarrinho: ProdutoCarrinho[] = [];
   produtoAdicionado: Produto = new Produto();
   produtoAdicionadoCarrinho: ProdutoCarrinho = new ProdutoCarrinho();
 
@@ -37,5 +37,13 @@ export class CarrinhoService {
       this.produtoAdicionado = new Produto();
       this.produtoAdicionadoCarrinho = new ProdutoCarrinho();
     })
+  }
+
+  removerProduto(index: number) {
+    this.produtosNoCarrinho.splice(index, 1);
+  }
+
+  esvaziarCarrinho() {
+    this.produtosNoCarrinho = [];
   }
 }
