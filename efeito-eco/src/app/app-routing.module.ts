@@ -10,6 +10,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { EntrarComponent } from './entrar/entrar.component';
 import { HomeComponent } from './home/home.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { TelaAtualizarComponent } from './tela-atualizar/tela-atualizar.component';
@@ -79,6 +80,10 @@ const routes: Routes = [
       {
         path: 'meus-produtos',
         component: MeusProdutosComponent
+      },
+      {
+        path: 'minhas-compras',
+        component: MinhasComprasComponent
       },
       {
         path: '',

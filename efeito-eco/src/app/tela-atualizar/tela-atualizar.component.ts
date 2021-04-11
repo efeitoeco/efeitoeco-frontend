@@ -41,8 +41,6 @@ export class TelaAtualizarComponent implements OnInit {
   }
 
   atualizarUsuario() {
-    this.usuario.id = this.meuId;
-
     this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp;
         this.alerta.showAlertSuccess("Dados atualizados com sucesso!");
