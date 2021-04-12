@@ -4,7 +4,7 @@ header {
     left: 0; 
     right: 0; 
     width: 100%; 
-    z-index: 2; 
+    z-index: 99999; 
 } 
 
 .navbar-eco {
@@ -111,3 +111,14 @@ input::-webkit-input-placeholder {
 	height: 30px;
 }
 /* Botão do DarkMode em construção */
+
+@media screen and (max-width: 992px) {
+	.navbar-eco {
+		height: auto;
+	}
+
+	.navbar-nav {
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+}

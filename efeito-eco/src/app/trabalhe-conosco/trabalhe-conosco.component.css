@@ -1,5 +1,5 @@
 .trabalho-eco-img {
-    margin-top: 3em;
+    margin-top: var(--em-tres);
 }
 
 .altura-logo{
