@@ -48,14 +48,22 @@
                     </a>
                 </li>
             
-                <div class="barra-pesquisa d-flex align-items-center">
-                    <form id= "tabPesquisar">
-                        <input type="search">
-                    </form>
+                
+                <div class="form-inline dropdown barrapesquisar" (mouseout)='zerarPesquisar()'>
+                    <div id='tabPesquisar' class="div-input-btn">
+                        <input type="search" [(ngModel)]='nomeProduto' (keyup)='findByNomeProduto()'>
+                    </div>
+                    <div>
+                        <div class="dropdown-menu-search" aria-labelledby="navbarDropdown" id="dropDown">
+                            <div *ngFor='let item of listaProdutos'>
+                                <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id]">{{item.nome}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
                 </div>
-
-            </ul>
-            
+            </ul> 
         </div>
     </nav>
 </header>
