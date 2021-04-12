@@ -55,18 +55,31 @@ export class CarrinhoComponent implements OnInit {
   }
 
   terminarCompra() {
-    this.auth.getByIdUsuario(environment.id).subscribe((resp: Usuario) => {
-      this.usuario = resp;
-      for(let i = 0; i < this.produtosCarrinho.length; i++) {
-        this.usuario.minhasCompras.push(this.produtosCarrinhoFull[i]);
-      }
+    // this.auth.getByIdUsuario(environment.id).subscribe((resp: Usuario) => {
+    //   this.usuario = resp;
+    //   for(let i = 0; i < this.produtosCarrinho.length; i++) {
+    //     this.usuario.minhasCompras.push(this.produtosCarrinhoFull[i]);
+    //   }
 
-      this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
-        this.usuario = resp;
-        this.alertas.showAlertSuccess("Compra efetuada!");
-        this.carrinhoService.esvaziarCarrinho();
-        this.router.navigate(['/home']);
-      })
+    //   this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
+    //     this.usuario = resp;
+    //     this.alertas.showAlertSuccess("Compra efetuada!");
+    //     this.carrinhoService.esvaziarCarrinho();
+    //     this.router.navigate(['/home']);
+    //   })
+    // })
+
+    let idDosProdutosComprados = [];
+
+    for(let i = 0; i < this.produtosCarrinho.length; i++) {
+      idDosProdutosComprados.push(this.produtosCarrinhoFull[i].id);
+    }
+
+    this.auth.adicionarProdutosComprados(environment.id, idDosProdutosComprados).subscribe((resp: Usuario) => {
+      this.usuario = resp;
+      this.alertas.showAlertSuccess("Compra efetuada!");
+      this.carrinhoService.esvaziarCarrinho();
+      this.router.navigate(['/home']);
     })
   }
 

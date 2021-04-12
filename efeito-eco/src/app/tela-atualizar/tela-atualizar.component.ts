@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AtualizarUsuario } from '../models/AtualizarUsuario';
 import { Usuario } from '../models/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
@@ -41,7 +42,14 @@ export class TelaAtualizarComponent implements OnInit {
   }
 
   atualizarUsuario() {
-    this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) => {
+    console.log('Usuario: ', this.usuario);
+
+    let atualizarUsuario = new AtualizarUsuario();
+    atualizarUsuario.nome = this.usuario.nome;
+    atualizarUsuario.sobrenome = this.usuario.sobrenome;
+    atualizarUsuario.foto = this.usuario.foto;
+
+    this.auth.atualizarUsuario(this.usuario.id, atualizarUsuario).subscribe((resp: Usuario) => {
         this.usuario = resp;
         this.alerta.showAlertSuccess("Dados atualizados com sucesso!");
         this.atualizarDados();
