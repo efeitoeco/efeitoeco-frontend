@@ -4,7 +4,8 @@ header {
     left: 0; 
     right: 0; 
     width: 100%; 
-    z-index: 99999; 
+    z-index: 99999;
+	transition: .5s;
 } 
 
 .navbar-eco {
@@ -13,7 +14,9 @@ header {
 
 header.hide { 
     transform: translateY(-100%);
+	transition: .5s;
 }
+
 .logo {
     height: 60px;
 }
