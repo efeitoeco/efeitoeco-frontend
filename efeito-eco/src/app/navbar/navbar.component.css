@@ -5,8 +5,27 @@ header {
     right: 0; 
     width: 100%; 
     z-index: 99999;
+	box-shadow: 5px 0 5px 1px rgba(0, 0, 0, .5);
 	transition: .5s;
-} 
+	background-color: #f3f3f3;
+}
+
+a {
+	transition: .5s;
+}
+
+.cor-menu-navbar:hover {
+	color: #614023;
+}
+
+.btn-navbar-eco {
+	background-color: #f3f3f3;
+	transition: .5s;
+}
+
+.btn-navbar-eco:hover {
+	background-color: #e2e2e2;
+}
 
 .navbar-eco {
 	height: 4em;
