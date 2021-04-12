@@ -1,8 +1,10 @@
 .bot-foto {
 	border-radius: 100%;
-	background-color: #fff;
 	width: 36px;
 	height: 36px;
+	background-image: url(../../assets/img/cacau_cortada.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .chat-topo {
