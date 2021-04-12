@@ -67,8 +67,7 @@
     cursor: pointer;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
+.controle-eco {
     filter: invert(100%);
     margin-left: 0%;
     margin-right: 0%;
@@ -80,8 +79,7 @@
     background-color: rgba(221, 221, 221, 0.068);
 }
 
-.carousel-control-next:hover,
-.carousel-control-prev:hover {
+.controle-eco:hover {
     background-color: rgba(221, 221, 221, 0.219);
 }
 
@@ -93,8 +91,63 @@
     transform: scale(1.2);
 }
 
+.img-jumbotron-eco {
+    width: 30%;
+}
+
+.texto-jumbotron-eco {
+    width: 70%;
+}
+
+.responsividade2 {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .responsividade2 {
+        display: block;
+    }
+
+    .responsividade1 {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #carrosel-2 {
+        display: none;
+    }
+
+    .grande-carrosel-eco {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-jumbotron-eco {
+        display: none;
+    }
+
+    .texto-jumbotron-eco {
+        width: 100%;
+    }
+
+    .jumbotron-home-eco {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .jumbotron-home-eco {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .parcela {
+        display: none;
+    }
+
+    .btn-success {
         display: none;
     }
 }
