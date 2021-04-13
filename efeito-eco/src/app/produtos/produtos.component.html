@@ -36,11 +36,11 @@
   </div>
   <div class="d-flex filtros-e-categorias">
     <div class="filtro">
-      <div class="borda div-filtro px-2 pb-2 pt-3">
+      <div class="borda div-filtro px-2 pb-2 pt-3 ">
         <h5 class="mb-3 text-center titulo">
           Categoria
         </h5>
-         <div *ngFor='let categoria of listaCategoria' class="form-check">
+         <div *ngFor='let categoria of listaCategoria' class="form-check categoria-mq">
           <input class="form-check-input" type="checkbox" [value]="categoria.id" id="defaultCheck1" (change)='filtrarPorCategoria($event, categoria.id)'>
           <label class="form-check-label" for="defaultCheck1">
             {{ categoria.nome }}
@@ -65,14 +65,14 @@
       <div class="row row-cols-md-2 row-cols-lg-3 row-cols-sm-1" align="center">
 
 
-        <div class="col mb-4" *ngFor='let produto of listaProdutoFiltrada | orderBy : key : reverse'>
+        <div class="col mb-4 filtro-produto" *ngFor='let produto of listaProdutoFiltrada | orderBy : key : reverse'>
           <div class="card" [routerLink]="['/produtos', produto.id]">
             <img id="imagem-card-eco" src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
             <img *ngIf="produto.imagem2!=null" src="{{produto.imagem2}}" style="position: absolute;" class="card-img-top imagem2" alt="{{produto.nome}}">
             <div class="card-body">
               <h5 class="card-title">{{produto.nome}}</h5>
               <hr>
-              <h5 class="preco">R$ {{produto.preco}}</h5>
+              <h5 class="preco">R$ {{produto.preco | number : '1.2-2'}}</h5>
               <div>
                 <span class="parcela">ou 3x de R$ {{produto.preco / 3 | number : '1.2-2'}} sem juros</span>
               </div>

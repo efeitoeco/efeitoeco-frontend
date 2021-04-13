@@ -113,3 +113,22 @@ input[type=range] {
 .img-mensagem{
     align-items: center;
 }
+
+@media screen and (max-width: 992px){
+    .filtros-e-categorias{
+        flex-direction: column;
+        
+    }
+    .filtro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+    .div-filtro{
+        margin-right: 20px;
+    }
+
+}
