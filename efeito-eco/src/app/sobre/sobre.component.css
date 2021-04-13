@@ -56,8 +56,13 @@
     text-align: center;
 }
 
-.card{
-    height: 100%;
+.img-perfil{
+    border-radius: 50%;
+    width: 30%;
+    height: 70%;
+    /*margin-top: 10px;
+    margin-left: 10px;*/
+    align-items: center;
 }
 
 .card:hover{
@@ -95,4 +100,16 @@
 
 li{
     margin-right: 10px;
+}
+
+.img-jumbotron{
+    width: 100%;
+}
+
+.lead{
+    size: 14pt;
+}
+
+.apoiador{
+    color: var(--texto-marrom);
 }
