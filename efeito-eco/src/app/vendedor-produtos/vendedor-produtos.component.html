@@ -1,0 +1,19 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-sm-1" align="center">
+    <div class="col mb-4" *ngFor="let produto of listaDeProdutos">
+      <div class="card">
+        <div class="px-5 pt-3">
+            <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{produto.nome}}</h5>
+          <hr>
+          <h5 class="preco">R$ {{produto.preco}}</h5>
+          <div class="p-3">
+          <div class="div-botoes">
+              <button class="btn btn-success mt-2" align="center">Comprar</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>

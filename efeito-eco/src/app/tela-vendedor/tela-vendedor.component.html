@@ -1,0 +1,14 @@
+<main class="container container-vendedor-eco mb-5 d-flex">
+    <div class="col-md-4 pt-4">
+        <div class="d-flex justify-content-center flex-column">
+            <img class="vendedor-foto" src="{{vendedor.foto}}" alt="Foto de perfil de {{ vendedor.nome }}">
+            <h4 class="text-center mt-3">{{vendedor.nome}}</h4>
+            <button class="mt-5 botao-menu py-3 btn btn-light" [routerLink]="['dados']" (click)="mostrarDados()">Dados</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['produtos']" (click)="mostrarProdutos()">Produtos</button>        
+        </div>
+    </div>
+    <div class="col-md-8 p-4 muda-conteudo">
+        <app-vendedor-dados [vendedor]='vendedor' *ngIf='dados'></app-vendedor-dados>
+        <app-vendedor-produtos [vendedor]='vendedor' *ngIf='produtos'></app-vendedor-produtos>
+    </div>
+</main>

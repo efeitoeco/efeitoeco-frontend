@@ -1,0 +1,15 @@
+<div class="container container-delete-eco">
+    <h1 class="text-center">Excluir produto</h1>
+    <p class="text-center">Se você optar por excluir este produto, você irá tirar ele da loja e o anúncio não estará mais ativo</p>
+    <div class="div-botoes mt-4 w-100 d-flex justify-content-center">
+        <button class="btn btn-cancelar-eco mr-4 mb-4" align="center" [routerLink]="['/conta/meus-produtos']">
+            Cancelar
+        </button>
+        <button (click)="apagarProduto()" class="btn btn-sucesso-eco mb-4" align="center">
+            Confirmar
+        </button>
+    </div>
+</div>
+
+
+

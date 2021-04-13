@@ -1,0 +1,31 @@
+<div class="container container-carrinho-eco">
+
+    <h1 class="text-center">Meu Carrinho</h1>
+
+    <p *ngIf='!temProdutos' class="mt-4">Você ainda não possui produtos em seu carrinho...</p>
+
+    <div class="card-eco-carrinho mt-3" *ngFor='let produto of produtosCarrinho; let i = index'>
+
+        <div class="img-eco-carrinho" [routerLink]="['/produtos', produto.id]">
+            <img class="img-eco-carrinho-arquivo" [src]="produto.imagem1" [alt]="produto.nome">
+        </div>
+
+        <div class="dados-eco-carrinho">
+
+            <h5>{{ produto.nome }}</h5>
+
+            <h6 class="produto-preco-carrinho">R$ {{ produto.preco }}</h6>
+
+            <a (click)='removerDoCarrinho(i)' class="remover-btn">Remover do carrinho</a>
+
+        </div>
+
+    </div>
+
+    <div class="finalizar-compra-botao mt-4" *ngIf='temProdutos'>
+        <button class="botao-finalizar btn btn-light" (click)='terminarCompra()'>
+            Finalizar Compra
+        </button>
+    </div>
+
+</div>

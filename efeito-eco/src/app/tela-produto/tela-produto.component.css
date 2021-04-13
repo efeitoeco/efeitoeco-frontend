@@ -1,0 +1,164 @@
+.carrosel-eco-produtos {
+    margin-top: var(--em-cinco);
+    margin-bottom: 1.5em;
+}
+
+.img-produto {
+    width: 100%;
+}
+
+.nome-produto {
+    color: #614023;
+}
+
+.vendedor {
+    color: #075f22;
+}
+
+.preco-principal {
+    color: #075f22;
+    font-weight: 600;
+}
+
+.botao-quant {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgba(0,0,0,.5);
+}
+
+.preco-item {
+    border: 1px solid rgba(0,0,0,.5);
+    border-radius: 3px;
+}
+
+.botao-carrinho {
+    width: 300px;
+    border-radius: 10px;
+    color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.5);
+    transition: 0.5s;
+    padding: 12px 0;
+    margin-left: 20px;
+}
+
+.botao-carrinho:hover {
+    color: #000;
+}
+
+.carrinho {
+    font-size: 1.1em;
+}
+
+/**
+ * Este .img-carousel serve para a imagem não ser clicável
+*/
+.img-carousel {
+    pointer-events: none;
+}
+
+/**
+ * Este .naoArrasta serve para a imagem não ser arrastada
+*/
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.container-qtde-carrinho {
+    display: flex;
+    align-items: center;
+}
+
+.quantidade-a-adicionar {
+    display: flex;
+    align-items: center;
+}
+
+.container-imagens {
+    width: 42%;
+}
+
+.container-dados {
+    width: 58%;
+    margin-left: 25px;
+}
+
+.img-mensagem{
+    align-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .container-qtde-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .botao-carrinho {
+        margin-left: 0;
+        margin-top: 20px;
+    }    
+}
+
+@media screen and (max-width: 800px) {
+    .container-imagens {
+        width: 100%;
+    }
+
+    .nome-produto, .vendido-por, .vendedor {
+        display: flex;
+        justify-content: center;
+    }
+
+    .preco-principal {
+        text-align: center;
+    }
+
+    .parcela-principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-qtde-carrinho {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .adicionar-carrinho-botao {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-dados {
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container-mae {
+        flex-direction: column;
+    }
+
+    .produto-descricao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao-carrinho {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .carrinho {
+        display: none;
+    }
+
+    .adicionar-carrinho-botao {
+        max-width: 100%;
+    }
+}

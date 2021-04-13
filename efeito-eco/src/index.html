@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Efeito Eco</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/eFWAmBJ.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+  <app-root></app-root>
+  <script src="https://kit.fontawesome.com/6c1b9b6ddb.js" crossorigin="anonymous"></script>
+  
+  <!-- Navbar semi-fixa-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    var zero = 0; 
+
+    $(document).ready(function() { 
+    $(window).on('scroll', function() { 
+        $('header').toggleClass('hide', $(window).scrollTop() 
+        > zero); 
+        zero = $(window).scrollTop(); 
+      }) 
+    })
+  </script> 
+  <!--Acessibilidade libras-->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>

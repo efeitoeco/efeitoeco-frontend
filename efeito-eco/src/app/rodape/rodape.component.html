@@ -1,0 +1,35 @@
+<div class="pt-5 footer-eco">
+    <div class="container">
+        <div class="primeira-linha-rodape">
+            
+            <a routerLink='home'><img class="logo" src="https://i.imgur.com/fjdf5BQ.png" alt="logo do ecommerce"></a>
+            
+
+            <ul class="menu-rodape">
+                <li><a class="cor-menu-rodape" href="">Política</a></li>
+                <li><a class="cor-menu-rodape" [routerLink]="['/sobre']">Sobre Nós</a></li>
+                <li><a class="cor-menu-rodape" href="">Perguntas Frequentes</a></li>
+                <li><a class="cor-menu-rodape" [routerLink]="['/contato']">Contato</a></li>
+                <li><a class="cor-menu-rodape" [routerLink]="['/trabalheconosco']">Trabalhe Conosco</a></li>
+            </ul>
+            
+            <ul class="menu-redes-sociais">
+                <li><a class="tamanho" href="https://www.facebook.com/Efeito-Eco-102859405242662
+                    " target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="tamanho" href="https://twitter.com/EcoEfeito
+                    " target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="tamanho" href="https://www.instagram.com/efeito_eco/
+                    " target="_blank"><i class="fab fa-instagram font-weight-bold"></i></a></li>
+            </ul>        
+        </div>
+        <hr>
+
+        <div class="py-4 menu-final-rodape">
+            <span class="cor-copy"> &copy; 2021 Efeito Eco. Todos os direitos reservados.</span>
+
+            <div id="scroll-btn" class="voltar-ao-topo cor-copy">
+                <a (click)='topScroll()'>Volte ao Topo<i class="fas fa-angle-up ml-2"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
