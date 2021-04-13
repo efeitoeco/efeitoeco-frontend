@@ -113,3 +113,8 @@ li{
 .apoiador{
     color: var(--texto-marrom);
 }
+
+#myVideo {
+    width: 100%;
+}
+
