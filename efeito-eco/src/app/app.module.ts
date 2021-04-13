@@ -32,6 +32,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
+import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { MinhasComprasComponent } from './minhas-compras/minhas-compras.componen
     ProdutoDeleteComponent,
     CarrinhoComponent,
     MinhasComprasComponent,
+    CadastrarCategoriaComponent,
   ],
   imports: [
     BrowserModule,

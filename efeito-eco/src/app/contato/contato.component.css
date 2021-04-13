@@ -79,9 +79,54 @@ i {
 
 .text-titulos{
     color: #614023;
+    font-weight: 700;
 }
 
+.h4{
+    color: var( --verde-preco);
+    font-weight: 600;
+}
 
+.botao-menu {
+    width: 100%;
+    border-radius: 10px;
+    color: rgba(0,0,0,.7);
+    transition: 0.5s;
+}
+
+.botao-menu:hover {
+    color: #000;   
+}
+
+.botao-menu:focus{
+    outline: none;
+}
+
+.img-tc{
+    width: 100%; 
+}
+
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.naoCopia{
+    pointer-events: none;
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
 
 
 

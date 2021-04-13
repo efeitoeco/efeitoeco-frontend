@@ -25,6 +25,10 @@ export class ProdutoServiceService {
     return this.http.get<Produto>(`http://localhost:8080/produtos/${id}`);
   }
 
+  getByNomeProduto(nome: string): Observable<Produto[]>{
+    return this.http.get<Produto[]>(`http://localhost:8080/produtos/nome/${nome}`);
+  }
+
   deleteProduto(id: number) {
     return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token);
   }

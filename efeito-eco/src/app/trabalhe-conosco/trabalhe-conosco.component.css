@@ -75,6 +75,19 @@
     pointer-events: none;
 }
 
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
 @media screen and (max-width: 1120px) {
     .dentro-login-form-div {
         width: 70%;
