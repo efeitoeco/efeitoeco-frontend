@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
+import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
 import { CadastrarProdutosComponent } from './cadastrar-produtos/cadastrar-produtos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -84,6 +85,10 @@ const routes: Routes = [
       {
         path: 'minhas-compras',
         component: MinhasComprasComponent
+      },
+      {
+        path: 'cadastrar-categoria',
+        component: CadastrarCategoriaComponent
       },
       {
         path: '',

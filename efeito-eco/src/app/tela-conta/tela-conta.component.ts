@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../models/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -18,13 +19,21 @@ export class TelaContaComponent implements OnInit {
   meuNome = environment.nome;
   meuId = environment.id;
 
+  administrador: boolean;
+
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
+    if(this.meuId == 1) {
+      this.administrador = true;
+    } else {
+      this.administrador = false;
+    }
     this.estaLogado();
     this.findByIdUsuario();  
   }
@@ -39,5 +48,14 @@ export class TelaContaComponent implements OnInit {
     this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) => {
       this.usuario = resp;
     })
+  }
+
+  sair() {
+    environment.token = '';
+    environment.nome = '';
+    environment.id = 0;
+    environment.foto = '';
+    this.alertas.showAlertInfo("Você saiu da conta");
+    this.router.navigate(['/home']);
   }
 }

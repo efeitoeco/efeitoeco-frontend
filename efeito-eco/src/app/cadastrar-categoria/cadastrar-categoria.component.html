@@ -1,0 +1,11 @@
+<div class="form-eco">
+    <input [(ngModel)]='categoria.nome' type="text" required class="input-eco" name="email" id="email" placeholder="" (keyup.enter)='cadastrarCategoria()'>
+    <label for="email" class="p-1 ml-2 bg-white label-eco">Categoria</label>
+    <div class="borda-do-input"></div>
+</div>
+
+<div class="w-100 d-flex justify-content-center mt-4">
+    <button class="btn btn-sucesso-eco" type="submit" (click)='cadastrarCategoria()'>
+        Entrar
+    </button>
+</div>
