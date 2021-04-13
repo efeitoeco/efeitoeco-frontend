@@ -1,0 +1,28 @@
+<div class="row row-cols-1 row-cols-md-2" align="center">
+    <div class="col mb-4" *ngFor="let produto of listaDeProdutos">
+      <div class="card">
+        <div class="px-5 pt-3">
+            <img [src]="produto.imagem1" class="card-img-top" [alt]="produto.nome">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{produto.nome}}</h5>
+          <hr>
+          <h5 class="preco">R$ {{produto.preco}}</h5>
+          <div class="p-3">
+          <div class="div-botoes">
+              <button class="btn btn-secondary mt-2 w-100" align="center" [routerLink]="['/produtos', produto.id]">Ver produto</button>
+          </div>
+
+          <div class="div-botoes">
+          <button class="btn btn-info mt-3 mr-10 w-45" align="center" [routerLink]="['/editar-produto', produto.id]">
+            Editar
+          </button>
+          <button class="btn btn-danger mt-3 w-45" align="center" [routerLink]="['/delete-produto', produto.id]">
+            Excluir
+          </button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>

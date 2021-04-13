@@ -1,0 +1,44 @@
+<div id="botao-chatbot" (click)='mostrarChat()' (mouseenter)='botaoOpaco()' (mouseleave)='botaoTransparente()'>
+    <div id="conteudo-botao">
+        <i class="fas fa-comment"></i>
+    </div>
+</div>
+
+<div id="chat-chatbot">
+    <div class="chat-topo d-flex align-items-center">
+        <div class="bot-foto mr-3">
+
+        </div>
+        <h5 class="text-white m-0">Cacau</h5>
+    </div>
+    <div class="bot">
+        <div class="chat" id="chat">
+            <div id="mensagens" class="mensagens">
+
+                <div style="display: flex; width: 80%; margin-top: 10px;">
+                    <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">
+                    <span>
+                        Olá, eu sou a Cacau, a assistente virtual da Efeito Eco :)
+                    </span>
+                    </div>
+                </div>
+
+                <div style="display: flex; width: 80%; margin-top: 10px;">
+                    <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">
+                    <span>
+                        Em que posso te ajudar hoje?
+                    </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex mt-2 mb-2 w-100 px-2">
+                <input class="h-100 mr-2 mg-light" type="text" id="fala-usuario" placeholder="Fale com a Eeliana" (keyup.enter)='enviarMsg()'>
+                <button class="enviar-chatbot p-0 m-0 bg-light" (click)='enviarMsg()'>
+                    <i class="fas fa-paper-plane m-0"></i>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</div>

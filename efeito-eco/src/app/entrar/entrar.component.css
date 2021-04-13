@@ -1,0 +1,85 @@
+#img-bg {
+    background-image: url(https://i.imgur.com/bwUkPyU.jpg);
+    height: 100%;
+    width: 50%;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-form-div {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dentro-login-form-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-login-eco {
+    display: flex;
+    height: calc(100vh + var(--em-quatro));
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.hr-eco {
+    width: 100%;
+}
+
+.div-botoes {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1120px) {
+    .dentro-login-form-div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .dentro-login-form-div {
+        width: 100%;
+    }
+
+    #img-bg {
+        display: none;
+    }
+
+    .container-login-eco {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .login-form-div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .login-form-div {
+        width: 80%;
+    }
+}

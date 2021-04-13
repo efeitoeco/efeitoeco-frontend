@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --texto-marrom:  #614023;
+    --verde-preco: #075f22;
+    --verde-parcela: #075f2193;
+    --em-tres: 3em;
+    --em-quatro: 4em;
+    --em-cinco: 5em;
+    --em-cinco-cinco: 5.5em;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.form-eco {
+    /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
+    position: relative;
+
+    /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
+    width: 100%;
+
+    /* height de 50px pois o form tem q ficar um pouco alto, já que o label vai estar dentro dele */
+    height: 50px;
+
+    /* user-select none para o usuário não conseguir selecionar o texto do label com o mouse e ficar parecendo um placeholder de verdade */
+    user-select: none;
+}
+
+.input-eco {
+    /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
+    width: 100%;
+
+    /* vamos tirar a borda natural do input, pois vamos substituíla pela div da classe borda-do-input */
+    border: 0;
+
+    /* a outline também será substituída pela div de borda-do-input */
+    outline: none;
+
+    /* height de 100% pra ficar do tamanho da div form-eco que agrupa o input, a label e a div de borda-do-input */
+    height: 100%;
+
+    /* Vamos adicionar padding na direita e na esqurda de 15px (px-15) para não deixar o input do usuário colado nos lados */
+    padding: 0 15px;
+
+    /* o tempo da animação da label subir para a borda é de 0.4 segundos */
+    transition: 0.4s;
+}
+
+.label-eco {
+    /* posição absoluta deixa o elemento posiciona em relação ao elemento anterior não-estático, no caso o input. Queremos isso para a label de mover em torno do input */
+    position: absolute;
+
+    /* a partir da posição absoluta, definimos o top 0 para o label fica a 0px de distância do input, ficando assim acima do input, e parecendo um placeholder */
+    top: 0;
+
+    /* utilizamos display flex para utilizar suas propriedades de alimenhamento */
+    display: flex;
+
+    /* centralizando o label verticalmente dentro do input */
+    align-items: center;
+
+    /* padding a esquerda para não deixar o label colado na esquerda */
+    padding-left: 15px;
+
+    /* width de 100% para o comprimento da label ser o tamanho da div mãe (form-eco) */
+    width: 100%;
+
+    /* height de 100% pra ficar do tamanho da div form-eco que agrupa o input, a label e a div de borda-do-input */
+    height: 100%;
+    
+    /* deixando na cor de placeholder */
+    color: gray;
+    
+    /* tiando a interatividade com o mouse do usuário para parecer um placeholder */
+    pointer-events: none;
+
+    /* tempo da animação que vai jogar a label para em cima da borda */
+    transition: 0.2s;
+}
+
+.borda-do-input {
+    /* deixando a posição da borda relacionada com a label, que está relacionada com o input */
+    position: absolute;
+    
+    /* a partir da posição absoluta, definimos o top 0 para o label fica a 0px de distância do input, ficando assim acima do input, e parecendo um placeholder */
+    top: 0;
+
+    /* deixando a borda bem clarinha, quase transparente */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    /* height de 100% pra ficar do tamanho da div form-eco que agrupa o input, a label e a div de borda-do-input */
+    height: 100%;
+
+    /* width (comprimento) de 100% pra ficar do tamanho da div form-eco que agrupa o input, a label e a div de borda-do-input */
+    width: 100%;
+
+    /* tirando a interatividade com o mouse do usuário para parecer a borda do input de verdade */
+    pointer-events: none;
+
+    /* deixando a borda com os cantos levemente arredondados */
+    border-radius: 4px;
+
+    /* tempo da animação que vai mudar a borda de cor quando a label subir */
+    transition: 0.2s;
+}
+
+/* aqui vamos usar a pseudoclasse do CSS :valid, que serve para manipular o input quando o usuário inserir um valor válido */
+.input-eco:valid + .label-eco {
+    /* deixando o label mais pra cima, sem isso ele ficaria caído/desalinhado */
+    top: -0.45rem;
+
+    /* deixando o label mais para a direita (aumentando o espaço na esquerda) para ele não ficar muito no comecinho da borda */
+    left: 10px;
+
+    /* deixando o tamanho na fonte menor quando o input sobe */
+    font-size: 0.9rem;
+
+    /* z-index define a ordem que os elementos aparecem na tela (quando menor, aparece numa camada mais para baixo). Sendo assim, definimos o z-index do label de 2, para ele aparecer em cima da borda, e não em baixo */
+    z-index: 2;
+
+    /* width auto para a label só ter o comprimento do seu conteúdo. Sem isso, a label iria ir até o final da div e não daria pra ver a borda, pois tem background de cor branca */
+    width: auto;
+
+    /* deixando a altura adequada ao tamanho da fonte */
+    height: 0.9rem;
+}
+
+/* aqui vamo usar a pseudoclasse do css de :focus. Isso nos permite manipular o input quando estamos clicados nele e digitando. Usaremos as mesmas características da pseudoclasse :valid, tendo de diferença somente a color */
+.input-eco:focus + .label-eco {
+    top: -0.45rem;
+    left: 10px;
+    font-size: 0.9rem;
+    z-index: 2;
+    width: auto;
+    height: 0.9rem;
+    color: #3484f0;
+}
+
+/* aqui vamos manipular a cor da borda na pseudoclasse :focus, deixando da mesma cor da label também no estado :focus */
+.input-eco:focus ~ .borda-do-input {
+    border: 2px solid #3484f0;
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --em-tres: 5em;
+        --em-quatro: 6em;
+        --em-cinco: 7em;
+        --em-cinco-cinco: 7.5em;
+    }
+}

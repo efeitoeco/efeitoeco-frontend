@@ -1,0 +1,153 @@
+.home {
+    margin-top: var(--em-cinco);
+}
+
+.h2 {
+    color: var(--texto-marrom);
+    font-weight: 600;
+}
+
+.img-jumbotron {
+    width: 100%;
+}
+
+/* Utilizei o posicion absoluta para colocar a div dentro do card com o bottom: 0, que deixa a div com zero de distância da parte de baixo da div-mãe (div do card), e deixei com width de 100% para ficar com o comprimento da div-mãe */
+.legenda-carrosel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* coloquei um background preto com 33% de opacidade para favorecer a leitura (contrastre com as letras brancas), e coloquei padding para o texto não ficar colado nas extremidades, especialmente na extremidade de baixo. Também deixei a cor do texto branco e usei o display flex pra centralizar o conteúdo verticalmente e horizontalmente */
+.carrosel2-bg {
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 30px 35px 40px 35px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition-duration: 0.3s;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
+}
+
+.card-title{
+    font-weight: 500;
+}
+
+.preco {
+    color:var(--verde-preco);
+    text-align: center;
+    font-weight: 500;
+}
+
+.parcela {
+    color:var(--verde-parcela);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.card-carrosel-eco {
+    max-width: 90%;
+    max-height: 95%;
+    transition: .1s;
+    border: 0;
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    box-shadow: 5px 1 5px -4px rgba(237, 241, 235, 0.8);
+    box-shadow: 5px 0 5px -4px rgba(237, 241, 235, 0.8);
+    cursor: pointer;
+}
+
+.controle-eco {
+    filter: invert(100%);
+    margin-left: 0%;
+    margin-right: 0%;
+    height: 25%;
+    width: 7%;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition-duration: .5s;
+    background-color: rgba(221, 221, 221, 0.068);
+}
+
+.controle-eco:hover {
+    background-color: rgba(221, 221, 221, 0.219);
+}
+
+.card-img-top {
+    transition: transform .2s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.2);
+}
+
+.img-jumbotron-eco {
+    width: 30%;
+}
+
+.texto-jumbotron-eco {
+    width: 70%;
+}
+
+.responsividade2 {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .responsividade2 {
+        display: block;
+    }
+
+    .responsividade1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #carrosel-2 {
+        display: none;
+    }
+
+    .grande-carrosel-eco {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-jumbotron-eco {
+        display: none;
+    }
+
+    .texto-jumbotron-eco {
+        width: 100%;
+    }
+
+    .jumbotron-home-eco {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .jumbotron-home-eco {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .parcela {
+        display: none;
+    }
+
+    .btn-success {
+        display: none;
+    }
+}

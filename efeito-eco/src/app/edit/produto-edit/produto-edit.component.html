@@ -1,0 +1,51 @@
+<div class="container container-edit-produto">
+    <h1 class="text-center">Atualizar produto</h1>
+
+    <div class="form-eco mt-4">
+        <input [(ngModel)]="produto.nome" [value]="antigoProduto.nome" type="text" required class="input-eco" name="nome-produto" id="nome-produto" placeholder="">
+        <label for="nome-produto" class="p-1 ml-2 bg-white label-eco">Nome do produto *</label>
+        <div class="borda-do-input"></div>
+    </div>
+
+    <div class="form-textarea-eco mt-4">
+
+        <textarea [(ngModel)]="produto.descricao" [value]="antigoProduto.descricao" class="input-eco textarea-eco" required></textarea>
+        <label for="descricao-produto" class="p-1 ml-2 bg-white label-eco">Descrição *</label>
+        <div class="borda-do-input"></div>
+    </div>
+
+    <div class="form-eco mt-4">
+        <input [(ngModel)]="produto.preco" [value]="antigoProduto.preco" type="number" min="0.1" max="1000" required class="input-eco" name="nome-produto" id="preco-produto" placeholder="">
+        <label for="preco-produto" class="p-1 ml-2 bg-white label-eco">Preço *</label>
+        <div class="borda-do-input"></div>
+    </div>
+
+    <div class="form-eco mt-4">
+        <input [(ngModel)]="produto.imagem1" [value]="antigoProduto.imagem1" type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">
+        <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Link da primeira foto *</label>
+        <div class="borda-do-input"></div>
+    </div>
+
+    <div class="form-eco mt-4">
+        <input [(ngModel)]="produto.imagem2" [value]="antigoProduto.imagem2" type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">
+        <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Link da segunda foto</label>
+        <div class="borda-do-input"></div>
+    </div>
+
+    <div class="form-eco mt-4">
+        <select [(ngModel)]="categoriaId" class="select-eco" [value]="antigoProduto.categoria">
+            <option value="">Categoria do produto *</option>
+            <option *ngFor="let categoria of categoriaLista" value="{{categoria.id}}">{{categoria.nome}}</option>
+        </select>
+    </div>
+
+    <div class="div-botoes mt-4 w-100 d-flex justify-content-center">
+        <button class="btn btn-cancelar-eco mr-4 mb-4" align="center" [routerLink]="['/conta/meus-produtos']">
+            Cancelar
+        </button>
+
+        <button (click)="atualizarProduto()" class="btn btn-sucesso-eco mb-4" align="center">
+            Atualizar
+        </button>
+    </div>
+</div>

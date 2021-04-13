@@ -1,0 +1,19 @@
+<main class="container container-conta-eco mb-5 d-flex">
+    <div class="col-md-4 pt-4">
+        <div class="d-flex justify-content-center flex-column">
+            <img class="usuario-foto" src="{{usuario.foto}}" alt="Foto de perfil de {{ usuario.nome }}">
+            <h4 class="text-center mt-3">{{usuario.nome}}</h4>
+            <button class="mt-5 botao-menu py-3 btn btn-light" [routerLink]="['atualizar-dados']">Atualizar Dados</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['alterar-senha']">Alterar Senha</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['cadastrar-produto']">Cadastrar Produto</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['meus-produtos']">Meus Produtos</button>
+            <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['minhas-compras']">Minhas Compras</button>
+            <button *ngIf='administrador' class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['cadastrar-categoria']">Cadastrar Categoria</button>
+            <button (click)="sair()" class="mt-3 botao-menu py-3 btn btn-light">Sair da Conta</button>
+            
+        </div>
+    </div>
+    <div class="col-md-8 p-4 muda-conteudo">
+        <router-outlet></router-outlet>
+    </div>
+</main>

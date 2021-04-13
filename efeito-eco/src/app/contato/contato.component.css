@@ -1,0 +1,133 @@
+.container-contato-eco {
+    margin-top: var(--em-cinco-cinco);
+}
+
+.form-textarea-eco {
+    /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
+    width: 100%;
+
+    /* height de 50px pois o form tem q ficar um pouco alto, já que o label vai estar dentro dele */
+    height: 80px;
+
+    /* user-select none para o usuário não conseguir selecionar o texto do label com o mouse e ficar parecendo um placeholder de verdade */
+    user-select: none;
+}
+
+.textarea-eco {
+    height: 75px;
+}
+
+.select-eco {
+    width: 100%;
+    padding: 10px;
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.text-center{
+    align-items: center;
+}
+
+.menu-redes-sociais {
+    display: flex;
+    align-items: center;
+}
+
+
+li {
+    list-style:none;
+    padding: 10px;  
+}
+
+a {
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+i {
+    transition: color 0.5s;
+}
+
+
+.fa-facebook-f:hover{
+    color: #4267b2;
+
+}
+
+.fa-twitter:hover{
+    color: #1da1f2;
+}
+
+.tamanho{
+    font-size: 2em;
+}
+
+.fa-instagram:hover{
+    color: #e65168;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.text-titulos{
+    color: #614023;
+    font-weight: 700;
+}
+
+.h4{
+    color: var( --verde-preco);
+    font-weight: 600;
+}
+
+.botao-menu {
+    width: 100%;
+    border-radius: 10px;
+    color: rgba(0,0,0,.7);
+    transition: 0.5s;
+}
+
+.botao-menu:hover {
+    color: #000;   
+}
+
+.botao-menu:focus{
+    outline: none;
+}
+
+.img-tc{
+    width: 100%; 
+}
+
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.naoCopia{
+    pointer-events: none;
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+
+
+

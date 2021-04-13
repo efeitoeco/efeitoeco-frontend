@@ -1,0 +1,85 @@
+<!--Logo centralizado-->
+<div align="center" class="naoArrasta trabalho-eco-img">
+    <img class="altura-logo naoCopia" src="../../assets/img/TrabEcov2.png" alt="">
+</div>
+<!--/Logo centralizado-->
+
+<!--Parágrafo explicativo Efeito Eco-->
+<div class = "container mt-3" align = "center">
+    <h3 class="h3">Somos uma start-up do grupo Eco!</h3>
+    <p>E por aqui, nós buscamos inovação, visão de futuro, sede de aprender e compromisso com trabalho em equipe. Ah, e claro, gente que seja apaixonad@ pela natureza, assim como a gente! Com foco em diversidade, nossa equipe de gente é totalmente voltada para criação de processos seletivos que sejam equilibrados, no quesito gênero, orientação sexual, credo e etc.</p> 
+    <h4 class= "h4">Venha fazer parte da família Eco!</h4>
+</div>
+<!--/Parágrafo explicativo Efeito Eco-->
+
+<!--Imagem e Formulário-->
+<div class="container-trabalhe-conosco d-flex align-items-center mt-5">
+
+    <div class="col-md-5 naoArrasta"><img class = "img-tc naoCopia" src="../../assets/img/Job hunt-amico.png" alt=""></div>
+  
+    <div class="trabalhe-conosco-form col-md-7">
+
+        <div class="dentro-trabaleConosco-form-div">
+
+            <h3 class="text-center mb-0 mt-3 h2">Fale um pouco sobre você!</h3>
+
+            <div class="form-eco mt-4">            
+                  <input type="text" required class="input-eco" name="nome" id="nome" placeholder="">
+                  <label for="nome" class="p-1 ml-2 bg-white label-eco">Nome</label>
+                  <div class="borda-do-input"></div>
+            </div>
+
+            <div class="form-eco mt-4">
+                <input type="telefone" required class="input-eco" name="telefone" id="telefone" placeholder="">
+                <label for="telefone" class="p-1 ml-2 bg-white label-eco">Telefone</label>
+                <div class="borda-do-input"></div>
+            </div>
+          
+            <div class="form-eco mt-4">
+                <input type="text" required class="input-eco" name="email" id="email" placeholder="">
+                <label for="email" class="p-1 ml-2 bg-white label-eco">E-mail</label>
+                <div class="borda-do-input"></div>
+            </div>
+
+            <div class="form-textarea-tc mt-4">
+
+                <textarea class="input-eco textarea-tc" required></textarea>
+                <label for="sobre-voce" class="p-1 ml-2 bg-white label-eco">Fale sobre você</label>
+                <div class="borda-do-input"></div>
+            </div>
+
+            <div class="form-eco mt-4">
+                <select class="custom-select">
+                    <option selected>Nível de cargo pretendido</option>
+                    <option value="1">Estágio</option>
+                    <option value="2">Júnior</option>
+                    <option value="3">Sênior</option>
+                    <option value="4">Pleno</option>
+                    <option value="5">Gerência</option>
+                  </select>
+            </div>
+
+            <div class="form-eco mt-4">
+                <form>
+                    <div class="form-group">
+                      <label for="anexocurriculo">Anexe seu currículo</label>
+                      <input type="file" class="form-control-file" id="anexocurriculo">
+                    </div>
+                  </form>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <button class="btn btn-cancelar-eco mr-3" [routerLink]="['/home']">
+                    Cancelar
+                </button>
+                <button (click)='enviar()' class="btn btn-sucesso-eco" type="submit">
+                    Enviar
+                </button>
+            </div>
+                
+        </div>
+    </div>
+
+</div>
+<!--/Imagem e Formulário-->
+

@@ -1,0 +1,45 @@
+.form-textarea-eco {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 80px;
+    user-select: none;
+}
+
+.textarea-eco {
+    height: 75px;
+}
+
+.select-eco {
+    width: 100%;
+    padding: 10px;
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.container-edit-produto {
+    margin-top: 5em;
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+}
+
+.input-eco:invalid + .label-eco {
+    top: -0.45rem;
+    left: 10px;
+    font-size: 0.9rem;
+    z-index: 2;
+    width: auto;
+    height: 0.9rem;
+}

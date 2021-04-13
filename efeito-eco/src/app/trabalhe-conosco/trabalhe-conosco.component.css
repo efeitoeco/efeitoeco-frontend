@@ -1,0 +1,133 @@
+.trabalho-eco-img {
+    margin-top: var(--em-tres);
+}
+
+.altura-logo{
+    width: 40%;
+}
+
+.container-trabalhe-conosco {
+    align-items: center;
+    justify-content: center;
+}
+
+.h3 {
+    color: var(--texto-marrom);
+    font-weight: 600;
+}
+
+.h4 {
+    color: var(--verde-preco);
+    font-weight: 600;
+}
+
+.img-tc{
+     width: 100%; 
+}
+.trabalhe-conosco-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dentro-trabaleConosco-form-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-trabalhe-conosco {
+    display: flex;
+    height: 100vh;
+}
+
+.form-textarea-tc {
+    /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
+    width: 100%;
+
+    /* height de 50px pois o form tem q ficar um pouco alto, já que o label vai estar dentro dele */
+    height: 80px;
+
+    /* user-select none para o usuário não conseguir selecionar o texto do label com o mouse e ficar parecendo um placeholder de verdade */
+    user-select: none;
+}
+
+.textarea-tc {
+    height: 75px;
+}
+
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.naoCopia{
+    pointer-events: none;
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1120px) {
+    .dentro-login-form-div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .dentro-login-form-div {
+        width: 100%;
+    }
+
+    #img-bg {
+        display: none;
+    }
+
+    .container-login-eco {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .login-form-div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .login-form-div {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .form-nomes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sobrenome-form {
+        margin-left: 0;
+    }
+}

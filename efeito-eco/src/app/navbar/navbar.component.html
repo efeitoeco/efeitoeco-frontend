@@ -1,0 +1,69 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-eco">
+        <a class="nav-link" [routerLink]="['/home']">
+            <img src="https://i.imgur.com/qPa7VJ9.png" alt="Logo image" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link cor-menu-navbar" [routerLink]="['/home']">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cor-menu-navbar" [routerLink]="['/produtos']">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cor-menu-navbar" [routerLink]="['/sobre']">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cor-menu-navbar" [routerLink]="['/contato']">Contato</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li *ngIf='auth.logado()' class="nav-item">
+                    <a class="nav-link" [routerLink]="['/conta']">
+                        <button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
+                        Minha Conta
+                        </button>
+                    </a>
+                </li>
+
+                <li *ngIf='auth.logado()' class="nav-item">
+                    <a class="nav-link" [routerLink]="['/carrinho']">
+                        <button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
+                            Carrinho
+                        </button>
+                    </a>
+                </li>
+                
+                <li *ngIf='!auth.logado()' class="nav-item">
+                    <a class="nav-link" [routerLink]="['/entrar']">
+                        <button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
+                            Fazer Login 
+                        </button>
+                    </a>
+                </li>
+            
+                
+                <div class="form-inline dropdown barrapesquisar" (mouseout)='zerarPesquisar()'>
+                    <div id='tabPesquisar' class="div-input-btn">
+                        <input type="search" [(ngModel)]='nomeProduto' (keyup)='findByNomeProduto()'>
+                    </div>
+                    <div>
+                        <div class="dropdown-menu-search" aria-labelledby="navbarDropdown" id="dropDown">
+                            <div *ngFor='let item of listaProdutos'>
+                                <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id]">{{item.nome}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+            </ul> 
+        </div>
+    </nav>
+</header>

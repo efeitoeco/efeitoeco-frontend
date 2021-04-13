@@ -1,0 +1,88 @@
+<!--Carousel automático para as mensagens-->
+<div class="carrosel-eco-produtos">
+  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="3000" align="center" data-ride='carousel'>
+    <div class="carousel-inner mt-3 naoArrasta img-carousel">
+      <div class="carousel-item active">
+        <i class="fas fa-seedling img-mensagem naoArrasta"></i><p>Na natureza nada se cria, nada se perde, tudo se transforma!
+        </p>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-globe-americas img-mensagem naoArrasta"></i><p>Plante sementes de felicidade, esperança, sucesso e amor!
+        </p>
+      </div>
+      <div class="carousel-item">
+        <i class="fab fa-pagelines img-mensagem naoArrasta"></i><p>O Mundo é a cidade de todos!</p>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-leaf img-mensagem naoArrasta"></i><p>A paz que tanto procuramos encontra-se na natureza!</p>
+      </div>
+      <div class="carousel-item">
+        <i class="fab fa-pagelines img-mensagem naoArrasta"></i><p>Tente mover o mundo e o primeiro passo será mover a si mesmo!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Carousel automático para as mensagens-->
+
+
+<main class="container d-flex mb-5 container-mae">
+    <div class="container-imagens">
+        <!--<img src="../../assets/img/card1.jpg" alt="" class="img-produto">-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img [src]="produto.imagem1" class="d-block w-100" [alt]="produto.nome">
+              </div>
+              <div class="carousel-item">
+                <img [src]="produto.imagem2" class="d-block w-100" [alt]="produto.nome">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+    <div class="container-dados">
+        <h2 class="m-0 font-weight-bold nome-produto">
+            {{produto.nome}}
+        </h2>
+        <span class="vendido-por">Vendido por: <a [routerLink]="['/usuario', produto.criadoPor.id]" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
+        <h3 class="mt-3 preco-principal mb-0">
+            R$ {{produto.preco}}
+        </h3>
+        <span class="parcela-principal"> ou 3x de R$ {{produto.preco / 3 | number: '1.2-2'}} sem juros</span>
+
+        <div class="mt-3 container-qtde-carrinho">
+
+          <div class="quantidade-a-adicionar">
+            <button class="botao-quant btn btn-light d-flex justify-content-center align-items-center" (click)="diminuirQuantidade()">-</button>
+            <div class="px-3 py-2 preco-item ml-3">{{quantidade}}</div>
+            <button class="botao-quant ml-3 btn btn-light d-flex justify-content-center align-items-center" (click)="aumentarQuantidade()">+</button>
+          </div>
+            
+          <div class="adicionar-carrinho-botao">
+            <button class="botao-carrinho btn btn-light" (click)='adicionarAoCarrinho(produto.id)'>
+              <i class="fas fa-shopping-cart mr-4 carrinho"></i>
+              Adicionar ao carrinho
+            </button>
+          </div>
+            
+        </div>
+        <div class="mt-4 text-justify produto-descricao">
+            <p>
+              {{produto.descricao}}
+            </p>
+        </div>
+
+    </div>
+
+</main>

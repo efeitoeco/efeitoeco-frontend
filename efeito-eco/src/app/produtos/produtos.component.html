@@ -1,0 +1,95 @@
+<!--Carousel automático para as mensagens-->
+<div class="carrosel-eco-produtos">
+  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="3000" align="center" data-ride='carousel'>
+    <div class="carousel-inner mt-3 naoArrasta img-carousel">
+      <div class="carousel-item active">
+        <i class="fas fa-seedling img-mensagem naoArrasta"></i><p>Na natureza nada se cria, nada se perde, tudo se transforma!
+        </p>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-globe-americas img-mensagem naoArrasta"></i><p>Plante sementes de felicidade, esperança, sucesso e amor!
+        </p>
+      </div>
+      <div class="carousel-item">
+        <i class="fab fa-pagelines img-mensagem naoArrasta"></i><p>O Mundo é a cidade de todos!</p>
+      </div>
+      <div class="carousel-item">
+        <i class="fas fa-leaf img-mensagem naoArrasta"></i><p>A paz que tanto procuramos encontra-se na natureza!</p>
+      </div>
+      <div class="carousel-item">
+        <i class="fab fa-pagelines img-mensagem naoArrasta"></i><p>Tente mover o mundo e o primeiro passo será mover a si mesmo!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Carousel automático para as mensagens-->
+
+
+<div class="container mb-5">
+  <div class="d-flex justify-content-end ordenar">
+    <div class="d-flex flex-column">
+      <label for="" class="text-center">Ordenar Por</label>
+      <select [(ngModel)]='tipoOrdenacao' name="" id="" class="bg-light border border-success p-2 ordenar-select" (change)='ordenar()'>
+        <option value="lancamento" class="">Lançamentos</option>
+        <option value="menorPreco">Menor Preço</option>
+        <option value="precoMaior">Maior Preço</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+
+      </select>
+    </div>
+  </div>
+  <div class="d-flex filtros-e-categorias">
+    <div class="filtro">
+      <div class="borda div-filtro px-2 pb-2 pt-3 ">
+        <h5 class="mb-3 text-center titulo">
+          Categoria
+        </h5>
+         <div *ngFor='let categoria of listaCategoria' class="form-check categoria-mq">
+          <input class="form-check-input" type="checkbox" [value]="categoria.id" id="defaultCheck1" (change)='filtrarPorCategoria($event, categoria.id)'>
+          <label class="form-check-label" for="defaultCheck1">
+            {{ categoria.nome }}
+          </label>
+        </div>
+        
+      </div>
+      <div class="borda div-filtro p-2 mt-3">
+        <h5 class="mb-3 text-center titulo">
+          Preço
+        </h5>
+        <input [(ngModel)]='precoFiltrado' class="slider-eco" type="range" min="{{menorPreco}}" max="{{maiorPreco}}" (change)='filtrarProdutos()' step="0.01" [value]='precoFiltrado'>
+        <div class="input-preco-div mt-2">
+          <p>R$ {{ precoFiltrado | number: '1.0-0'}}</p>
+        </div>
+        
+
+      </div>
+
+    </div>
+    <div class="filtrados px-5 pb-5">
+      <div class="row row-cols-md-2 row-cols-lg-3 row-cols-sm-1" align="center">
+
+
+        <div class="col mb-4 filtro-produto" *ngFor='let produto of listaProdutoFiltrada | orderBy : key : reverse'>
+          <div class="card" [routerLink]="['/produtos', produto.id]">
+            <img id="imagem-card-eco" src="{{produto.imagem1}}" class="card-img-top" alt="{{produto.nome}}">
+            <img *ngIf="produto.imagem2!=null" src="{{produto.imagem2}}" style="position: absolute;" class="card-img-top imagem2" alt="{{produto.nome}}">
+            <div class="card-body">
+              <h5 class="card-title">{{produto.nome}}</h5>
+              <hr>
+              <h5 class="preco">R$ {{produto.preco | number : '1.2-2'}}</h5>
+              <div>
+                <span class="parcela">ou 3x de R$ {{produto.preco / 3 | number : '1.2-2'}} sem juros</span>
+              </div>
+              <button class="btn btn-success mt-3" align="center" [routerLink]="['/produtos', produto.id]">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<h1 class="text-center">Atualizar Cadastro</h1>
+
+<div class="form-nomes d-flex mt-5">
+
+    <!--Vamos tirar a classe form-control do bootstrap e adicionar o form-eco (nossa própria classe)-->
+    <div class="form-eco">
+        
+        <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
+        <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
+        <input [(ngModel)]="usuario.nome" [value]="usuario.nome" type="text" required class="input-eco" name="nome" id="nome" placeholder="">
+
+        <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
+        <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
+        <label for="nome" class="p-1 ml-2 bg-white label-eco">Nome</label>
+        
+        <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
+        <div class="borda-do-input"></div>
+    </div>
+
+    <!--Vamos tirar a classe form-control do bootstrap e adicionar o form-eco (nossa própria classe)-->
+    <div class="form-eco ml-4"> 
+
+        <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
+        <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
+        <input [(ngModel)]="usuario.sobrenome" [value]="usuario.sobrenome" type="text" required class="input-eco" name="sobrenome" id="sobrenome" placeholder="">
+
+        <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
+        <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
+        <label for="nome" class="p-1 ml-2 bg-white label-eco">Sobrenome</label>
+        
+        <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
+        <div class="borda-do-input"></div>
+    </div>
+</div>
+
+<div class="form-eco mt-4">
+                            
+    <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->
+    <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->
+    <input [(ngModel)]="usuario.foto" [value]="usuario.foto" type="text" required class="input-eco" name="email" id="email" placeholder="">
+
+    <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->
+    <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->
+    <label for="email" class="p-1 ml-2 bg-white label-eco">Link da foto</label>
+    
+    <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->
+    <div class="borda-do-input"></div>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-cancelar-eco mr-3" [routerLink]="['/home']">
+        Cancelar
+    </button>
+    <button (click)="atualizarUsuario()" class="btn btn-sucesso-eco" type="submit">
+        Confirmar
+    </button>
+</div>
+
