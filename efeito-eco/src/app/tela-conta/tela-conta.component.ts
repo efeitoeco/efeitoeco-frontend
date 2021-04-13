@@ -18,6 +18,8 @@ export class TelaContaComponent implements OnInit {
   meuNome = environment.nome;
   meuId = environment.id;
 
+  administrador: boolean;
+
 
   constructor(
     private auth: AuthService,
@@ -25,6 +27,11 @@ export class TelaContaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(this.meuId == 1) {
+      this.administrador = true;
+    } else {
+      this.administrador = false;
+    }
     this.estaLogado();
     this.findByIdUsuario();  
   }

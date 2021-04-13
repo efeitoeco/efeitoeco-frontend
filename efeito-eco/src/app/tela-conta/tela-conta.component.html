@@ -8,6 +8,7 @@
             <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['cadastrar-produto']">Cadastrar Produto</button>
             <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['meus-produtos']">Meus Produtos</button>
             <button class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['minhas-compras']">Minhas Compras</button>
+            <button *ngIf='administrador' class="mt-3 botao-menu py-3 btn btn-light" [routerLink]="['cadastrar-categoria']">Cadastrar Categoria</button>
             
         </div>
     </div>
