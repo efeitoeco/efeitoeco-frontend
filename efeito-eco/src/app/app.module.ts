@@ -33,6 +33,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
+import { AutofocusFixModule } from 'ngx-autofocus-fix';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-cat
     FormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
-    OrderModule
+    OrderModule,
+    AutofocusFixModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
