@@ -76,7 +76,7 @@
             <div class="card-body">
               <h5 class="card-title">{{produto.nome}}</h5>
               <hr>
-              <h5 class="preco">R$ {{produto.preco}}</h5>
+              <h5 class="preco">R$ {{produto.preco | number : '1.2-2'}}</h5>
               <div>
                 <span class="parcela">ou 3x de R$ {{produto.preco / 3 | number : '1.2-2'}} sem juros</span>
               </div>
