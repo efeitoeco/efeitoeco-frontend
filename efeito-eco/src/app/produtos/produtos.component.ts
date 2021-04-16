@@ -19,6 +19,8 @@ export class ProdutosComponent implements OnInit {
   maiorPreco: number;
   menorPreco: number;
 
+  temProdutos: boolean;
+
   listaCategoria: Categoria[];
 
   categoriasSelecionadas: number[];
@@ -34,6 +36,7 @@ export class ProdutosComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    this.temProdutos = true;
     this.tipoOrdenacao = 'lancamento';
     this.verTodosProdutos();
     this.verTodasCategorias();
@@ -87,6 +90,10 @@ export class ProdutosComponent implements OnInit {
     this.listaProdutoFiltrada = this.listaProdutoFiltrada.filter((produto: Produto) => {
       return produto.preco <= this.precoFiltrado;
     })
+
+    if(this.listaProdutoFiltrada.length < 1) {
+      this.temProdutos = false;
+    }
   }
 
   pegarPrecoMax() {
