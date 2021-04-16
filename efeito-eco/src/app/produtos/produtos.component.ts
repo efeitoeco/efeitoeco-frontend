@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Categoria } from '../models/Categoria';
 import { Produto } from '../models/Produto';
 import { CategoriaService } from '../service/categoria.service';
@@ -14,6 +15,7 @@ export class ProdutosComponent implements OnInit {
   produto: Produto = new Produto();
   listaProduto: Produto[];
   listaProdutoFiltrada: Produto[];
+  listaProdutoFiltradaDelimitada: Produto[];
   listaProdutoFiltradaPreco: Produto[];
   precoFiltrado: number;
   maiorPreco: number;
@@ -30,12 +32,19 @@ export class ProdutosComponent implements OnInit {
   key = 'id';
   reverse = true;
 
+  produtoNaoVazio = true;
+  naoScroll = true;
+  arrayFinal: number;
+
   constructor(
     private produtoService: ProdutoServiceService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(){
+    window.scroll(0, 0);
+    this.arrayFinal = 9;
     this.temProdutos = true;
     this.tipoOrdenacao = 'lancamento';
     this.verTodosProdutos();
@@ -54,6 +63,7 @@ export class ProdutosComponent implements OnInit {
       this.pegarPrecoMax();
       this.pegarPrecoMin();
       this.precoFiltrado = this.maiorPreco;
+      this.delimitarProdutos();
     })
   }
 
@@ -93,7 +103,16 @@ export class ProdutosComponent implements OnInit {
 
     if(this.listaProdutoFiltrada.length < 1) {
       this.temProdutos = false;
+    } else {
+      this.temProdutos = true;
     }
+
+    this.delimitarProdutos();
+  }
+
+  delimitarProdutos() {
+    this.listaProdutoFiltradaDelimitada = [...this.listaProdutoFiltrada];
+    this.listaProdutoFiltradaDelimitada = this.listaProdutoFiltradaDelimitada.slice(0, this.arrayFinal);
   }
 
   pegarPrecoMax() {
@@ -157,5 +176,24 @@ export class ProdutosComponent implements OnInit {
   ordenarLancamento() {
     this.key = 'id';
     this.reverse = true;
+  }
+
+  onScroll(): void {
+    if(this.naoScroll && this.produtoNaoVazio) {
+      this.spinner.show();
+      this.naoScroll = false;
+      this.carregarProximosProdutos();
+    }
+  }
+
+  carregarProximosProdutos() {
+    setTimeout(() => {
+      this.arrayFinal += 9;
+      this.filtrarProdutos();
+      if(this.listaProdutoFiltradaDelimitada[this.arrayFinal] == undefined) {
+      this.produtoNaoVazio = false;
+      this.spinner.hide();
+    }
+    }, 1500);
   }
 }

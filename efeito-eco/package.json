@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.2.4",
+    "@angular/animations": "^11.2.10",
     "@angular/common": "~11.2.4",
     "@angular/compiler": "~11.2.4",
     "@angular/core": "~11.2.4",
@@ -24,7 +24,9 @@
     "jquery": "^3.6.0",
     "ngx-autofocus-fix": "^1.0.4",
     "ngx-bootstrap": "^6.2.0",
+    "ngx-infinite-scroll": "^10.0.1",
     "ngx-order-pipe": "^2.1.1",
+    "ngx-spinner": "^11.0.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
