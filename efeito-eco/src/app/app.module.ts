@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
 import { AutofocusFixModule } from 'ngx-autofocus-fix';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -64,7 +67,7 @@ import { AutofocusFixModule } from 'ngx-autofocus-fix';
     ProdutoDeleteComponent,
     CarrinhoComponent,
     MinhasComprasComponent,
-    CadastrarCategoriaComponent,
+    CadastrarCategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +76,10 @@ import { AutofocusFixModule } from 'ngx-autofocus-fix';
     HttpClientModule,
     ModalModule.forRoot(),
     OrderModule,
-    AutofocusFixModule.forRoot()
+    AutofocusFixModule.forRoot(),
+    InfiniteScrollModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
