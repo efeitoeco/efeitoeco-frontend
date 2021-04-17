@@ -146,10 +146,11 @@ li{
         display: none;
     }
     .efeitoEco-logo{
-        display: none;
+        width: 80%;
+        height: 80%;
     }
     .sobre{
-        margin-top:50px;
+        margin-top:20px;
     }
     .card{
         margin-right: 50px;
