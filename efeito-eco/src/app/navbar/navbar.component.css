@@ -21,6 +21,7 @@ a {
 .btn-navbar-eco {
 	background-color: #f3f3f3;
 	transition: .5s;
+	box-shadow: none; 
 }
 
 .btn-navbar-eco:hover {

@@ -118,3 +118,41 @@ li{
     width: 100%;
 }
 
+@media screen and (max-width: 768px){
+    .proposito{
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .card{
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 80px;
+    }
+    #card-missao{
+        margin-left: 50px;
+    }
+    .sobre{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px){
+    #myVideo{
+        display: none;
+    }
+    .efeitoEco-logo{
+        width: 80%;
+        height: 80%;
+    }
+    .sobre{
+        margin-top:20px;
+    }
+    .card{
+        margin-right: 50px;
+    }
+}

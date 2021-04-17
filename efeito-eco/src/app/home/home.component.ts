@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
     private produtoService: ProdutoServiceService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0);
     this.verProdutosLancamentos();
     this.verProdutosDestaque();
   }
