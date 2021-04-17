@@ -191,9 +191,9 @@ export class ProdutosComponent implements OnInit {
       this.arrayFinal += 9;
       this.filtrarProdutos();
       if(this.listaProdutoFiltradaDelimitada[this.arrayFinal] == undefined) {
-      this.produtoNaoVazio = false;
-      this.spinner.hide();
-    }
+        this.produtoNaoVazio = false;
+        this.spinner.hide();
+      }
     }, 1500);
   }
 }
