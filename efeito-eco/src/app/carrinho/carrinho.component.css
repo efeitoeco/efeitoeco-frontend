@@ -10,7 +10,7 @@
 .card-eco-carrinho {
     width: 50%;
     display: flex;
-    border: #b3d6bd 1px solid;
+    border: #d2e6d8 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -24,7 +24,7 @@
 }
 
 .img-eco-carrinho-arquivo {
-    height: 210px;
+    height: 200px;
 }
 
 .dados-eco-carrinho {
@@ -55,4 +55,52 @@
 
 .botao-finalizar:hover {
     color: #000;
+}
+
+.form-estado-cidade {
+    display: flex;
+    width: 100%;
+}
+
+.login-form-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dentro-login-form-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-login-eco {
+    display: flex;
+    height: calc(110vh + var(--em-quatro));
+}
+
+.estado-form {
+    margin-left: 8px;
+}
+
+.btn-successo-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+}
+
+.buscar-cep{
+    cursor: pointer;
+    color: #0000ee
 }

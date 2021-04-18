@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Endereco } from '../models/Endereco';
 import { Produto, ProdutoCarrinho } from '../models/Produto';
 import { Usuario } from '../models/Usuario';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CarrinhoService } from '../service/carrinho.service';
+import { CepService } from '../service/cep.service';
+import { VendedorDadosComponent } from '../vendedor-dados/vendedor-dados.component';
 
 @Component({
   selector: 'app-carrinho',
@@ -20,11 +23,14 @@ export class CarrinhoComponent implements OnInit {
   temProdutos: boolean;
   usuario: Usuario = new Usuario();
 
+  endereco: Endereco = new Endereco();
+
   constructor(
     private carrinhoService: CarrinhoService,
     private router: Router,
     private alertas: AlertasService,
-    private auth: AuthService
+    private auth: AuthService,
+    private cepService: CepService
   ) { }
 
   ngOnInit(): void {
@@ -82,5 +88,12 @@ export class CarrinhoComponent implements OnInit {
       this.router.navigate(['/home']);
     })
   }
+
+  encontrarEnderecoPeloCep(cep: string) {
+    this.cepService.encontrarEndereco(cep).subscribe((resp: Endereco) => {
+      this.endereco = resp;
+    })
+  }
+
 
 }
