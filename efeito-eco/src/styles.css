@@ -5,6 +5,7 @@
     --verde-parcela: #075f2193;
     --em-tres: 3em;
     --em-quatro: 4em;
+    --em-quatro-cinco: 4.5em;
     --em-cinco: 5em;
     --em-cinco-cinco: 5.5em;
 }
@@ -146,6 +147,7 @@ html{
     :root {
         --em-tres: 5em;
         --em-quatro: 6em;
+        --em-quatro-cinco: 6.5em;
         --em-cinco: 7em;
         --em-cinco-cinco: 7.5em;
     }
