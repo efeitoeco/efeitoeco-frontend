@@ -46,11 +46,19 @@ export class NavbarComponent implements OnInit {
     })
   }
 
+  atualizarDados() {
+    let urlAtual = this.router.url;
+
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+  }
+
   findByNomeProduto(){
     this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: Produto[])=>{
+      this.atualizarDados();
       this.listaProdutos = resp;
       let dropdown:any = document.getElementById('dropDown');
-      dropdown.style.display = 'block'
+      dropdown.style.display = 'block';
     })
   }
 
