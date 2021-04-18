@@ -1,6 +1,11 @@
-<video autoplay muted loop id="myVideo">
+<video autoplay muted loop id="myVideo" controls muted>
   <source src="../../assets/video/PROJETO RELAMPAGO .mp4" type="video/mp4">
 </video>
+
+<button class="mute-video-btn" (click)='mutarVolume()'>
+  <i class="fas fa-volume-mute" id="fa-volume-mute"></i>
+  <i class="fas fa-volume-up" id="fa-volume-up"></i>
+</button>
 
 <div class="container-fluid container-fluid-eco">
 
