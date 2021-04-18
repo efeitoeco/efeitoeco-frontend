@@ -104,3 +104,37 @@
     cursor: pointer;
     color: #0000ee
 }
+
+@media screen and (max-width: 993px){
+    .form-estado-cidade{
+        flex-direction: column;
+    }
+
+    .form-eco{
+        width: 100%;
+    }
+
+    .estado-form{
+        margin-left: 0;
+    }
+
+    .dentro-login-form-div {
+        width: 70%;
+    }
+    .img-eco-carrinho{
+        display: flex;
+        width: 100%;
+    }
+    .nome-produto-carrinho, .produto-preco-carrinho, .btn-carrinho {
+        display: flex;
+        justify-content: center;
+    } 
+    
+}
+
+@media screen and (max-width: 800px){
+    .dentro-login-form-div {
+        width: 100%;
+    }
+}
+

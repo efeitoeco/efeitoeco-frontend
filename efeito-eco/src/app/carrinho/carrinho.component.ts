@@ -58,6 +58,7 @@ export class CarrinhoComponent implements OnInit {
   removerDoCarrinho(i: number) {
     this.carrinhoService.removerProduto(i);
     this.atualizarDados();
+    this.alertas.showAlertInfo("Produto Removido!");
   }
 
   terminarCompra() {
