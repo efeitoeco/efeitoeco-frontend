@@ -1,0 +1,850 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>efeitoeco-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">efeitoeco-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ContatoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/contato/contato.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-contato</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./contato.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./contato.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#enviarContato">enviarContato</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, auth: <a href="../injectables/AuthService.html">AuthService</a>, alerta: <a href="../injectables/AlertasService.html">AlertasService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/contato/contato.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alerta</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertasService.html" target="_self" >AlertasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enviarContato"></a>
+                    <span class="name">
+                        <b>
+                            enviarContato
+                        </b>
+                        <a href="#enviarContato"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enviarContato()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/contato/contato.component.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/contato/contato.component.ts:21</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AlertasService } from &#x27;../service/alertas.service&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-contato&#x27;,
+  templateUrl: &#x27;./contato.component.html&#x27;,
+  styleUrls: [&#x27;./contato.component.css&#x27;]
+})
+export class ContatoComponent implements OnInit {
+
+  
+  
+  constructor(
+    private router: Router,
+    private auth: AuthService,
+    private alerta: AlertasService
+  ) { }
+
+  ngOnInit(){
+    window.scroll(0,0)
+  }
+
+  enviarContato(){
+    this.alerta.showAlertSuccess(&quot;Sua mensagem foi enviada com sucesso!&quot;);
+    this.router.navigate([&#x27;/home&#x27;]);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container container-contato-eco mb-5&quot;&gt;
+  &lt;h2 class&#x3D;&quot;mt-5 text-titulos&quot;&gt;Dúvidas Frequentes&lt;/h2&gt;
+
+  &lt;h4 class&#x3D;&quot;h4 mt-5&quot;&gt;Clientes&lt;/h4&gt;
+  
+  &lt;div class&#x3D;&quot;accordion mt-4&quot; id&#x3D;&quot;accordionExample&quot;&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        
+          &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingOne&quot;&gt;
+          &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-block btn-light text-left botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOne&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOne&quot;&gt;
+              Por que alguns produtos ficam indisponíveis no site?
+            &lt;/button&gt;
+          &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div id&#x3D;&quot;collapseOne&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingOne&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+          &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            Na plataforma do Efeito Eco  os vendedores cadastram e vendem os produtos, de acordo com sua programação de produção e estoque. Como, em sua maioria, os produtos são handmades, é possível que alguns produtos estejam disponíveis e outros não.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingTwo&quot;&gt;
+          &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwo&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwo&quot;&gt;
+              Por que produtos de papelaria às vezes têm tonalidades diferentes?
+            &lt;/button&gt;
+          &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div id&#x3D;&quot;collapseTwo&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwo&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+          &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            Por se tratar de produtos produzidos a partir de material reciclável, o controle de cor fica comprometido. Porém, a qualidade é sempre a mesma.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingThree&quot;&gt;
+          &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed tab-label botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseThree&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseThree&quot;&gt;
+              Como funciona a entrega?
+            &lt;/button&gt;
+          &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div id&#x3D;&quot;collapseThree&quot; class&#x3D;&quot;collapse tab-label&quot; aria-labelledby&#x3D;&quot;headingThree&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+          &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            Após a confirmação de pagamento, junto às instituições financeiras, a programação de entrega ocorre de acordo com o combinado com o vendedor. Normalmente, um dia após a confirmação de pagamento, o produto entra em rota de distribuição.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingFour&quot;&gt;
+          &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed tab-label botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseFour&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseFour&quot;&gt;
+              E se eu não receber meu produto?
+            &lt;/button&gt;
+          &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div id&#x3D;&quot;collapseFour&quot; class&#x3D;&quot;collapse tab-label&quot; aria-labelledby&#x3D;&quot;headingFour&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+          &lt;div class&#x3D;&quot;card-body&quot;&gt;
+            Caso você não receba seu produto, indicamos que tente contato com o vendedor para entender o que houve. Caso o contato não seja eficaz para solução do problema, nosso time de SAC estará disponível para apresentar a melhor solução para você.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      
+
+      
+
+
+
+    &lt;/div&gt;
+
+    &lt;h4 class&#x3D;&quot;h4 mt-5&quot;&gt;Fornecedores&lt;/h4&gt;
+  
+    &lt;div class&#x3D;&quot;accordion mt-4&quot; id&#x3D;&quot;accordionExample&quot;&gt;
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+          
+            &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingOneF&quot;&gt;
+            &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-block btn-light text-left botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseOneF&quot; aria-expanded&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;collapseOneF&quot;&gt;
+                Como posso vender meus produtos na Efeito Eco?
+              &lt;/button&gt;
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div id&#x3D;&quot;collapseOneF&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingOneF&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              Você deve se cadastrar no nosso site, e dentro da plataforma da Efeito Eco, você estará apto para cadastrar e gerenciar seus produtos.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingTwoF&quot;&gt;
+            &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseTwoF&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseTwoF&quot;&gt;
+                Quais os critérios para venda de produtos?
+              &lt;/button&gt;
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div id&#x3D;&quot;collapseTwoF&quot; class&#x3D;&quot;collapse&quot; aria-labelledby&#x3D;&quot;headingTwoF&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              Seus produtos devem, necessariamente, ser de origem ecológica: material reciclável, óleos essenciais e etc. De preferência, veganos também! As fotos dos produtos devem ser claras e o mais próximo da realidade possível.
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingThreeF&quot;&gt;
+            &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed tab-label botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseThreeF&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseThreeF&quot;&gt;
+                Como funciona o recebimento financeiro da minha venda?
+              &lt;/button&gt;
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div id&#x3D;&quot;collapseThreeF&quot; class&#x3D;&quot;collapse tab-label&quot; aria-labelledby&#x3D;&quot;headingThreeF&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              Você recebe na sua conta cadastrada o valor da venda, já descontada da taxa de 8% sobre o valor do item + uma taxa fixa de R$ 3,50.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-header&quot; id&#x3D;&quot;headingFour&quot;&gt;
+            &lt;h2 class&#x3D;&quot;mb-0&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-block btn-light text-left collapsed tab-label botao-menu&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#collapseFourF&quot; aria-expanded&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;collapseFourF&quot;&gt;
+                Eu não tenho experiência em vendas com Marketplace, o que devo fazer?
+              &lt;/button&gt;
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div id&#x3D;&quot;collapseFourF&quot; class&#x3D;&quot;collapse tab-label&quot; aria-labelledby&#x3D;&quot;headingFourF&quot; data-parent&#x3D;&quot;#accordionExample&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              Entre em contato conosco, através do formulário abaixo.
+              Nosso objetivo é ampliar suas possibilidades de venda e auxiliar no crescimento do seu negócio. Portanto, temos uma equipe exclusiva para integração de novos parceiros.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        
+
+        
+
+
+
+      &lt;/div&gt;
+
+&lt;div class&#x3D;&quot;container-trabalhe-conosco d-flex align-items-center mt-5&quot;&gt;
+&lt;div class&#x3D;&quot;col-md-5 naoArrasta&quot;&gt;&lt;img class &#x3D; &quot;img-tc naoCopia imagemContato&quot; src&#x3D;&quot;https://i.imgur.com/PsWbZmf.png&quot; alt&#x3D;&quot;&quot;&gt;&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;trabalhe-conosco-form col-md-7 col-sm-12 col-12 contatoResponsi&quot;&gt;
+  &lt;h2 class&#x3D;&quot;mt-5 text-titulos&quot;&gt;Entre em contato&lt;/h2&gt;
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+  &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+  &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+  &lt;input type&#x3D;&quot;text&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;foto-produto&quot; id&#x3D;&quot;foto-produto&quot; placeholder&#x3D;&quot;&quot;&gt;
+  &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+  &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+  &lt;label for&#x3D;&quot;foto-produto&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Seu nome&lt;/label&gt;
+  &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+  &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+  &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+  &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+  &lt;input type&#x3D;&quot;text&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;foto-produto&quot; id&#x3D;&quot;foto-produto&quot; placeholder&#x3D;&quot;&quot;&gt;
+  &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+  &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+  &lt;label for&#x3D;&quot;foto-produto&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;E-mail&lt;/label&gt;
+  &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+  &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+  &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+  &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+  &lt;input type&#x3D;&quot;text&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;foto-produto&quot; id&#x3D;&quot;foto-produto&quot; placeholder&#x3D;&quot;&quot;&gt;
+  &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+  &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+  &lt;label for&#x3D;&quot;foto-produto&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Telefone&lt;/label&gt;
+  &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+  &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+  &lt;select class&#x3D;&quot;select-eco&quot;&gt;
+      &lt;option value&#x3D;&quot;&quot;&gt;Escolha seu Estado *&lt;/option&gt; 
+          &lt;option&gt;Acre&lt;/option&gt; 
+          &lt;option&gt;Alagoas&lt;/option&gt; 
+          &lt;option&gt;Amazonas&lt;/option&gt; 
+          &lt;option&gt;Amapá&lt;/option&gt; 
+          &lt;option&gt;Bahia&lt;/option&gt; 
+          &lt;option&gt;Ceará&lt;/option&gt; 
+          &lt;option&gt;Distrito Federal&lt;/option&gt; 
+          &lt;option&gt;Espírito Santo&lt;/option&gt; 
+          &lt;option&gt;Goiás&lt;/option&gt; 
+          &lt;option&gt;Maranhão&lt;/option&gt; 
+          &lt;option&gt;Mato Grosso&lt;/option&gt; 
+          &lt;option&gt;Mato Grosso do Sul&lt;/option&gt; 
+          &lt;option&gt;Minas Gerais&lt;/option&gt; 
+          &lt;option&gt;Pará&lt;/option&gt; 
+          &lt;option&gt;Paraíba&lt;/option&gt; 
+          &lt;option&gt;Paraná&lt;/option&gt; 
+          &lt;option&gt;Pernambuco&lt;/option&gt; 
+          &lt;option&gt;Piauí&lt;/option&gt; 
+          &lt;option&gt;Rio de Janeiro&lt;/option&gt; 
+          &lt;option&gt;Rio Grande do Norte&lt;/option&gt; 
+          &lt;option&gt;Rondônia&lt;/option&gt; 
+          &lt;option&gt;Rio Grande do Sul&lt;/option&gt; 
+          &lt;option&gt;Roraima&lt;/option&gt; 
+          &lt;option&gt;Santa Catarina&lt;/option&gt; 
+          &lt;option&gt;Sergipe&lt;/option&gt; 
+          &lt;option&gt;São Paulo&lt;/option&gt; 
+          &lt;option&gt;Tocantins&lt;/option&gt; 
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;form-textarea-eco mt-4&quot;&gt;
+  &lt;textarea class&#x3D;&quot;input-eco textarea-eco&quot; required&gt;&lt;/textarea&gt;
+  &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+  &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+  &lt;label for&#x3D;&quot;descricao-produto&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Mensagem&lt;/label&gt;
+  &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+  &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;div-botoes mt-4 w-100 d-flex justify-content-center&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-cancelar-eco mr-4&quot; align&#x3D;&quot;center&quot; [routerLink]&#x3D;&quot;[&#x27;/home&#x27;]&quot;&gt;
+      Cancelar
+      &lt;/button&gt;
+
+      &lt;button (click)&#x3D;&#x27;enviarContato()&#x27; class&#x3D;&quot;btn btn-sucesso-eco&quot; align&#x3D;&quot;center&quot;&gt;
+      Enviar
+      &lt;/button&gt;
+  &lt;/div&gt;
+
+  
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;h5 class&#x3D;&quot;text-center mt-5 mb-2&quot;&gt;Mande sua mensagem também pelas nossas redes sociais&lt;/h5&gt;
+&lt;ul class&#x3D;&quot;menu-redes-sociais d-flex justify-content-center&quot;&gt;
+    &lt;li&gt;&lt;a class&#x3D;&quot;tamanho&quot; href&#x3D;&quot;https://www.facebook.com/Efeito-Eco-102859405242662&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class&#x3D;&quot;tamanho&quot; href&#x3D;&quot;https://twitter.com/EcoEfeito&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class&#x3D;&quot;tamanho&quot; href&#x3D;&quot;https://www.instagram.com/efeito_eco/&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;i class&#x3D;&quot;fab fa-instagram font-weight-bold&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./contato.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.container-contato-eco {
+    margin-top: var(--em-cinco-cinco);
+}
+
+.form-textarea-eco {
+    /* posição relativa pois a posição normal (estática) renderiza os elementos HTML em ordem, e a gente vai deixar um em cima do outro */
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* width de 100% para ficar no tamanho da div mãe (aquela col-md-6) */
+    width: 100%;
+
+    /* height de 50px pois o form tem q ficar um pouco alto, já que o label vai estar dentro dele */
+    height: 80px;
+
+    /* user-select none para o usuário não conseguir selecionar o texto do label com o mouse e ficar parecendo um placeholder de verdade */
+    user-select: none;
+}
+
+.textarea-eco {
+    height: 75px;
+}
+
+.select-eco {
+    width: 100%;
+    padding: 10px;
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.text-center{
+    align-items: center;
+}
+
+.menu-redes-sociais {
+    display: flex;
+    align-items: center;
+}
+
+
+li {
+    list-style:none;
+    padding: 10px;  
+}
+
+a {
+    color: rgba(0,0,0,.5);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+i {
+    transition: color 0.5s;
+}
+
+
+.fa-facebook-f:hover{
+    color: #4267b2;
+
+}
+
+.fa-twitter:hover{
+    color: #1da1f2;
+}
+
+.tamanho{
+    font-size: 2em;
+}
+
+.fa-instagram:hover{
+    color: #e65168;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.text-titulos{
+    color: #614023;
+    font-weight: 700;
+}
+
+.h4{
+    color: var( --verde-preco);
+    font-weight: 600;
+}
+
+.botao-menu {
+    width: 100%;
+    border-radius: 10px;
+    color: rgba(0,0,0,.7);
+    transition: 0.5s;
+}
+
+.botao-menu:hover {
+    color: #000;   
+}
+
+.botao-menu:focus{
+    outline: none;
+}
+
+.img-tc{
+    width: 100%; 
+}
+
+.naoArrasta{
+    -webkit-user-select: none;  
+    user-select: none;
+}
+
+.naoCopia{
+    pointer-events: none;
+}
+
+.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+
+
+ @media (max-width: 767px) {
+    .imagemContato{
+        display: none;
+    }
+
+}
+
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container container-contato-eco mb-5">  <h2 class="mt-5 text-titulos">Dúvidas Frequentes</h2>  <h4 class="h4 mt-5">Clientes</h4>    <div class="accordion mt-4" id="accordionExample">      <div class="card">                  <div class="card-header" id="headingOne">          <h2 class="mb-0">            <button class="btn btn-block btn-light text-left botao-menu" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">              Por que alguns produtos ficam indisponíveis no site?            </button>          </h2>        </div>        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">          <div class="card-body">            Na plataforma do Efeito Eco  os vendedores cadastram e vendem os produtos, de acordo com sua programação de produção e estoque. Como, em sua maioria, os produtos são handmades, é possível que alguns produtos estejam disponíveis e outros não.          </div>        </div>      </div>            <div class="card">        <div class="card-header" id="headingTwo">          <h2 class="mb-0">            <button class="btn btn-block btn-light text-left collapsed botao-menu" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">              Por que produtos de papelaria às vezes têm tonalidades diferentes?            </button>          </h2>        </div>        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">          <div class="card-body">            Por se tratar de produtos produzidos a partir de material reciclável, o controle de cor fica comprometido. Porém, a qualidade é sempre a mesma.          </div>        </div>      </div>            <div class="card">        <div class="card-header" id="headingThree">          <h2 class="mb-0">            <button class="btn btn-block btn-light text-left collapsed tab-label botao-menu" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">              Como funciona a entrega?            </button>          </h2>        </div>        <div id="collapseThree" class="collapse tab-label" aria-labelledby="headingThree" data-parent="#accordionExample">          <div class="card-body">            Após a confirmação de pagamento, junto às instituições financeiras, a programação de entrega ocorre de acordo com o combinado com o vendedor. Normalmente, um dia após a confirmação de pagamento, o produto entra em rota de distribuição.          </div>        </div>      </div>      <div class="card">        <div class="card-header" id="headingFour">          <h2 class="mb-0">            <button class="btn btn-block btn-light text-left collapsed tab-label botao-menu" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">              E se eu não receber meu produto?            </button>          </h2>        </div>        <div id="collapseFour" class="collapse tab-label" aria-labelledby="headingFour" data-parent="#accordionExample">          <div class="card-body">            Caso você não receba seu produto, indicamos que tente contato com o vendedor para entender o que houve. Caso o contato não seja eficaz para solução do problema, nosso time de SAC estará disponível para apresentar a melhor solução para você.          </div>        </div>      </div>                </div>    <h4 class="h4 mt-5">Fornecedores</h4>      <div class="accordion mt-4" id="accordionExample">        <div class="card">                      <div class="card-header" id="headingOneF">            <h2 class="mb-0">              <button class="btn btn-block btn-light text-left botao-menu" type="button" data-toggle="collapse" data-target="#collapseOneF" aria-expanded="true" aria-controls="collapseOneF">                Como posso vender meus produtos na Efeito Eco?              </button>            </h2>          </div>          <div id="collapseOneF" class="collapse" aria-labelledby="headingOneF" data-parent="#accordionExample">            <div class="card-body">              Você deve se cadastrar no nosso site, e dentro da plataforma da Efeito Eco, você estará apto para cadastrar e gerenciar seus produtos.            </div>          </div>        </div>                <div class="card">          <div class="card-header" id="headingTwoF">            <h2 class="mb-0">              <button class="btn btn-block btn-light text-left collapsed botao-menu" type="button" data-toggle="collapse" data-target="#collapseTwoF" aria-expanded="false" aria-controls="collapseTwoF">                Quais os critérios para venda de produtos?              </button>            </h2>          </div>          <div id="collapseTwoF" class="collapse" aria-labelledby="headingTwoF" data-parent="#accordionExample">            <div class="card-body">              Seus produtos devem, necessariamente, ser de origem ecológica: material reciclável, óleos essenciais e etc. De preferência, veganos também! As fotos dos produtos devem ser claras e o mais próximo da realidade possível.            </div>          </div>        </div>                <div class="card">          <div class="card-header" id="headingThreeF">            <h2 class="mb-0">              <button class="btn btn-block btn-light text-left collapsed tab-label botao-menu" type="button" data-toggle="collapse" data-target="#collapseThreeF" aria-expanded="false" aria-controls="collapseThreeF">                Como funciona o recebimento financeiro da minha venda?              </button>            </h2>          </div>          <div id="collapseThreeF" class="collapse tab-label" aria-labelledby="headingThreeF" data-parent="#accordionExample">            <div class="card-body">              Você recebe na sua conta cadastrada o valor da venda, já descontada da taxa de 8% sobre o valor do item + uma taxa fixa de R$ 3,50.            </div>          </div>        </div>        <div class="card">          <div class="card-header" id="headingFour">            <h2 class="mb-0">              <button class="btn btn-block btn-light text-left collapsed tab-label botao-menu" type="button" data-toggle="collapse" data-target="#collapseFourF" aria-expanded="false" aria-controls="collapseFourF">                Eu não tenho experiência em vendas com Marketplace, o que devo fazer?              </button>            </h2>          </div>          <div id="collapseFourF" class="collapse tab-label" aria-labelledby="headingFourF" data-parent="#accordionExample">            <div class="card-body">              Entre em contato conosco, através do formulário abaixo.              Nosso objetivo é ampliar suas possibilidades de venda e auxiliar no crescimento do seu negócio. Portanto, temos uma equipe exclusiva para integração de novos parceiros.            </div>          </div>        </div>                      </div><div class="container-trabalhe-conosco d-flex align-items-center mt-5"><div class="col-md-5 naoArrasta"><img class = "img-tc naoCopia imagemContato" src="https://i.imgur.com/PsWbZmf.png" alt=""></div><div class="trabalhe-conosco-form col-md-7 col-sm-12 col-12 contatoResponsi">  <h2 class="mt-5 text-titulos">Entre em contato</h2><div class="form-eco mt-4">  <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->  <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->  <input type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">  <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->  <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->  <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Seu nome</label>  <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->  <div class="borda-do-input"></div></div><div class="form-eco mt-4">  <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->  <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->  <input type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">  <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->  <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->  <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">E-mail</label>  <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->  <div class="borda-do-input"></div></div><div class="form-eco mt-4">  <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->  <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->  <input type="text" required class="input-eco" name="foto-produto" id="foto-produto" placeholder="">  <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->  <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->  <label for="foto-produto" class="p-1 ml-2 bg-white label-eco">Telefone</label>  <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->  <div class="borda-do-input"></div></div><div class="form-eco mt-4">  <select class="select-eco">      <option value="">Escolha seu Estado *</option>           <option>Acre</option>           <option>Alagoas</option>           <option>Amazonas</option>           <option>Amapá</option>           <option>Bahia</option>           <option>Ceará</option>           <option>Distrito Federal</option>           <option>Espírito Santo</option>           <option>Goiás</option>           <option>Maranhão</option>           <option>Mato Grosso</option>           <option>Mato Grosso do Sul</option>           <option>Minas Gerais</option>           <option>Pará</option>           <option>Paraíba</option>           <option>Paraná</option>           <option>Pernambuco</option>           <option>Piauí</option>           <option>Rio de Janeiro</option>           <option>Rio Grande do Norte</option>           <option>Rondônia</option>           <option>Rio Grande do Sul</option>           <option>Roraima</option>           <option>Santa Catarina</option>           <option>Sergipe</option>           <option>São Paulo</option>           <option>Tocantins</option>   </select></div><div class="form-textarea-eco mt-4">  <textarea class="input-eco textarea-eco" required></textarea>  <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->  <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->  <label for="descricao-produto" class="p-1 ml-2 bg-white label-eco">Mensagem</label>  <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->  <div class="borda-do-input"></div></div>  <div class="div-botoes mt-4 w-100 d-flex justify-content-center">      <button class="btn btn-cancelar-eco mr-4" align="center" [routerLink]="[\'/home\']">      Cancelar      </button>      <button (click)=\'enviarContato()\' class="btn btn-sucesso-eco" align="center">      Enviar      </button>  </div>  </div></div><h5 class="text-center mt-5 mb-2">Mande sua mensagem também pelas nossas redes sociais</h5><ul class="menu-redes-sociais d-flex justify-content-center">    <li><a class="tamanho" href="https://www.facebook.com/Efeito-Eco-102859405242662" target="_blank"><i class="fab fa-facebook-f"></i></a></li>    <li><a class="tamanho" href="https://twitter.com/EcoEfeito" target="_blank"><i class="fab fa-twitter"></i></a></li>    <li><a class="tamanho" href="https://www.instagram.com/efeito_eco/" target="_blank"><i class="fab fa-instagram font-weight-bold"></i></a></li></ul></div></div>'
+    var COMPONENTS = [{'name': 'AcessibilidadeComponent', 'selector': 'app-acessibilidade'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AlterarSenhaComponent', 'selector': 'app-alterar-senha'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarCategoriaComponent', 'selector': 'app-cadastrar-categoria'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'CadastrarProdutosComponent', 'selector': 'app-cadastrar-produtos'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'ChatbotComponent', 'selector': 'app-chatbot'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MeusProdutosComponent', 'selector': 'app-meus-produtos'},{'name': 'MinhasComprasComponent', 'selector': 'app-minhas-compras'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProdutoDeleteComponent', 'selector': 'app-produto-delete'},{'name': 'ProdutoEditComponent', 'selector': 'app-produto-edit'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreComponent', 'selector': 'app-sobre'},{'name': 'TelaAtualizarComponent', 'selector': 'app-tela-atualizar'},{'name': 'TelaContaComponent', 'selector': 'app-tela-conta'},{'name': 'TelaProdutoComponent', 'selector': 'app-tela-produto'},{'name': 'TelaVendedorComponent', 'selector': 'app-tela-vendedor'},{'name': 'TrabalheConoscoComponent', 'selector': 'app-trabalhe-conosco'},{'name': 'VendedorDadosComponent', 'selector': 'app-vendedor-dados'},{'name': 'VendedorProdutosComponent', 'selector': 'app-vendedor-produtos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ContatoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ContatoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

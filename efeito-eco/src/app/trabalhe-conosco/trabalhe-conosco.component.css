@@ -1,5 +1,5 @@
-.trabalho-eco-img {
-    margin-top: var(--em-tres);
+.container-margin-top-eco {
+    margin-top: var(--em-quatro);
 }
 
 .altura-logo{
@@ -21,9 +21,14 @@
     font-weight: 600;
 }
 
-.img-tc{
+.img-tc {
      width: 100%; 
 }
+
+.img-ilustracao-trabalho {
+    width: 45%;
+}
+
 .trabalhe-conosco-form {
     height: 100%;
     width: 100%;
@@ -39,11 +44,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.container-trabalhe-conosco {
-    display: flex;
-    height: 100vh;
 }
 
 .form-textarea-tc {
@@ -88,46 +88,18 @@
     margin-right: 20px;
 }
 
-@media screen and (max-width: 1120px) {
-    .dentro-login-form-div {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .dentro-login-form-div {
-        width: 100%;
-    }
-
-    #img-bg {
-        display: none;
-    }
-
-    .container-login-eco {
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .login-form-div {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .login-form-div {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .form-nomes {
+@media screen and (max-width: 1250px) {
+    .container-trabalhe-conosco {
         flex-direction: column;
-        width: 100%;
     }
 
-    .sobrenome-form {
-        margin-left: 0;
+    .dentro-trabaleConosco-form-div {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .dentro-trabaleConosco-form-div {
+        width: 85%;
     }
 }

@@ -22,7 +22,9 @@ export class CadastrarComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-    window.scroll(0,0);
+    setTimeout(() => {
+      window.scroll(0,0);
+    });
   }
 
   confirmarSenha(event: any){
@@ -38,7 +40,7 @@ export class CadastrarComponent implements OnInit {
       this.auth.cadastrar(this.usuario).subscribe((resp: Usuario)=> {
         this.usuario = resp;
         this.router.navigate(['/entrar']);
-        this.alertas.showAlertSuccess('Seja bem-vindo(a), você é um amante da natureza!');
+        this.alertas.showAlertSuccess('Seja bem-vinde, você é um amigue da natureza!');
       }, err => {       
         this.alertas.showAlertDanger(err.error.mensagem);
       })

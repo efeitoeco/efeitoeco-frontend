@@ -57,6 +57,16 @@ export class TelaProdutoComponent implements OnInit {
     } else {
       this.carrinhoService.adicionarProduto(idProduto, this.quantidade);
       this.alertas.showAlertSuccess("Produto adicionado com sucesso!");
+      this.atualizarDados();
     }
+  }
+
+  atualizarDados() {
+    /* Pegamos a Url atual e atrbuimos ela a variavel local chamada urlAtual */
+    let urlAtual = this.router.url;
+
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/produtos']);
   }
 }

@@ -10,21 +10,21 @@
 .card-eco-carrinho {
     width: 50%;
     display: flex;
-    border: #b3d6bd 1px solid;
+    border: #d2e6d8 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .img-eco-carrinho {
     overflow: hidden;
-    width: 50%;
+    max-width: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
 .img-eco-carrinho-arquivo {
-    height: 210px;
+    height: 200px;
 }
 
 .dados-eco-carrinho {
@@ -55,4 +55,124 @@
 
 .botao-finalizar:hover {
     color: #000;
+}
+
+.form-estado-cidade {
+    display: flex;
+    width: 100%;
+}
+
+.login-form-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dentro-login-form-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-login-eco {
+    display: flex;
+    height: calc(110vh + var(--em-quatro));
+}
+
+.estado-form {
+    margin-left: 8px;
+}
+
+.btn-successo-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+}
+
+.buscar-cep{
+    cursor: pointer;
+    color: #0000ee
+}
+
+@media screen and (max-width: 993px){
+    .form-estado-cidade{
+        flex-direction: column;
+    }
+
+    .form-eco{
+        width: 100%;
+    }
+
+    .estado-form{
+        margin-left: 0;
+    }
+
+    .dentro-login-form-div {
+        width: 70%;
+    }
+    .img-eco-carrinho{
+        display: flex;
+        width: 100%;
+    }
+    .nome-produto-carrinho, .produto-preco-carrinho, .btn-carrinho {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-eco-carrinho {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .dentro-login-form-div {
+        width: 100%;
+    }
+
+    .card-eco-carrinho {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .card-eco-carrinho {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .img-eco-carrinho {
+        width: 100%;
+        max-height: 45%;
+        justify-content: center;
+    }
+
+    .img-eco-carrinho-arquivo {
+        max-height: 45%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .img-eco-carrinho {
+        max-height: 30%;
+    }
+
+    .img-eco-carrinho-arquivo {
+        max-height: 30%;
+        width: max-content;
+    }
 }

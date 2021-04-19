@@ -1,0 +1,825 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>efeitoeco-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">efeitoeco-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AlterarSenhaComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/alterar-senha/alterar-senha.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-alterar-senha</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./alterar-senha.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./alterar-senha.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#confirmeSenha">confirmeSenha</a>
+                            </li>
+                            <li>
+                                <a href="#meuId">meuId</a>
+                            </li>
+                            <li>
+                                <a href="#novaSenha">novaSenha</a>
+                            </li>
+                            <li>
+                                <a href="#usuario">usuario</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#atualizarSenha">atualizarSenha</a>
+                            </li>
+                            <li>
+                                <a href="#confirmarSenha">confirmarSenha</a>
+                            </li>
+                            <li>
+                                <a href="#findByIdUsuario">findByIdUsuario</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#validarSenhaAntiga">validarSenhaAntiga</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(auth: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="atualizarSenha"></a>
+                    <span class="name">
+                        <b>
+                            atualizarSenha
+                        </b>
+                        <a href="#atualizarSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>atualizarSenha()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmarSenha"></a>
+                    <span class="name">
+                        <b>
+                            confirmarSenha
+                        </b>
+                        <a href="#confirmarSenha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>confirmarSenha(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findByIdUsuario"></a>
+                    <span class="name">
+                        <b>
+                            findByIdUsuario
+                        </b>
+                        <a href="#findByIdUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findByIdUsuario()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validarSenhaAntiga"></a>
+                    <span class="name">
+                        <b>
+                            validarSenhaAntiga
+                        </b>
+                        <a href="#validarSenhaAntiga"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validarSenhaAntiga()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="confirmeSenha"></a>
+                        <span class="name">
+                            <b>
+                            confirmeSenha</b>
+                            <a href="#confirmeSenha"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="meuId"></a>
+                        <span class="name">
+                            <b>
+                            meuId</b>
+                            <a href="#meuId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.id</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="novaSenha"></a>
+                        <span class="name">
+                            <b>
+                            novaSenha</b>
+                            <a href="#novaSenha"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="usuario"></a>
+                        <span class="name">
+                            <b>
+                            usuario</b>
+                            <a href="#usuario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Usuario.html" target="_self" >Usuario</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Usuario ()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/alterar-senha/alterar-senha.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { Usuario } from &#x27;../models/Usuario&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-alterar-senha&#x27;,
+  templateUrl: &#x27;./alterar-senha.component.html&#x27;,
+  styleUrls: [&#x27;./alterar-senha.component.css&#x27;]
+})
+export class AlterarSenhaComponent implements OnInit {
+  
+  usuario: Usuario &#x3D; new Usuario ();
+  meuId: number &#x3D; environment.id;
+  novaSenha: string;
+  confirmeSenha: string;
+
+  constructor(
+    private auth: AuthService
+  ) { }
+
+  ngOnInit(): void {
+    this.findByIdUsuario();
+    console.log(String.fromCharCode(123456))
+  }
+
+  confirmarSenha(event: any){
+    this.confirmeSenha &#x3D; event.target.value;
+  }
+
+  findByIdUsuario() {
+    this.auth.getByIdUsuario(this.meuId).subscribe((resp: Usuario) &#x3D;&gt; {
+      this.usuario &#x3D; resp;
+    })
+  }
+
+  atualizarSenha(){
+    this.usuario.senha &#x3D; this.novaSenha
+    this.auth.putUsuario(this.usuario).subscribe((resp: Usuario) &#x3D;&gt; {
+      this.usuario &#x3D; resp;
+    })
+  }
+
+  validarSenhaAntiga (){
+
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 class&#x3D;&quot;text-center&quot;&gt;Alterar Senha&lt;/h1&gt;
+
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+
+    &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+    &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+    &lt;input type&#x3D;&quot;password&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;senha&quot; id&#x3D;&quot;senha&quot; placeholder&#x3D;&quot;&quot;&gt;
+    
+    &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+    &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+    &lt;label for&#x3D;&quot;senha&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Nova Senha&lt;/label&gt;
+
+    &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+    &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o form-eco (nossa própria classe)--&gt;
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+
+    &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+    &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+    &lt;input [(ngModel)]&#x3D;&quot;novaSenha&quot; type&#x3D;&quot;password&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;senha&quot; id&#x3D;&quot;confirmarSenha&quot; placeholder&#x3D;&quot;&quot;&gt;
+
+    &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+    &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+    &lt;label for&#x3D;&quot;senha&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Confirmar Nova Senha&lt;/label&gt;
+
+
+
+    &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+    &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;form-eco mt-4&quot;&gt;
+
+    &lt;!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.--&gt;
+    &lt;!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)--&gt;
+    &lt;input type&#x3D;&quot;password&quot; required class&#x3D;&quot;input-eco&quot; name&#x3D;&quot;senha&quot; id&#x3D;&quot;confirmarSenha&quot; placeholder&#x3D;&quot;&quot;&gt;
+
+    &lt;!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder &quot;de mentirinha&quot;--&gt;
+    &lt;!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver--&gt;
+    &lt;label for&#x3D;&quot;senha&quot; class&#x3D;&quot;p-1 ml-2 bg-white label-eco&quot;&gt;Senha Antiga&lt;/label&gt;
+
+    
+
+    &lt;!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.--&gt;
+    &lt;div class&#x3D;&quot;borda-do-input&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;d-flex justify-content-center mt-4&quot;&gt;
+    &lt;button class&#x3D;&quot;btn btn-cancelar-eco mr-3&quot; [routerLink]&#x3D;&quot;[&#x27;/home&#x27;]&quot;&gt;
+        Cancelar
+    &lt;/button&gt;
+    &lt;button (click)&#x3D;&quot;atualizarSenha()&quot; class&#x3D;&quot;btn btn-sucesso-eco&quot; type&#x3D;&quot;submit&quot;&gt;
+        Confirmar
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./alterar-senha.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.btn-sucesso-eco {
+    background-color: var(--verde-parcela);
+    color: #fff;
+}
+
+.btn-cancelar-eco {
+    background-color: transparent;
+    border: 2px solid var(--verde-parcela);
+    color: var(--verde-parcela);
+    font-weight: 600;
+    margin-right: 20px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 class="text-center">Alterar Senha</h1><div class="form-eco mt-4">    <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->    <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->    <input type="password" required class="input-eco" name="senha" id="senha" placeholder="">        <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->    <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->    <label for="senha" class="p-1 ml-2 bg-white label-eco">Nova Senha</label>    <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->    <div class="borda-do-input"></div></div><!--Vamos tirar a classe form-control do bootstrap e adicionar o form-eco (nossa própria classe)--><div class="form-eco mt-4">    <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->    <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->    <input [(ngModel)]="novaSenha" type="password" required class="input-eco" name="senha" id="confirmarSenha" placeholder="">    <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->    <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->    <label for="senha" class="p-1 ml-2 bg-white label-eco">Confirmar Nova Senha</label>    <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->    <div class="borda-do-input"></div></div><div class="form-eco mt-4">    <!--O placeholder o input fica vazio, pois o label vai agir como se fosse um.-->    <!--Vamos tirar a classe form-control do bootstrap e adicionar o input-eco (nossa própria classe)-->    <input type="password" required class="input-eco" name="senha" id="confirmarSenha" placeholder="">    <!--O label fica abaixo do input, mas vamos jogar ele pra cima, pra fica em cima do input e agir como um placeholder "de mentirinha"-->    <!--Além disso, vamos usar as classes de padding de 1px (p-1), margem a esquerda de 2px (ml-2) e background branco (bg-white) para o label não ficar colado na parte esquerda do input e para ficar com um fundo branco, pois quando ele sobe, a borda do label iria passar pelas letras e ficar feio e difícil de ler. Com o fundo branco fica clean, e a borda passa por baixo do fundo, sem a gente ver-->    <label for="senha" class="p-1 ml-2 bg-white label-eco">Senha Antiga</label>        <!--Para fazer a label interagir com a borda do input, não podemos usar a verdadeira borda do input. Por isso, vamos criar uma div que vai ser meramente uma borda falsa do input, que vai se modificar junto com o label.-->    <div class="borda-do-input"></div></div><div class="d-flex justify-content-center mt-4">    <button class="btn btn-cancelar-eco mr-3" [routerLink]="[\'/home\']">        Cancelar    </button>    <button (click)="atualizarSenha()" class="btn btn-sucesso-eco" type="submit">        Confirmar    </button></div></div>'
+    var COMPONENTS = [{'name': 'AcessibilidadeComponent', 'selector': 'app-acessibilidade'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AlterarSenhaComponent', 'selector': 'app-alterar-senha'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarCategoriaComponent', 'selector': 'app-cadastrar-categoria'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'CadastrarProdutosComponent', 'selector': 'app-cadastrar-produtos'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'ChatbotComponent', 'selector': 'app-chatbot'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MeusProdutosComponent', 'selector': 'app-meus-produtos'},{'name': 'MinhasComprasComponent', 'selector': 'app-minhas-compras'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProdutoDeleteComponent', 'selector': 'app-produto-delete'},{'name': 'ProdutoEditComponent', 'selector': 'app-produto-edit'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreComponent', 'selector': 'app-sobre'},{'name': 'TelaAtualizarComponent', 'selector': 'app-tela-atualizar'},{'name': 'TelaContaComponent', 'selector': 'app-tela-conta'},{'name': 'TelaProdutoComponent', 'selector': 'app-tela-produto'},{'name': 'TelaVendedorComponent', 'selector': 'app-tela-vendedor'},{'name': 'TrabalheConoscoComponent', 'selector': 'app-trabalhe-conosco'},{'name': 'VendedorDadosComponent', 'selector': 'app-vendedor-dados'},{'name': 'VendedorProdutosComponent', 'selector': 'app-vendedor-produtos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AlterarSenhaComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AlterarSenhaComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

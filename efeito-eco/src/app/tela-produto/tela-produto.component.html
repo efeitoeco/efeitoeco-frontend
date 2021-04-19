@@ -1,5 +1,5 @@
 <!--Carousel automático para as mensagens-->
-<div class="carrosel-eco-produtos">
+<div class="carrosel-eco-produtos px-5">
   <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="3000" align="center" data-ride='carousel'>
     <div class="carousel-inner mt-3 naoArrasta img-carousel">
       <div class="carousel-item active">
@@ -57,7 +57,7 @@
         </h2>
         <span class="vendido-por">Vendido por: <a [routerLink]="['/usuario', produto.criadoPor.id]" class="vendedor">{{produto.criadoPor.nome}} {{produto.criadoPor.sobrenome}}</a></span>
         <h3 class="mt-3 preco-principal mb-0">
-            R$ {{produto.preco}}
+            R$ {{produto.preco | number : '1.2-2'}}
         </h3>
         <span class="parcela-principal"> ou 3x de R$ {{produto.preco / 3 | number: '1.2-2'}} sem juros</span>
 

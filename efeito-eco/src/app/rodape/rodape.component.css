@@ -108,7 +108,7 @@ i {
 }
 
 @media screen and (max-width: 800px) {
-    .menu-rodape li:nth-child(5) {
+    .menu-rodape li:nth-child(4) {
         display: none;
     }
 }

@@ -1,0 +1,1390 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>efeitoeco-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">efeitoeco-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ChatbotComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/chatbot/chatbot.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-chatbot</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./chatbot.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./chatbot.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#alternativas">alternativas</a>
+                            </li>
+                            <li>
+                                <a href="#botaoAtivado">botaoAtivado</a>
+                            </li>
+                            <li>
+                                <a href="#falasUsuario">falasUsuario</a>
+                            </li>
+                            <li>
+                                <a href="#respostas">respostas</a>
+                            </li>
+                            <li>
+                                <a href="#synth">synth</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#adicionarChat">adicionarChat</a>
+                            </li>
+                            <li>
+                                <a href="#botaoOpaco">botaoOpaco</a>
+                            </li>
+                            <li>
+                                <a href="#botaoTransparente">botaoTransparente</a>
+                            </li>
+                            <li>
+                                <a href="#compare">compare</a>
+                            </li>
+                            <li>
+                                <a href="#enviarMsg">enviarMsg</a>
+                            </li>
+                            <li>
+                                <a href="#mostrarChat">mostrarChat</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#saida">saida</a>
+                            </li>
+                            <li>
+                                <a href="#voz">voz</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/chatbot/chatbot.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="adicionarChat"></a>
+                    <span class="name">
+                        <b>
+                            adicionarChat
+                        </b>
+                        <a href="#adicionarChat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>adicionarChat(entrada: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, produto: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>entrada</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>produto</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="botaoOpaco"></a>
+                    <span class="name">
+                        <b>
+                            botaoOpaco
+                        </b>
+                        <a href="#botaoOpaco"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>botaoOpaco()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="botaoTransparente"></a>
+                    <span class="name">
+                        <b>
+                            botaoTransparente
+                        </b>
+                        <a href="#botaoTransparente"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>botaoTransparente()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="compare"></a>
+                    <span class="name">
+                        <b>
+                            compare
+                        </b>
+                        <a href="#compare"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>compare(arrayEntrada: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, arrayResposta: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, varString: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arrayEntrada</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>arrayResposta</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>varString</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="enviarMsg"></a>
+                    <span class="name">
+                        <b>
+                            enviarMsg
+                        </b>
+                        <a href="#enviarMsg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>enviarMsg()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mostrarChat"></a>
+                    <span class="name">
+                        <b>
+                            mostrarChat
+                        </b>
+                        <a href="#mostrarChat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>mostrarChat()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saida"></a>
+                    <span class="name">
+                        <b>
+                            saida
+                        </b>
+                        <a href="#saida"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saida(entrada: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="167"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:167</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>entrada</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="voz"></a>
+                    <span class="name">
+                        <b>
+                            voz
+                        </b>
+                        <a href="#voz"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>voz(textoString: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/app/chatbot/chatbot.component.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>textoString</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="alternativas"></a>
+                        <span class="name">
+                            <b>
+                            alternativas</b>
+                            <a href="#alternativas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+      &quot;Não entendi o que você disse :(&quot;,
+      &quot;Você pode repetir, por favor?&quot;,
+      &quot;Tente dizer novamente, por favor&quot;,
+      &#x60;Você pode tentar falar com um de nossos colaboradores &lt;a href&#x3D;&quot;#&quot;&gt;clicando aqui&lt;/a&gt;&#x60;
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/chatbot/chatbot.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="botaoAtivado"></a>
+                        <span class="name">
+                            <b>
+                            botaoAtivado</b>
+                            <a href="#botaoAtivado"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/chatbot/chatbot.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="falasUsuario"></a>
+                        <span class="name">
+                            <b>
+                            falasUsuario</b>
+                            <a href="#falasUsuario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+      [&quot;oi&quot;, &quot;eae&quot;, &quot;ola&quot;, &quot;iai&quot;, &quot;olá&quot;, &quot;oie&quot;, &quot;oii&quot;, &quot;hey&quot;],
+      [&quot;tudo bem&quot;, &quot;como voce ta&quot;, &quot;tudo bem com voce&quot;],
+      [&quot;meu pedido ta atrasado&quot;, &quot;atraso&quot;, &quot;pedido atrasado&quot;, &quot;pedido em atraso&quot;, &quot;atrasado&quot;],
+      [&quot;te amo&quot;, &quot;eu te amo&quot;],
+      [&quot;obrigado&quot;, &quot;valeu&quot;, &quot;thanks&quot;, &quot;thx&quot;, &quot;obrigada&quot;, &quot;vlw&quot;],
+      [&quot;boa noite&quot;],
+      [&quot;boa tarde&quot;],
+      [&quot;bom dia&quot;],
+      [&quot;quais sao seus produtos&quot;, &quot;o que voces vendem&quot;, &quot;o que voce vende&quot;],
+      [&quot;como vender&quot;, &quot;como vender meus produtos&quot;, &quot;como posso vender meus produtos&quot;, &quot;como cadastrar meus produtos&quot;, &quot;como posso cadastrar meus produtos&quot;, &quot;como ser vendedor&quot;, &quot;como ser vendedora&quot;, &quot;quero ser vendedor&quot;, &quot;quero ser vendedora&quot;, &quot;quero ser parceiro&quot;, &quot;quero ser parceira&quot;, &quot;como ser parceiro&quot;, &quot;como ser parceira&quot;],
+      [&quot;to bem&quot;, &quot;bem tmb&quot;, &quot;to bem tmb&quot;, &quot;to otimo&quot;, &quot;to otima&quot;],
+      [&quot;como faço para comprar&quot;, &quot;como comprar&quot;, &quot;como posso comprar&quot;, &quot;quero comprar&quot;],
+      [&quot;como saber mais sobre voces&quot;, &quot;como saber novidades&quot;, &quot;como saber das novidades&quot;, &quot;como acompanhar novidades&quot;, &quot;como acompanhar&quot;, &quot;quero acompanhar novidades&quot;]
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/chatbot/chatbot.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="respostas"></a>
+                        <span class="name">
+                            <b>
+                            respostas</b>
+                            <a href="#respostas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+      [&quot;Oi!&quot;, &quot;Olá!&quot;],
+      [&quot;Estou bem, e você?&quot;, &quot;Ótima, e você?&quot;, &quot;Hmmm, estou ótima. Como você está?&quot;],
+      [&quot;Aguarde um momento, estamos te redirecionando para uma atendente...&quot;],
+      [&quot;Eu também amo todos os clientes da Efeito Eco &lt;3&quot;],
+      [&quot;De nada :)&quot;],
+      [&quot;Boa noite&quot;],
+      [&quot;Boa tarde&quot;],
+      [&quot;Bom dia&quot;],
+      [&#x60;Para descobrir nossos maravilhosos produtos, &lt;a href&#x3D;&#x27;http://localhost:4200/produtos&#x27; target&#x3D;&quot;_blank&quot;&gt;clique aqui&lt;/a&gt;&#x60;],
+      [&#x60;Para ser um dos nossos parceiros, você deve &lt;a href&#x3D;&#x27;http://localhost:4200/cadastrar&#x27; target&#x3D;&quot;_blank&quot;&gt;criar uma conta&lt;/a&gt;, ir até a página de &quot;minha conta&quot; e clicar no botão de &quot;cadastrar produto&quot;.&#x60;],
+      [&quot;Que bom!&quot;, &quot;Fico feliz em saber disso!&quot;, &quot;Que ótimo!&quot;, &quot;Maravilha!&quot;],
+      [&#x60;Para comprar um de nossos incríveis produtos, faça o seu  &lt;a href&#x3D;&#x27;http://localhost:4200/cadastrar&#x27; target&#x3D;&quot;_blank&quot;&gt;cadastro aqui&lt;/a&gt;, entre em &quot;produtos&quot; e escolha os de sua preferência.&#x60;],
+      [&#x60;Você pode saber mais sobre nós na seção &lt;a href&#x3D;&#x27;#&#x27;&gt;sobre nós&lt;/a&gt; e nos acompanhar nas redes sociais (&lt;a href&#x3D;&#x27;https://www.facebook.com/Efeito-Eco-102859405242662&#x27; target&#x3D;&quot;_blank&quot;&gt;Facebook&lt;/a&gt;, &lt;a href&#x3D;&#x27;https://twitter.com/EcoEfeito&#x27; target&#x3D;&quot;_blank&quot;&gt;Twitter&lt;/a&gt; e &lt;a href&#x3D;&#x27;https://www.instagram.com/efeito_eco/&#x27; target&#x3D;&quot;_blank&quot;&gt;Instagram&lt;/a&gt;).&#x60;]
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/chatbot/chatbot.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="synth"></a>
+                        <span class="name">
+                            <b>
+                            synth</b>
+                            <a href="#synth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>window.speechSynthesis</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/chatbot/chatbot.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-chatbot&#x27;,
+  templateUrl: &#x27;./chatbot.component.html&#x27;,
+  styleUrls: [&#x27;./chatbot.component.css&#x27;]
+})
+export class ChatbotComponent implements OnInit {
+
+    falasUsuario &#x3D; [
+      [&quot;oi&quot;, &quot;eae&quot;, &quot;ola&quot;, &quot;iai&quot;, &quot;olá&quot;, &quot;oie&quot;, &quot;oii&quot;, &quot;hey&quot;],
+      [&quot;tudo bem&quot;, &quot;como voce ta&quot;, &quot;tudo bem com voce&quot;],
+      [&quot;meu pedido ta atrasado&quot;, &quot;atraso&quot;, &quot;pedido atrasado&quot;, &quot;pedido em atraso&quot;, &quot;atrasado&quot;],
+      [&quot;te amo&quot;, &quot;eu te amo&quot;],
+      [&quot;obrigado&quot;, &quot;valeu&quot;, &quot;thanks&quot;, &quot;thx&quot;, &quot;obrigada&quot;, &quot;vlw&quot;],
+      [&quot;boa noite&quot;],
+      [&quot;boa tarde&quot;],
+      [&quot;bom dia&quot;],
+      [&quot;quais sao seus produtos&quot;, &quot;o que voces vendem&quot;, &quot;o que voce vende&quot;],
+      [&quot;como vender&quot;, &quot;como vender meus produtos&quot;, &quot;como posso vender meus produtos&quot;, &quot;como cadastrar meus produtos&quot;, &quot;como posso cadastrar meus produtos&quot;, &quot;como ser vendedor&quot;, &quot;como ser vendedora&quot;, &quot;quero ser vendedor&quot;, &quot;quero ser vendedora&quot;, &quot;quero ser parceiro&quot;, &quot;quero ser parceira&quot;, &quot;como ser parceiro&quot;, &quot;como ser parceira&quot;],
+      [&quot;to bem&quot;, &quot;bem tmb&quot;, &quot;to bem tmb&quot;, &quot;to otimo&quot;, &quot;to otima&quot;],
+      [&quot;como faço para comprar&quot;, &quot;como comprar&quot;, &quot;como posso comprar&quot;, &quot;quero comprar&quot;],
+      [&quot;como saber mais sobre voces&quot;, &quot;como saber novidades&quot;, &quot;como saber das novidades&quot;, &quot;como acompanhar novidades&quot;, &quot;como acompanhar&quot;, &quot;quero acompanhar novidades&quot;]
+  ];
+
+  respostas &#x3D; [
+      [&quot;Oi!&quot;, &quot;Olá!&quot;],
+      [&quot;Estou bem, e você?&quot;, &quot;Ótima, e você?&quot;, &quot;Hmmm, estou ótima. Como você está?&quot;],
+      [&quot;Aguarde um momento, estamos te redirecionando para uma atendente...&quot;],
+      [&quot;Eu também amo todos os clientes da Efeito Eco &lt;3&quot;],
+      [&quot;De nada :)&quot;],
+      [&quot;Boa noite&quot;],
+      [&quot;Boa tarde&quot;],
+      [&quot;Bom dia&quot;],
+      [&#x60;Para descobrir nossos maravilhosos produtos, &lt;a href&#x3D;&#x27;http://localhost:4200/produtos&#x27; target&#x3D;&quot;_blank&quot;&gt;clique aqui&lt;/a&gt;&#x60;],
+      [&#x60;Para ser um dos nossos parceiros, você deve &lt;a href&#x3D;&#x27;http://localhost:4200/cadastrar&#x27; target&#x3D;&quot;_blank&quot;&gt;criar uma conta&lt;/a&gt;, ir até a página de &quot;minha conta&quot; e clicar no botão de &quot;cadastrar produto&quot;.&#x60;],
+      [&quot;Que bom!&quot;, &quot;Fico feliz em saber disso!&quot;, &quot;Que ótimo!&quot;, &quot;Maravilha!&quot;],
+      [&#x60;Para comprar um de nossos incríveis produtos, faça o seu  &lt;a href&#x3D;&#x27;http://localhost:4200/cadastrar&#x27; target&#x3D;&quot;_blank&quot;&gt;cadastro aqui&lt;/a&gt;, entre em &quot;produtos&quot; e escolha os de sua preferência.&#x60;],
+      [&#x60;Você pode saber mais sobre nós na seção &lt;a href&#x3D;&#x27;#&#x27;&gt;sobre nós&lt;/a&gt; e nos acompanhar nas redes sociais (&lt;a href&#x3D;&#x27;https://www.facebook.com/Efeito-Eco-102859405242662&#x27; target&#x3D;&quot;_blank&quot;&gt;Facebook&lt;/a&gt;, &lt;a href&#x3D;&#x27;https://twitter.com/EcoEfeito&#x27; target&#x3D;&quot;_blank&quot;&gt;Twitter&lt;/a&gt; e &lt;a href&#x3D;&#x27;https://www.instagram.com/efeito_eco/&#x27; target&#x3D;&quot;_blank&quot;&gt;Instagram&lt;/a&gt;).&#x60;]
+  ];
+
+  alternativas &#x3D; [
+      &quot;Não entendi o que você disse :(&quot;,
+      &quot;Você pode repetir, por favor?&quot;,
+      &quot;Tente dizer novamente, por favor&quot;,
+      &#x60;Você pode tentar falar com um de nossos colaboradores &lt;a href&#x3D;&quot;#&quot;&gt;clicando aqui&lt;/a&gt;&#x60;
+  ];
+
+  synth &#x3D; window.speechSynthesis;
+
+  botaoAtivado: boolean &#x3D; false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  botaoTransparente() {
+    if(!this.botaoAtivado) {
+      let botao: any &#x3D; document.getElementById(&quot;botao-chatbot&quot;);
+      botao.style.opacity &#x3D; &quot;0.5&quot;;
+      botao.style.transform &#x3D; &quot;translateY(+3px)&quot;;
+    }
+  }
+
+  botaoOpaco() {
+    let botao: any &#x3D; document.getElementById(&quot;botao-chatbot&quot;);
+    botao.style.opacity &#x3D; &quot;1&quot;;
+    botao.style.transform &#x3D; &quot;translateY(-3px)&quot;;
+  }
+
+  mostrarChat() {
+    let chatChatbot:any &#x3D; document.getElementById(&quot;chat-chatbot&quot;);
+    let displayChatbot &#x3D; getComputedStyle(chatChatbot).display;
+
+    if(displayChatbot &#x3D;&#x3D; &quot;none&quot;) {
+      chatChatbot.style.display &#x3D; &quot;block&quot;;
+      this.botaoAtivado &#x3D; true;
+    } else {
+      chatChatbot.style.display &#x3D; &quot;none&quot;;
+      this.botaoAtivado &#x3D; false;
+    }
+  }
+
+  enviarMsg() {
+    let inputUsuario: any &#x3D; document.getElementById(&quot;fala-usuario&quot;);
+    let entrada &#x3D; inputUsuario.value;
+    inputUsuario.value &#x3D; &quot;&quot;;
+    this.saida(entrada);
+  }
+
+  compare(arrayEntrada: any, arrayResposta: any, varString: string) {
+    let resposta;
+    let encontrouResposta: boolean &#x3D; false;
+    for(let i &#x3D; 0; i &lt; arrayEntrada.length; i++) {
+      for(let j &#x3D; 0; j &lt; arrayEntrada[i].length; j++) {
+        if(arrayEntrada[i][j] &#x3D;&#x3D; varString) {
+          let respostas &#x3D; arrayResposta[i];
+          resposta &#x3D; respostas[Math.floor(Math.random() * respostas.length)];
+          encontrouResposta &#x3D; true;
+          break;
+        }
+      }
+      if(encontrouResposta) break;
+    }
+    return resposta;
+  }
+
+  voz(textoString: string) {
+    let vozBot &#x3D; new SpeechSynthesisUtterance(textoString);
+    vozBot.text &#x3D; textoString;
+    vozBot.lang &#x3D; &quot;pt-BR&quot;;
+    vozBot.volume &#x3D; 1;
+    vozBot.rate &#x3D; 1;
+    vozBot.pitch &#x3D; 1;
+    this.synth.speak(vozBot);
+  }
+
+  adicionarChat(entrada: any, produto: any) {
+    let divMensagens: any &#x3D; document.querySelector(&quot;.mensagens&quot;);
+
+    let divUsuario &#x3D; document.createElement(&quot;div&quot;);
+    divUsuario.id &#x3D; &quot;chat-usuario&quot;;
+    divUsuario.className &#x3D; &quot;chat-usuario&quot;;
+    divUsuario.innerHTML &#x3D; &#x60;
+      &lt;div style&#x3D;&quot;display: flex; width: 100%; flex-direction: row-reverse; margin-top: 10px;&quot;&gt;
+        &lt;div style&#x3D;&quot;padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block; max-width: 80%&quot;&gt;
+          &lt;span&gt;
+            ${entrada}
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&#x60;;
+    divMensagens?.appendChild(divUsuario);
+
+    let divBot &#x3D; document.createElement(&quot;div&quot;);
+    divBot.id &#x3D; &quot;div-texto-bot&quot;;
+    divBot.className &#x3D; &quot;resposta-bot&quot;;
+    let textoBot: string &#x3D; &quot;Digitando...&quot;
+    divBot.innerHTML &#x3D; &#x60;
+      &lt;div style&#x3D;&quot;display: flex; width: 80%; margin-top: 10px;&quot;&gt;
+        &lt;div style&#x3D;&quot;padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;&quot;&gt;
+          &lt;span&gt;
+            ${textoBot}
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&#x60;;
+    divMensagens?.appendChild(divBot);
+
+    divMensagens.scrollTop &#x3D; divMensagens?.scrollHeight - divMensagens?.clientHeight;
+
+    setTimeout(() &#x3D;&gt; {
+      textoBot &#x3D; &#x60;${produto}&#x60;
+      divBot.innerHTML &#x3D; &#x60;
+        &lt;div style&#x3D;&quot;display: flex; width: 80%; margin-top: 10px;&quot;&gt;
+          &lt;div style&#x3D;&quot;padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;&quot;&gt;
+            &lt;span&gt;
+              ${textoBot}
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;&#x60;;
+    divMensagens?.appendChild(divBot);
+
+      this.voz(produto)
+    }, 1200)
+  }
+
+  saida(entrada: string) {
+    let produto;
+
+    let texto &#x3D; entrada.toLowerCase().trim();
+    texto &#x3D; texto
+    .replace(/pra/g, &quot;para&quot;)
+    .replace(&quot;?&quot;, &quot;&quot;)
+    .replace(&quot;!&quot;, &quot;&quot;)
+    .replace(&quot;.&quot;, &quot;&quot;)
+    .replace(/ um /g, &quot;&quot;)
+    .replace(/ o /g, &quot;&quot;)
+    .replace(/ os /g, &quot;&quot;)
+    .replace(/ a /g, &quot;&quot;)
+    .replace(/ as /g, &quot;&quot;)
+    .replace(/ olá /g, &quot;ola&quot;)
+    .replace(/ você /g, &quot;voce&quot;)
+    .replace(/ vocês /g, &quot;voces&quot;)
+    .replace(/ são /g, &quot;sao&quot;)
+    .replace(/ tô /g, &quot;to&quot;)
+    .replace(/ estou /g, &quot;to&quot;)
+    .replace(/ tbm /g, &quot;tmb&quot;)
+    .replace(/ também /g, &quot;tmb&quot;)
+    .replace(/ tambem /g, &quot;tmb&quot;)
+    .replace(/ tb /g, &quot;tmb&quot;)
+    .replace(/ uma /g, &quot;&quot;)
+    .replace(/ vc /g, &quot;voce&quot;)
+    .replace(/ vcs /g, &quot;voces&quot;)
+    .replace(/ está /g, &quot;ta&quot;)
+    .replace(/ esta /g, &quot;ta&quot;)
+    .replace(/ td /g, &quot;tudo&quot;);
+
+    if(this.compare(this.falasUsuario, this.respostas, texto)) {
+      produto &#x3D; this.compare(this.falasUsuario, this.respostas, texto);
+    } else {
+      produto &#x3D; this.alternativas[Math.floor(Math.random() * this.alternativas.length)];
+    }
+
+    this.adicionarChat(entrada, produto);
+  }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;botao-chatbot&quot; (click)&#x3D;&#x27;mostrarChat()&#x27; (mouseenter)&#x3D;&#x27;botaoOpaco()&#x27; (mouseleave)&#x3D;&#x27;botaoTransparente()&#x27;&gt;
+    &lt;div id&#x3D;&quot;conteudo-botao&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-comment&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id&#x3D;&quot;chat-chatbot&quot;&gt;
+    &lt;div class&#x3D;&quot;chat-topo d-flex align-items-center&quot;&gt;
+        &lt;div class&#x3D;&quot;bot-foto mr-3&quot;&gt;
+
+        &lt;/div&gt;
+        &lt;h5 class&#x3D;&quot;text-white m-0&quot;&gt;Cacau&lt;/h5&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;bot&quot;&gt;
+        &lt;div class&#x3D;&quot;chat&quot; id&#x3D;&quot;chat&quot;&gt;
+            &lt;div id&#x3D;&quot;mensagens&quot; class&#x3D;&quot;mensagens&quot;&gt;
+
+                &lt;div style&#x3D;&quot;display: flex; width: 80%; margin-top: 10px;&quot;&gt;
+                    &lt;div style&#x3D;&quot;padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;&quot;&gt;
+                    &lt;span&gt;
+                        Olá, eu sou a Cacau, a assistente virtual da Efeito Eco :)
+                    &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div style&#x3D;&quot;display: flex; width: 80%; margin-top: 10px;&quot;&gt;
+                    &lt;div style&#x3D;&quot;padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;&quot;&gt;
+                    &lt;span&gt;
+                        Em que posso te ajudar hoje?
+                    &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;d-flex mt-2 mb-2 w-100 px-2&quot;&gt;
+                &lt;input class&#x3D;&quot;h-100 mr-2 mg-light&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;fala-usuario&quot; placeholder&#x3D;&quot;Fale com a Cacau&quot; (keyup.enter)&#x3D;&#x27;enviarMsg()&#x27;&gt;
+                &lt;button class&#x3D;&quot;enviar-chatbot p-0 m-0 bg-light&quot; (click)&#x3D;&#x27;enviarMsg()&#x27;&gt;
+                    &lt;i class&#x3D;&quot;fas fa-paper-plane m-0&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./chatbot.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.bot-foto {
+	border-radius: 100%;
+	width: 36px;
+	height: 36px;
+	background-image: url(https://i.imgur.com/nJ45ESx.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.chat-topo {
+	height: 50px;
+	padding-left: 15px;
+}
+
+.bot {
+	display: flex;
+}
+
+#fala-usuario {
+	border-radius: 4px;
+	width: 80%;
+    border: 0; 
+    padding: 5px; 
+    border: 1px solid rgba(0, 0, 0, .5); 
+}
+
+.enviar-chatbot {
+	color: rgba(0, 0, 0, .5);
+	border-radius: 4px;
+	width: 20%;
+	transition: 0.5s;
+}
+
+.enviar-chatbot:hover {
+	color: #000;
+}
+
+.chat {
+	height: 300px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;
+} 
+
+.mensagens {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	background-color: #f8f9fa;
+	padding: 15px;
+	overflow-x: hidden;
+	border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+#botao-chatbot {
+	transition: 0.5s;
+	opacity: 0.5;
+	cursor: pointer;
+	position: fixed;
+	right: 15px;
+	bottom: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: #075f21;
+	border-radius: 100%;
+	box-shadow: 0 6px 10px rgb(0, 0, 0, 66%);
+}
+
+#botao-chatbot:hover {
+	opacity: 1;
+}
+
+#conteudo-botao {
+	font-size: 1.5em;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#chat-chatbot {
+	z-index: 999;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+	display: none;
+	position: fixed;
+	right: 25px;
+	bottom: 100px;
+	width: 300px;
+	background-color: #075f21;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div id="botao-chatbot" (click)=\'mostrarChat()\' (mouseenter)=\'botaoOpaco()\' (mouseleave)=\'botaoTransparente()\'>    <div id="conteudo-botao">        <i class="fas fa-comment"></i>    </div></div><div id="chat-chatbot">    <div class="chat-topo d-flex align-items-center">        <div class="bot-foto mr-3">        </div>        <h5 class="text-white m-0">Cacau</h5>    </div>    <div class="bot">        <div class="chat" id="chat">            <div id="mensagens" class="mensagens">                <div style="display: flex; width: 80%; margin-top: 10px;">                    <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">                    <span>                        Olá, eu sou a Cacau, a assistente virtual da Efeito Eco :)                    </span>                    </div>                </div>                <div style="display: flex; width: 80%; margin-top: 10px;">                    <div style="padding: 4px 6px 4px 6px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .5); display: inline-block;">                    <span>                        Em que posso te ajudar hoje?                    </span>                    </div>                </div>            </div>            <div class="d-flex mt-2 mb-2 w-100 px-2">                <input class="h-100 mr-2 mg-light" type="text" id="fala-usuario" placeholder="Fale com a Cacau" (keyup.enter)=\'enviarMsg()\'>                <button class="enviar-chatbot p-0 m-0 bg-light" (click)=\'enviarMsg()\'>                    <i class="fas fa-paper-plane m-0"></i>                </button>            </div>                    </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AcessibilidadeComponent', 'selector': 'app-acessibilidade'},{'name': 'AlertasComponent', 'selector': 'app-alertas'},{'name': 'AlterarSenhaComponent', 'selector': 'app-alterar-senha'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarCategoriaComponent', 'selector': 'app-cadastrar-categoria'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'CadastrarProdutosComponent', 'selector': 'app-cadastrar-produtos'},{'name': 'CarrinhoComponent', 'selector': 'app-carrinho'},{'name': 'ChatbotComponent', 'selector': 'app-chatbot'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MeusProdutosComponent', 'selector': 'app-meus-produtos'},{'name': 'MinhasComprasComponent', 'selector': 'app-minhas-compras'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProdutoDeleteComponent', 'selector': 'app-produto-delete'},{'name': 'ProdutoEditComponent', 'selector': 'app-produto-edit'},{'name': 'ProdutosComponent', 'selector': 'app-produtos'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreComponent', 'selector': 'app-sobre'},{'name': 'TelaAtualizarComponent', 'selector': 'app-tela-atualizar'},{'name': 'TelaContaComponent', 'selector': 'app-tela-conta'},{'name': 'TelaProdutoComponent', 'selector': 'app-tela-produto'},{'name': 'TelaVendedorComponent', 'selector': 'app-tela-vendedor'},{'name': 'TrabalheConoscoComponent', 'selector': 'app-trabalhe-conosco'},{'name': 'VendedorDadosComponent', 'selector': 'app-vendedor-dados'},{'name': 'VendedorProdutosComponent', 'selector': 'app-vendedor-produtos'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ChatbotComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChatbotComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

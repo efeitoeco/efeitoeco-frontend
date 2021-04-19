@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "nome": "Nome",
+    "sobrenome": "Sobrenome",
+    "email": "email@dominio.com",
+    "senha": "$2a$10$erqfKhpoY.OXuS1NWOYiOeiYfpk7bwADumB6HVJjLUtaY3fEai8tG",
+    "foto": "http://site.jpeg",
+    "produtosVenda": [],
+    "minhasCompras": []
+}

@@ -32,3 +32,21 @@
     width: auto;
     height: 0.9rem;
 }
+
+.form-eco-sobrenome {
+    margin-left: 20px;
+}
+
+.form-eco-usuario {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-nomes {
+        flex-direction: column;
+    }
+
+    .form-eco-sobrenome {
+        margin: 20px 0 0 0;
+    }
+}

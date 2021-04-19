@@ -11,6 +11,7 @@ import { CategoriaService } from '../service/categoria.service';
 export class CadastrarCategoriaComponent implements OnInit {
 
   categoria: Categoria = new Categoria();
+  listaCategoria: Categoria[];
 
   constructor(
     private categoriaService: CategoriaService,
@@ -18,6 +19,7 @@ export class CadastrarCategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.verTodasCategorias();
   }
 
   cadastrarCategoria() {
@@ -28,4 +30,9 @@ export class CadastrarCategoriaComponent implements OnInit {
   }
 
 
+  verTodasCategorias() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp;
+    })
+  }
 }

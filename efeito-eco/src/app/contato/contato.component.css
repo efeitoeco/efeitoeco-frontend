@@ -130,4 +130,13 @@ i {
 
 
 
+ @media (max-width: 767px) {
+    .imagemContato{
+        display: none;
+    }
+
+}
+
+
+
 

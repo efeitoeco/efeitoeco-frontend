@@ -6,6 +6,23 @@
 
 <div class="w-100 d-flex justify-content-center mt-4">
     <button class="btn btn-sucesso-eco" type="submit" (click)='cadastrarCategoria()'>
-        Entrar
+        Cadastrar
     </button>
 </div>
+
+<h3 class="text-center mt-4">Categorias já cadastradas:</h3>
+
+<table class="table table-hover mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let categoria of listaCategoria'>
+        <th scope="row">{{categoria.id}}</th>
+        <td>{{categoria.nome}}</td>
+      </tr>
+    </tbody>
+  </table>

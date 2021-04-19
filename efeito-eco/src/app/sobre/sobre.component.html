@@ -2,19 +2,24 @@
   <source src="../../assets/video/PROJETO RELAMPAGO .mp4" type="video/mp4">
 </video>
 
+<button class="mute-video-btn" (click)='mutarVolume()'>
+  <i class="fas fa-volume-mute" id="fa-volume-mute"></i>
+  <i class="fas fa-volume-up" id="fa-volume-up"></i>
+</button>
+
 <div class="container-fluid container-fluid-eco">
 
 </div>
 
 <div class="container">
 
-  <div class="d-flex container-logo">
-    <img class="tamanho-imgLogo" src="../../assets/img/logosobre.png" alt="">
+  <div class="d-flex container-logo ">
+    <img class="tamanho-imgLogo efeitoEco-logo" src="../../assets/img/logosobre.png" alt="">
   </div>
 
   <div class="">
     <div class="d-flex justify-content-center">
-      <div class="container-sobre">
+      <div class="container-sobre sobre">
 
         <h3 class="sobre-nos">Sobre nós</h3>
         <p class="text-center">Nascemos da necessidade de contribuir com a ampliação do trabalho decente, crescimento
@@ -26,9 +31,9 @@
     </div>
 
   <!--Missão, Visão, Valores-->
-      <div class="d-flex justify-content-center mt-5"> 
-      <div class="card" style="width: 18rem;">
-        <img src="https://imgur.com/B5W7gOj.png" class="card-img-top" alt="...">
+      <div class="d-flex justify-content-center mt-5 proposito"> 
+      <div class="card" style="width: 18rem;" id="card-missao">
+        <img src="https://imgur.com/Iqwawyz.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h4 class="principios">Missão</h4>
           <p class="card-text mt-3">Facilitar o consumo consciente, dando voz a pequenos produtores de produtos ecológicos e
@@ -37,7 +42,7 @@
       </div>
 
       <div class="card ml-5" style="width: 18rem;">
-        <img src="https://imgur.com/Iqwawyz.png" class="card-img-top" alt="...">
+        <img src="https://i.imgur.com/AZOTXhZ.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h4 class="principios">Visão</h4>
           <p class="card-text mt-3">Contribuir com o desenvolvimento sustentável, geração de renda para o pequeno produtor e
