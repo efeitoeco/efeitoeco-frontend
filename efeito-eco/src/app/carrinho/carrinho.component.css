@@ -17,7 +17,7 @@
 
 .img-eco-carrinho {
     overflow: hidden;
-    width: 50%;
+    max-width: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -128,13 +128,51 @@
     .nome-produto-carrinho, .produto-preco-carrinho, .btn-carrinho {
         display: flex;
         justify-content: center;
-    } 
+    }
+
+    .card-eco-carrinho {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px) {
     .dentro-login-form-div {
+        width: 100%;
+    }
+
+    .card-eco-carrinho {
         width: 100%;
     }
 }
 
+@media screen and (max-width: 470px) {
+    .card-eco-carrinho {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .img-eco-carrinho {
+        width: 100%;
+        max-height: 45%;
+        justify-content: center;
+    }
+
+    .img-eco-carrinho-arquivo {
+        max-height: 45%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .img-eco-carrinho {
+        max-height: 30%;
+    }
+
+    .img-eco-carrinho-arquivo {
+        max-height: 30%;
+        width: max-content;
+    }
+}

@@ -84,6 +84,10 @@ export class NavbarComponent implements OnInit {
     environment.foto = '';
     this.alertas.showAlertInfo("Você saiu da conta");
     this.router.navigate(['/home']);
-  
+  }
+
+  irLogin() {
+    this.router.navigate(['/entrar']);
+    window.scroll(0, 0);
   }
 }

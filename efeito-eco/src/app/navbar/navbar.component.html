@@ -30,26 +30,23 @@
                                 Opções
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                              <button class="dropdown-item" [routerLink]="['/conta']" type="submit">Minha Conta</button>
-                              <button (click)="sair()" class="dropdown-item" type="button">Sair</button>
+                              <button class="dropdown-item" [routerLink]="['/conta']">Minha Conta</button>
+                              <button (click)="sair()" class="dropdown-item">Sair</button>
                             </div>
-                          </div>
-                        <!--<button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
-                        Minha Conta
-                        </button>-->
+                        </div>
                     </a>
 
                 <li *ngIf='auth.logado()' class="nav-item">
-                    <a class="nav-link" [routerLink]="['/carrinho']">
-                        <button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
+                    <a class="nav-link">
+                        <button [routerLink]="['/carrinho']" class="btn btn-navbar-eco my-2 my-sm-0">
                             Carrinho
                         </button>
                     </a>
                 </li>
                 
-                <li *ngIf='!auth.logado()' class="nav-item">
-                    <a class="nav-link" [routerLink]="['/entrar']">
-                        <button class="btn btn-navbar-eco my-2 my-sm-0" type="submit" >
+                <li  class="nav-item">
+                    <a *ngIf='!auth.logado()' class="nav-link" (click)='irLogin()'>
+                        <button class="btn btn-navbar-eco my-2 my-sm-0">
                             Fazer Login 
                         </button>
                     </a>
